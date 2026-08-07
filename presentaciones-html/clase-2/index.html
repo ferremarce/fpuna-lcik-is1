@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Presentación HTML de la Unidad II de Ingeniería de Software I">
+  <title>IS1 · Unidad II</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <header class="topbar">
+    <a class="brand" href="./">IS1 <span>/</span> UNIDAD II</a>
+    <div class="top-actions">
+      <button class="quiet-button" id="index-toggle" type="button" aria-controls="index-panel" aria-expanded="false">Índice <kbd>I</kbd></button>
+      <button class="quiet-button" id="notes-toggle" type="button" aria-controls="notes-panel" aria-expanded="false">Notas <kbd>N</kbd></button>
+      <button class="quiet-button" id="fullscreen" type="button">Pantalla completa</button>
+    </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <div id="stage" aria-live="polite"></div>
+  </main>
+  <footer class="controls" aria-label="Controles de presentación">
+    <button id="previous" type="button" aria-label="Slide anterior">← <span>Anterior</span></button>
+    <div class="progress-wrap"><div id="progress" class="progress" role="progressbar" aria-label="Progreso" aria-valuemin="1" aria-valuemax="48" aria-valuenow="1"></div></div>
+    <span id="counter" class="counter">01 / 48</span>
+    <button id="next" type="button" aria-label="Slide siguiente"><span>Siguiente</span> →</button>
+  </footer>
+  <aside id="index-panel" class="side-panel" aria-hidden="true" aria-labelledby="index-heading">
+    <div class="panel-heading"><h2 id="index-heading">Índice de slides</h2><button class="close-panel" data-close="index-panel" type="button" aria-label="Cerrar índice">×</button></div>
+    <nav id="slide-index" aria-label="Navegar a slide"></nav>
+  </aside>
+  <aside id="notes-panel" class="side-panel notes-panel" aria-hidden="true" aria-labelledby="notes-heading">
+    <div class="panel-heading"><h2 id="notes-heading">Notas docentes</h2><button class="close-panel" data-close="notes-panel" type="button" aria-label="Cerrar notas">×</button></div>
+    <p class="notes-help">Notas de apoyo para la exposición. Presioná <kbd>N</kbd> para abrir o cerrar este panel.</p>
+    <div id="speaker-notes"></div>
+  </aside>
+  <script src="app.js"></script>
+</body>
+</html>

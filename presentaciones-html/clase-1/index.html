@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Presentación de la clase 1 de Ingeniería del Software I">
+  <meta name="description" content="Clase 1: Introducción a la Ingeniería de Software">
   <title>Ingeniería del Software I | Clase 1</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="app.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
   <header class="topbar">
     <a class="brand" href="#slide-1" aria-label="Ir al inicio">IS1 <span>·</span> Clase 1</a>
     <div class="top-actions">
       <button id="index-toggle" class="quiet-button" type="button" aria-expanded="false" aria-controls="index-panel">Índice</button>
       <button id="notes-toggle" class="quiet-button" type="button" aria-expanded="false" aria-controls="notes-panel">Notas docentes</button>
-      <button id="fullscreen" class="quiet-button" type="button" aria-label="Activar pantalla completa">Pantalla completa</button>
+       <button id="fullscreen" class="quiet-button" type="button" aria-label="Activar pantalla completa">Pantalla completa</button>
     </div>
   </header>
 
@@ -28,14 +29,14 @@
   </aside>
   <aside id="notes-panel" class="side-panel notes-panel" aria-hidden="true" aria-label="Notas docentes">
     <div class="panel-heading"><h2>Notas docentes</h2><button class="close-panel" data-close="notes-panel" aria-label="Cerrar notas docentes">×</button></div>
-    <p class="notes-help">Estas notas no forman parte de la exposición. Sirven para orientar preguntas, tiempos y conexiones con T1/T3.</p>
+     <p class="notes-help">Estas notas no forman parte de la exposición. Sirven para orientar la explicación y las conexiones entre slides.</p>
     <div id="speaker-notes"></div>
   </aside>
 
   <footer class="controls" aria-label="Controles de presentación">
     <button id="previous" type="button" aria-label="Diapositiva anterior">← <span>Anterior</span></button>
-    <div class="progress-wrap"><div id="progress" class="progress" role="progressbar" aria-label="Progreso de la presentación" aria-valuemin="1" aria-valuemax="20" aria-valuenow="1"></div></div>
-    <span id="counter" class="counter">01 / 20</span>
+     <div class="progress-wrap"><div id="progress" class="progress" role="progressbar" aria-label="Progreso de la presentación" aria-valuemin="1" aria-valuemax="25" aria-valuenow="1"></div></div>
+     <span id="counter" class="counter">01 / 25</span>
     <button id="next" type="button" aria-label="Diapositiva siguiente"><span>Siguiente</span> →</button>
   </footer>
 </body>
