@@ -35,7 +35,18 @@ Cada slide se describe en tres capas para facilitar la revisión:
 
 **Explicación docente**
 
-Presentar la asignatura y a la docente. Usar este slide como apertura formal antes de explicar la organización de la materia y la unidad que se trabajará.
+- **Desarrollo:**
+  - Quiero presentar **Ingeniería de Software I** como una asignatura que estudia cómo producir y sostener software, no solamente cómo programarlo.
+  - Usemos esta apertura para ubicar la **unidad** y el **contexto** de trabajo que vamos a desarrollar durante el curso.
+- **Ejemplos:** **Global Exchange (conductor):** tomemos el curso como el mapa para construir un sistema de cambio de divisas, desde entender el problema hasta mantenerlo. **Segundo contexto industrial:** en un sistema de turnos hospitalarios, también necesitaremos organizar decisiones, roles y controles antes de escribir código.
+- **Reflexión docente:**
+  - La profesión exige ampliar la mirada: una solución técnicamente interesante puede fallar si no responde al contexto de uso.
+- **Pregunta desafío:** ¿qué diferencia esperan encontrar entre programar y ejercer Ingeniería de Software?
+- **Respuestas posibles:**
+  1. Programar implementa una solución; la Ingeniería de Software organiza todo su ciclo de vida.
+  2. La Ingeniería de Software incorpora requisitos, calidad, coordinación, riesgos y mantenimiento.
+  3. Una persona puede programar correctamente y aun así no resolver el problema completo del sistema.
+- **Advertencia:** esta apertura contextualiza; todavía no define conceptos técnicos.
 
 ### Slide 2. Sobre el docente
 
@@ -52,7 +63,18 @@ Presentar la asignatura y a la docente. Usar este slide como apertura formal ant
 
 **Explicación docente**
 
-Compartir la trayectoria académica y profesional de la docente para establecer el contexto de la asignatura. El correo funciona como canal de contacto indicado en el material base.
+- **Desarrollo:**
+  - Fíjense en cómo la **trayectoria** combina Ingeniería de Software, **análisis funcional** y **gestión de proyectos**; son perspectivas distintas sobre un mismo trabajo.
+  - El objetivo es entender el contexto docente y reconocer que un proyecto necesita responsabilidades complementarias.
+- **Ejemplos:** **Global Exchange (conductor):** para construir el sistema de cambio de divisas, el análisis funcional puede aclarar reglas de tasas y fondos, mientras la gestión coordina alcance, plazos y riesgos. **Segundo contexto industrial:** en una plataforma educativa, una persona puede relevar necesidades de docentes y estudiantes, y otra organizar la entrega con el equipo.
+- **Reflexión docente:**
+  - La colaboración entre roles reduce puntos ciegos, aunque también exige acordar vocabulario y responsabilidades.
+- **Pregunta desafío:** ¿qué decisiones tomaría un analista funcional que no tomaría un programador?
+- **Respuestas posibles:**
+  1. Aclarar necesidades y reglas del negocio con las personas involucradas.
+  2. Analizar alternativas de alcance y priorizar requisitos antes de implementarlos.
+  3. Un programador puede aportar viabilidad técnica, pero no debería asumir automáticamente la decisión del negocio.
+- **Advertencia:** presento la trayectoria como contexto docente, no como contenido evaluable.
 
 ### Slide 3. Sobre la asignatura
 
@@ -71,7 +93,18 @@ Compartir la trayectoria académica y profesional de la docente para establecer 
 
 **Explicación docente**
 
-Ubicar a los estudiantes en la sección correspondiente y mostrar cómo se distribuye la carga semanal entre clases teóricas y prácticas.
+- **Desarrollo:**
+  - Veamos la **sección** y la distribución entre **horas teóricas** y **horas prácticas**: la teoría ayuda a construir conceptos y la práctica permite aplicarlos y revisarlos.
+  - La carga indicada organiza la cursada; no reemplaza la responsabilidad de preparar, producir y justificar el trabajo.
+- **Ejemplos:** **Global Exchange (conductor):** podemos usar una clase teórica para analizar requisitos del cambio de divisas y una práctica para modelar una operación concreta. **Segundo contexto industrial:** en logística, una actividad práctica podría representar el flujo de un pedido y detectar dónde falta información.
+- **Reflexión docente:**
+  - El aprendizaje se vuelve visible cuando una idea puede convertirse en una decisión o artefacto revisable.
+- **Pregunta desafío:** ¿qué actividad práctica demostraría que una idea fue comprendida?
+- **Respuestas posibles:**
+  1. Aplicar el concepto a un caso y explicar por qué la decisión es adecuada.
+  2. Elaborar un modelo, prueba o documento que otra persona pueda revisar.
+  3. Comparar una alternativa correcta con otra y justificar el trade-off.
+- **Advertencia:** no confundan la distribución horaria con una garantía de dedicación total.
 
 ### Slide 4. Metodología
 
@@ -91,7 +124,18 @@ Ubicar a los estudiantes en la sección correspondiente y mostrar cómo se distr
 
 **Explicación docente**
 
-Explicar que la materia combina exposición, trabajo práctico grupal, defensa de producciones, foros y tutorías. Destacar la participación activa de los estudiantes en las actividades prácticas.
+- **Desarrollo:**
+  - Les propongo combinar **exposición**, **práctica**, trabajo en **equipo**, **defensa**, **foro** y **tutoría** como partes de un mismo proceso de aprendizaje.
+  - La participación activa implica producir, recibir preguntas y revisar decisiones, no solo escuchar una explicación.
+- **Ejemplos:** **Global Exchange (conductor):** un equipo puede presentar el flujo de una operación de cambio, defender sus supuestos en un foro y ajustar el modelo con tutoría. **Segundo contexto industrial:** en banca, un grupo podría justificar el flujo de una transferencia y responder qué controles aplicaría antes de liberarla.
+- **Reflexión docente:**
+  - Defender una solución hace visible el razonamiento y puede revelar supuestos que una entrega aislada no muestra.
+- **Pregunta desafío:** ¿qué evidencia mostraría que un grupo colaboró realmente?
+- **Respuestas posibles:**
+  1. Un producto integrado, con decisiones y aportes trazables de sus integrantes.
+  2. La capacidad de explicar y defender el trabajo como equipo, no solo repartir diapositivas.
+  3. Cambios incorporados a partir de revisiones, foros o tutorías.
+- **Advertencia:** participar no equivale solo a asistir; requiere producir y justificar decisiones.
 
 ### Slide 5. Aula virtual
 
@@ -111,7 +155,18 @@ Explicar que la materia combina exposición, trabajo práctico grupal, defensa d
 
 **Explicación docente**
 
-Indicar dónde se encuentra el aula virtual y cómo identificarla. La credencial debe administrarse por un canal seguro y no incorporarse a una presentación pública ni a documentación versionada.
+- **Desarrollo:**
+  - Fíjense en la **plataforma**, el nombre corto y el enlace del **aula virtual**; son datos para encontrar el espacio de trabajo y organizar el **acceso**.
+  - La **seguridad** exige tratar cualquier credencial por un canal seguro, separado de la documentación pública y versionada.
+- **Ejemplos:** **Global Exchange (conductor):** el aula puede centralizar el caso de cambio de divisas, sus entregas y las discusiones de equipo; el enlace identifica el espacio, pero la credencial no se comparte públicamente. **Segundo contexto industrial:** en un SaaS, una URL de administración puede documentarse, pero sus secretos deben gestionarse fuera del repositorio.
+- **Reflexión docente:**
+  - Una exposición accidental de credenciales convierte un recurso académico en un incidente de seguridad; la prevención forma parte de la práctica profesional.
+- **Pregunta desafío:** ¿qué harían si una contraseña aparece en un repositorio?
+- **Respuestas posibles:**
+  1. Avisar al responsable y revocar o cambiar la credencial de inmediato.
+  2. Retirar el secreto del historial y revisar quién pudo acceder.
+  3. Registrar el incidente y evitar volver a publicar el valor en documentación o capturas.
+- **Advertencia:** nunca expongan credenciales en notas, repositorios ni capturas públicas.
 
 ### Slide 6. Sobre el contenido
 
@@ -130,7 +185,18 @@ Indicar dónde se encuentra el aula virtual y cómo identificarla. La credencial
 
 **Explicación docente**
 
-Presentar el recorrido general de la materia. Señalar que la clase actual corresponde a la Unidad I y que las unidades siguientes avanzan hacia procesos, requerimientos y diseño.
+- **Desarrollo:**
+  - Observen el recorrido: la **Unidad I** introduce la disciplina; luego estudiaremos **procesos**, **requerimientos** y **diseño**.
+  - La secuencia va de comprender el problema y organizar el trabajo a decidir cómo construir una solución.
+- **Ejemplos:** **Global Exchange (conductor):** primero entendemos el sistema de cambio de divisas, después acordamos qué debe hacer y recién entonces diseñamos su solución. **Segundo contexto industrial:** en salud, conviene relevar necesidades de pacientes y profesionales antes de diseñar un sistema de historias clínicas.
+- **Reflexión docente:**
+  - Saltar etapas puede producir modelos elegantes para un problema mal entendido; el orden ayuda a reducir retrabajo.
+- **Pregunta desafío:** ¿por qué conviene estudiar requerimientos antes del diseño?
+- **Respuestas posibles:**
+  1. Porque los requerimientos expresan qué problema debe resolver el sistema.
+  2. Porque el diseño debe responder a restricciones y necesidades ya comprendidas.
+  3. Porque diseñar antes puede fijar una solución que luego contradiga al usuario o al negocio.
+- **Advertencia:** el mapa anticipa temas; no reemplaza el desarrollo de cada unidad.
 
 ### Slide 7. Sobre las evaluaciones
 
@@ -150,7 +216,18 @@ Presentar el recorrido general de la materia. Señalar que la clase actual corre
 
 **Explicación docente**
 
-Explicar la composición de las evaluaciones tal como está definida en el material: los parciales combinan examen escrito y trabajo práctico; el final se basa en un examen escrito sobre un caso práctico.
+- **Desarrollo:**
+  - Revisemos la composición: en los **parciales**, el **examen escrito** representa 30% y el **trabajo práctico** 70%; el **final** es un examen escrito sobre un **caso práctico**, 100%.
+  - Un caso permite conectar conceptos, decisiones y justificaciones, no solo repetir definiciones.
+- **Ejemplos:** **Global Exchange (conductor):** pueden justificar el diseño de una operación de cambio frente a un requisito de trazabilidad y luego analizar sus consecuencias en un caso escrito. **Segundo contexto industrial:** en transporte, un caso de asignación de viajes puede exigir explicar requisitos, riesgos y decisiones de diseño.
+- **Reflexión docente:**
+  - La evaluación combina conocimiento y aplicación; prepararse solo para memorizar deja sin demostrar una parte central del trabajo profesional.
+- **Pregunta desafío:** ¿cómo justificarían una decisión de diseño frente a un requisito?
+- **Respuestas posibles:**
+  1. Vinculando la decisión con el requisito y con la necesidad que lo origina.
+  2. Explicando alternativas descartadas, riesgos y consecuencias.
+  3. Mostrando evidencia, como un modelo, prueba o criterio de aceptación.
+- **Advertencia:** conserven exactamente los porcentajes del material.
 
 ### Slide 8. Trabajos prácticos
 
@@ -170,7 +247,18 @@ Explicar la composición de las evaluaciones tal como está definida en el mater
 
 **Explicación docente**
 
-Presentar la lógica incremental del trabajo práctico: equipos de hasta cuatro integrantes desarrollan un caso o proyecto y entregan productos asociados a los hitos H1 a H8. Aclarar que `H` significa `Hito` según el propio slide.
+- **Desarrollo:**
+  - Veamos la progresión del **caso práctico o proyecto**: un **equipo** de hasta cuatro integrantes construye evidencia mediante **requerimientos**, **casos de uso**, especificaciones y diagramas.
+  - La `H` significa **Hito**: cada punto de control permite revisar una parte del trabajo antes de avanzar.
+- **Ejemplos:** **Global Exchange (conductor):** H1 puede aclarar requerimientos de tasas y fondos; los hitos siguientes pueden modelar casos de uso, clases, secuencias, estados, actividades y despliegue. **Segundo contexto industrial:** en logística, un proyecto puede pasar de requisitos de despacho a casos de uso y diagramas del seguimiento de paquetes.
+- **Reflexión docente:**
+  - Trabajar incrementalmente reduce el riesgo de descubrir al final que todas las decisiones iniciales estaban mal orientadas, aunque cada hito requiere revisión real.
+- **Pregunta desafío:** ¿qué riesgo aparece si se salta el hito de requerimientos?
+- **Respuestas posibles:**
+  1. Diseñar o codificar funciones que no resuelven la necesidad real.
+  2. Generar inconsistencias entre casos de uso y diagramas posteriores.
+  3. Aumentar el retrabajo porque los errores se descubren tarde.
+- **Advertencia:** un hito es un punto de control, no solo una fecha de entrega.
 
 ### Slide 9. Bibliografía de referencia
 
@@ -189,7 +277,18 @@ Presentar la lógica incremental del trabajo práctico: equipos de hasta cuatro 
 
 **Explicación docente**
 
-Indicar las obras de referencia que acompañan la materia. Mantener las ediciones, editoriales y años tal como aparecen en la fuente; cualquier actualización bibliográfica deberá documentarse aparte.
+- **Desarrollo:**
+  - Usemos esta **bibliografía** como conjunto de **fuentes de referencia** para ampliar conceptos y contrastar explicaciones.
+  - Respetemos la **edición**, editorial y año que aparecen en el material; una actualización bibliográfica debe identificarse como tal.
+- **Ejemplos:** **Global Exchange (conductor):** podemos buscar en las referencias criterios para discutir el proceso de un sistema de cambio de divisas, sin atribuir al material una explicación que no contiene. **Segundo contexto industrial:** para un sistema gubernamental legado, distintas fuentes pueden ayudar a comparar mantenibilidad, riesgos y gestión del proyecto.
+- **Reflexión docente:**
+  - Consultar fuentes no significa acumular citas: significa verificar conceptos y reconocer el alcance de cada afirmación.
+- **Pregunta desafío:** ¿qué afirmación del slide buscarían verificar en una fuente?
+- **Respuestas posibles:**
+  1. Una definición de Ingeniería de Software o de proceso.
+  2. Una comparación entre productos genéricos y hechos a medida.
+  3. Una recomendación cuya aplicabilidad dependa del contexto.
+- **Advertencia:** no presenten una edición o año actualizado como si perteneciera al material original.
 
 ### Slide 10. Separador de la Unidad I
 
@@ -206,7 +305,18 @@ Indicar las obras de referencia que acompañan la materia. Mantener las edicione
 
 **Explicación docente**
 
-Marcar el pasaje desde la presentación administrativa de la materia hacia el contenido académico de la Unidad I.
+- **Desarrollo:**
+  - Ahora pasemos de la organización del curso a la **Unidad I: Introducción a la Ingeniería de Software**.
+  - En esta unidad vamos a construir el vocabulario para hablar de productos, procesos, costos, retos y **responsabilidad profesional**.
+- **Ejemplos:** **Global Exchange (conductor):** usemos el sistema de cambio de divisas como caso para observar cómo una disciplina organiza decisiones más allá del código. **Segundo contexto industrial:** un sistema de transporte permite estudiar problemas similares de requisitos, operación, mantenimiento y evolución.
+- **Reflexión docente:**
+  - Este cambio de registro importa: comprender el curso ayuda a participar, pero comprender la disciplina permite tomar mejores decisiones profesionales.
+- **Pregunta desafío:** ¿qué problema profesional esperan que la unidad ayude a comprender?
+- **Respuestas posibles:**
+  1. Cómo producir software confiable y mantenible.
+  2. Cómo organizar un proceso para reducir errores y retrabajo.
+  3. Cómo equilibrar necesidades del negocio, restricciones técnicas y responsabilidad.
+- **Advertencia:** no adelanten conclusiones antes de presentar los conceptos.
 
 ### Slide 11. Objetivos
 
@@ -224,7 +334,18 @@ Marcar el pasaje desde la presentación administrativa de la materia hacia el co
 
 **Explicación docente**
 
-Anticipar los resultados esperados de la unidad. Usar los objetivos como guía de lectura y retomarlos al cierre para comprobar qué conceptos fueron abordados.
+- **Desarrollo:**
+  - Tomemos los **objetivos** como criterios de aceptación: debemos poder **definir** Ingeniería de Software, discutir **producto** y **proceso**, e introducir la **responsabilidad profesional**.
+  - Al cierre, volvamos a ellos para comprobar si podemos explicar y aplicar cada idea.
+- **Ejemplos:** **Global Exchange (conductor):** definamos producto y proceso a partir del sistema de cambio de divisas y discutamos qué responsabilidades aparecen al manejar fondos y auditoría. **Segundo contexto industrial:** en educación, una plataforma de evaluaciones exige pensar en confiabilidad, privacidad y consecuencias para sus usuarios.
+- **Reflexión docente:**
+  - Un objetivo se demuestra con evidencia: repetir una frase no alcanza si no podemos usarla para razonar sobre un caso.
+- **Pregunta desafío:** ¿cómo demostrarían que pueden definir y no solo repetir un término?
+- **Respuestas posibles:**
+  1. Explicándolo con palabras propias y distinguiéndolo de conceptos cercanos.
+  2. Aplicándolo a un caso y justificando qué elementos lo muestran.
+  3. Comparando ejemplos y contraejemplos.
+- **Advertencia:** distingan conocer una definición de aplicarla a un caso.
 
 ### Slide 12. Contenido
 
@@ -244,7 +365,18 @@ Anticipar los resultados esperados de la unidad. Usar los objetivos como guía d
 
 **Explicación docente**
 
-Mostrar el mapa de la unidad y anticipar la secuencia temática: definición de la disciplina, productos, costos, procesos y retos profesionales.
+- **Desarrollo:**
+  - Observen el mapa: iremos de la **disciplina** a los **productos**, **costos**, **procesos** y **retos** de la Ingeniería de Software.
+  - La secuencia organiza la conversación, pero los temas se conectan: el proceso influye en costos y los retos condicionan las decisiones.
+- **Ejemplos:** **Global Exchange (conductor):** relacionemos el producto de cambio de divisas con su costo de desarrollo, el proceso de construcción y los retos de integrarlo con servicios externos. **Segundo contexto industrial:** en una solución de comercio, mantenimiento, volumen de usuarios y entregas pueden modificar tanto el proceso como el costo.
+- **Reflexión docente:**
+  - Pensar cada tema de forma aislada oculta trade-offs; la ingeniería consiste en conectar decisiones con sus consecuencias.
+- **Pregunta desafío:** ¿cómo se relacionan costo y proceso?
+- **Respuestas posibles:**
+  1. Un proceso con controles puede requerir más esfuerzo inicial y reducir retrabajo.
+  2. Un proceso poco claro puede abaratar el inicio, pero aumentar fallos y mantenimiento.
+  3. El contexto determina qué inversión produce una mejora razonable.
+- **Advertencia:** el orden organiza la explicación, pero los temas están conectados.
 
 ### Slide 13. ¿Qué es la Ingeniería de Software?
 
@@ -263,7 +395,18 @@ Mostrar el mapa de la unidad y anticipar la secuencia temática: definición de 
 
 **Explicación docente**
 
-Introducir la Ingeniería de Software como una disciplina que abarca todo el ciclo de producción, desde la especificación hasta el mantenimiento. Comparar las tres formulaciones visibles para identificar sus énfasis en alcance, principios, métodos, herramientas, confiabilidad, eficiencia y costo.
+- **Desarrollo:**
+  - Veamos la **Ingeniería de Software** como una disciplina que abarca la **especificación**, la **producción** y el **mantenimiento**.
+  - Comparen las formulaciones del slide: unas enfatizan alcance y ciclo de vida; otras, **principios**, **métodos**, **herramientas**, **confiabilidad**, **eficiencia** y costo.
+- **Ejemplos:** **Global Exchange (conductor):** para el sistema de cambio de divisas debemos especificar reglas, producir una solución, verificar operaciones y mantenerla cuando cambien las tasas o integraciones. **Segundo contexto industrial:** una aplicación de turnos médicos necesita esas mismas actividades para operar confiablemente y adaptarse a nuevas necesidades.
+- **Reflexión docente:**
+  - La mirada profesional distribuye la prevención a lo largo del ciclo; esperar al final para descubrir fallos suele limitar las alternativas.
+- **Pregunta desafío:** ¿en qué etapa se puede prevenir un fallo costoso?
+- **Respuestas posibles:**
+  1. Desde la especificación, aclarando necesidades y restricciones.
+  2. Durante diseño y desarrollo, revisando decisiones antes de hacerlas más costosas de cambiar.
+  3. En validación, detectando evidencia insuficiente antes de la operación.
+- **Advertencia:** Ingeniería de Software no es únicamente escribir código.
 
 ### Slide 14. ¿Qué es el Software?
 
@@ -282,7 +425,18 @@ Introducir la Ingeniería de Software como una disciplina que abarca todo el cic
 
 **Explicación docente**
 
-Contrastar las dos definiciones presentes en el slide. Enfatizar que el material incluye tanto los programas como la documentación asociada y que presenta al software como un elemento lógico diferenciado del hardware.
+- **Desarrollo:**
+  - Contrastemos las definiciones: el **software** incluye **programas** y **documentación asociada**, y es un **elemento lógico** distinto del **hardware**.
+  - La documentación sostiene el uso, la operación y el mantenimiento; por eso forma parte del producto considerado en el slide.
+- **Ejemplos:** **Global Exchange (conductor):** además del programa de cambio de divisas, necesitamos documentar reglas, operación, errores e integración con pagos. **Segundo contexto industrial:** un sistema legado de gobierno puede seguir funcionando, pero sin documentación su mantenimiento depende de conocimiento difícil de transferir.
+- **Reflexión docente:**
+  - Tratar la documentación como un accesorio aumenta la dependencia de personas y el riesgo de operar o cambiar el sistema sin comprenderlo.
+- **Pregunta desafío:** ¿qué documento asociarían a un sistema real?
+- **Respuestas posibles:**
+  1. Manual de usuario o procedimiento operativo.
+  2. Especificación de requisitos, diseño o interfaz de integración.
+  3. Instrucciones de despliegue, mantenimiento y recuperación ante fallos.
+- **Advertencia:** lógico no significa intangible o irrelevante para la operación física.
 
 ### Slide 15. Productos de Software
 
@@ -300,7 +454,18 @@ Contrastar las dos definiciones presentes en el slide. Enfatizar que el material
 
 **Explicación docente**
 
-Distinguir productos genéricos de productos hechos a medida y cerrar con la comparación de gasto y esfuerzo indicada por el material.
+- **Desarrollo:**
+  - Distingamos **productos genéricos**, producidos para comercializarse a varias organizaciones, de productos **hechos a medida**, desarrollados bajo pedido.
+  - El slide señala una diferencia entre **gasto** y **esfuerzo**: debemos conservarla como comparación del material, no como una ley universal.
+- **Ejemplos:** **Global Exchange (conductor):** una plataforma genérica de cambio puede servir a varias empresas, mientras una solución hecha a medida puede integrar reglas y sistemas particulares de una entidad financiera. **Segundo contexto industrial:** un hospital puede comprar un producto estándar o encargar un sistema adaptado a sus circuitos y regulaciones.
+- **Reflexión docente:**
+  - Pasar de un cliente a muchos amplía la necesidad de configurar, documentar y sostener variaciones; la reutilización trae oportunidades y restricciones.
+- **Pregunta desafío:** ¿qué decisión cambia al pasar de un cliente a muchos?
+- **Respuestas posibles:**
+  1. Qué requisitos se consideran parte del producto común y cuáles serán configurables.
+  2. Cómo se priorizan cambios que afectan a varios clientes.
+  3. Qué estrategia de soporte, documentación y evolución se necesita.
+- **Advertencia:** no conviertan la comparación del slide en una regla para todos los mercados.
 
 ### Slide 16. Características de Productos Software
 
@@ -319,7 +484,19 @@ Distinguir productos genéricos de productos hechos a medida y cerrar con la com
 
 **Explicación docente**
 
-Recorrer las cuatro características y relacionar cada nombre con la condición que el slide le asigna. Mantener la separación entre la etiqueta de la característica y su explicación en la futura presentación.
+- **Desarrollo:**
+  - Recorramos las características: **mantenibilidad** permite evolucionar, **confiabilidad** evita daños ante fallos, **eficiencia** cuida los recursos y **utilización adecuada** reúne interfaz y documentación apropiadas.
+  - No las tratemos como etiquetas decorativas: cada una expresa una condición que debemos observar en el producto.
+- **Ejemplos:** **Global Exchange (conductor):** el sistema debe adaptarse a nuevas tasas, manejar fallos sin afectar fondos, responder sin desperdiciar recursos y orientar correctamente a quien realiza una operación. **Segundo contexto industrial:** en un sistema de salud, confiabilidad y utilización adecuada pueden ser especialmente visibles en alertas, permisos y documentación para el personal.
+- **Reflexión docente:**
+  - Mejorar un atributo puede exigir costos o compromisos en otros; la prioridad debe justificarse por el contexto y el impacto.
+- **Pregunta desafío:** ¿qué atributo priorizarían en un sistema crítico y por qué?
+- **Respuestas posibles:**
+  1. Confiabilidad, si un fallo puede causar daño económico o físico.
+  2. Mantenibilidad, si el entorno cambia y el sistema deberá evolucionar durante años.
+  3. Eficiencia, si los recursos son limitados y afectan la operación.
+  4. Utilización adecuada, si errores de comprensión pueden comprometer el servicio.
+- **Advertencia:** mejorar un atributo puede exigir costos o compromisos en otros.
 
 ### Slide 17. Importancia de las características
 
@@ -337,7 +514,18 @@ Recorrer las cuatro características y relacionar cada nombre con la condición 
 
 **Explicación docente**
 
-Explicar que no todas las características tienen el mismo peso en todos los productos ni contextos. Usar el ejemplo de los sistemas de seguridad críticos de tiempo real y conectar la exigencia de atributos con el crecimiento de costos mencionado.
+- **Desarrollo:**
+  - La importancia relativa de una característica depende del **tipo de producto** y del **ambiente** donde se usa.
+  - En sistemas de **seguridad crítica** y **tiempo real**, el slide destaca confiabilidad y eficiencia; también advierte que exigir niveles altos puede elevar los **costos**.
+- **Ejemplos:** **Global Exchange (conductor):** una operación financiera puede priorizar confiabilidad y trazabilidad, mientras una consulta pública de tasas puede tolerar otra combinación de atributos. **Segundo contexto industrial:** un sistema de control médico puede priorizar confiabilidad de forma distinta que una aplicación de entretenimiento.
+- **Reflexión docente:**
+  - No existe una prioridad profesional fuera de contexto: sacrificar un atributo puede ser razonable en un caso y peligroso en otro.
+- **Pregunta desafío:** ¿qué atributo sacrificarían menos en cada caso?
+- **Respuestas posibles:**
+  1. En control médico, confiabilidad, porque el impacto de un fallo puede ser crítico.
+  2. En una aplicación de entretenimiento, quizá eficiencia o disponibilidad según el uso, sin ignorar seguridad.
+  3. En una operación financiera, confiabilidad y trazabilidad antes que una mejora superficial de velocidad.
+- **Advertencia:** el slide expresa una tendencia cualitativa; no aporta una fórmula de costos.
 
 ### Slide 18. Clasificación de Productos Software
 
@@ -370,7 +558,18 @@ Explicar que no todas las características tienen el mismo peso en todos los pro
 
 **Explicación docente**
 
-Presentar los tres ejes de clasificación y recorrer sus ejemplos. Conservar la jerarquía para que se entienda que cada grupo pertenece a un criterio diferente.
+- **Desarrollo:**
+  - Clasifiquemos los productos por **estructura**, por **función** y por **plataforma de cómputo**; son tres ejes distintos.
+  - Destaquemos términos como **orientado a objetos**, **componentes**, **web**, **embebido**, **distribuido** y **tiempo real** sin confundirlos entre sí.
+- **Ejemplos:** **Global Exchange (conductor):** el sistema puede ser distribuido por su plataforma, orientado a componentes por su estructura y un sistema de usuario o web por su función. **Segundo contexto industrial:** una aplicación móvil de logística puede combinar una interfaz de usuario, bases de datos, servicios distribuidos y funciones de ubicación.
+- **Reflexión docente:**
+  - Clasificar con varios ejes ayuda a describir mejor un sistema; forzar una sola etiqueta oculta decisiones técnicas importantes.
+- **Pregunta desafío:** ¿qué clasificaciones aplicarían a una aplicación móvil?
+- **Respuestas posibles:**
+  1. Por función, como programa de usuario o sistema basado en web si expone servicios web.
+  2. Por plataforma, como sistema distribuido o ubicuo según su arquitectura y uso.
+  3. Por estructura, según use objetos, componentes u otra organización indicada por el material.
+- **Advertencia:** no mezclen criterios como si fueran categorías excluyentes.
 
 ### Slide 19. Costos del Software
 
@@ -389,7 +588,18 @@ Presentar los tres ejes de clasificación y recorrer sus ejemplos. Conservar la 
 
 **Explicación docente**
 
-Presentar las tres afirmaciones sobre costos y utilizar el gráfico para acompañar la relación visual entre costos y eficiencia tal como aparece en la fuente. No agregar valores numéricos ni una interpretación cuantitativa que el slide no proporciona.
+- **Desarrollo:**
+  - Leamos las afirmaciones sobre **costos**: pueden dominar el costo del sistema, el **mantenimiento** puede superar al desarrollo y la Ingeniería de Software busca un desarrollo efectivo en costos.
+  - El gráfico relaciona visualmente **costos** y **eficiencia**, pero no aporta valores ni una fórmula.
+- **Ejemplos:** **Global Exchange (conductor):** una arquitectura difícil de cambiar puede volver costoso adaptar tasas, fondos o integraciones, aunque la primera versión haya sido rápida. **Segundo contexto industrial:** un sistema legado de transporte puede requerir más mantenimiento que desarrollo cuando cada cambio rompe integraciones antiguas.
+- **Reflexión docente:**
+  - La eficiencia profesional incluye pensar el costo futuro; ahorrar hoy sin cuidar mantenibilidad puede trasladar el problema a toda la vida del sistema.
+- **Pregunta desafío:** ¿qué decisión temprana reduciría el costo futuro?
+- **Respuestas posibles:**
+  1. Aclarar requisitos y restricciones antes de comprometer una solución.
+  2. Diseñar puntos de cambio y registrar decisiones para facilitar mantenimiento.
+  3. Validar temprano las integraciones o riesgos que podrían generar retrabajo.
+- **Advertencia:** el gráfico expresa una relación cualitativa; no permite inferir valores ni una fórmula.
 
 ### Slide 20. Proceso de Software
 
@@ -411,7 +621,19 @@ Presentar las tres afirmaciones sobre costos y utilizar el gráfico para acompa�
 
 **Explicación docente**
 
-Definir el proceso como un conjunto estructurado de actividades. Recorrer especificación, desarrollo, validación y evolución, y cerrar con la variación según organización y sistema y la necesidad de modelarlo explícitamente para administrarlo.
+- **Desarrollo:**
+  - Definamos el **proceso de software** como un conjunto estructurado de actividades: **especificación**, **desarrollo**, **validación** y **evolución**.
+  - Las actividades varían según la organización y el sistema; modelarlas explícitamente ayuda a administrarlas sin asumir que existe una receta única.
+- **Ejemplos:** **Global Exchange (conductor):** especificamos reglas de cambio, desarrollamos la solución, validamos cálculos y evolucionamos el sistema cuando cambian tasas o servicios externos. **Segundo contexto industrial:** un sistema de turnos puede adaptar su proceso según la criticidad, privacidad y cantidad de integraciones.
+- **Reflexión docente:**
+  - Modelar el proceso mejora la visibilidad, pero no debe convertir el trabajo en una secuencia rígida incapaz de responder a evidencia nueva.
+- **Pregunta desafío:** ¿qué evidencia ubicarían en cada actividad?
+- **Respuestas posibles:**
+  1. Especificación: requisitos, restricciones y criterios de aceptación.
+  2. Desarrollo: diseño, código y decisiones de construcción.
+  3. Validación: pruebas, revisiones y evidencia de que se cumple lo pedido.
+  4. Evolución: cambios priorizados, incidentes y nuevas necesidades.
+- **Advertencia:** modelar el proceso no significa volverlo rígido.
 
 ### Slide 21. Proceso Genérico
 
@@ -432,7 +654,18 @@ Definir el proceso como un conjunto estructurado de actividades. Recorrer especi
 
 **Explicación docente**
 
-Presentar la secuencia de actividades desde especificación hasta mantenimiento. Mantener la distinción entre establecer requerimientos, producir el modelo, construir, probar, instalar y reparar.
+- **Desarrollo:**
+  - Recorramos el **proceso genérico**: establecer **requerimientos**, producir el **diseño**, realizar la **codificación**, ejecutar la **prueba**, completar la **instalación** y sostener el **mantenimiento**.
+  - Cada actividad tiene un propósito distinto, aunque en la práctica podamos volver atrás con nueva evidencia.
+- **Ejemplos:** **Global Exchange (conductor):** acordamos cómo se calcula una operación, modelamos la solución, codificamos, probamos fondos y pagos, instalamos y luego corregimos fallos. **Segundo contexto industrial:** en comercio electrónico, probar el checkout antes de instalarlo evita que una ambigüedad de requerimientos llegue a producción.
+- **Reflexión docente:**
+  - La secuencia ordena el trabajo, pero no elimina la incertidumbre; el riesgo crece cuando se confunde avanzar con comprender.
+- **Pregunta desafío:** ¿qué error aparece si se codifica antes de acordar el requerimiento?
+- **Respuestas posibles:**
+  1. Construir una solución técnicamente válida para una necesidad equivocada.
+  2. Aumentar cambios, discusiones y retrabajo cuando el requerimiento se aclare.
+  3. Dificultar la prueba porque no existe un criterio acordado contra el cual comparar.
+- **Advertencia:** la secuencia ayuda a organizar, pero el trabajo real puede requerir retrocesos.
 
 ### Slide 22. Características del Proceso
 
@@ -455,7 +688,19 @@ Presentar la secuencia de actividades desde especificación hasta mantenimiento.
 
 **Explicación docente**
 
-Usar las preguntas como lista de comprobación para analizar un proceso de software: comprensión, visibilidad, soporte, aceptación, confiabilidad, robustez, mantenibilidad y rapidez.
+- **Desarrollo:**
+  - Usemos estas preguntas como una lista de comprobación de **entendibilidad**, **visibilidad**, soporte, aceptación, **confiabilidad**, **robustez**, **mantenibilidad** y **rapidez**.
+  - Cada característica observa un aspecto diferente del proceso; juntas permiten detectar debilidades antes de atribuirlas solo al producto.
+- **Ejemplos:** **Global Exchange (conductor):** revisemos si el proceso hace visibles las decisiones sobre tasas, acepta a los roles involucrados, resiste fallos de pago y puede evolucionar con nuevas reglas. **Segundo contexto industrial:** en logística, un proceso puede ser rápido pero frágil si no hace visibles excepciones, dependencias o pruebas de entregas.
+- **Reflexión docente:**
+  - La rapidez es atractiva, pero un proceso que produce velozmente errores o retrabajo no es profesionalmente eficaz.
+- **Pregunta desafío:** ¿qué indicador revelaría primero un proceso frágil?
+- **Respuestas posibles:**
+  1. Requisitos que cambian sin trazabilidad ni aceptación clara.
+  2. Errores del proceso que se descubren recién durante la operación.
+  3. Bloqueos ante problemas inesperados o dependencia de una sola persona.
+  4. Entregas rápidas acompañadas de defectos y retrabajo frecuentes.
+- **Advertencia:** rapidez aislada no equivale a calidad.
 
 ### Slide 23. Problemas en el Proceso
 
@@ -475,7 +720,18 @@ Usar las preguntas como lista de comprobación para analizar un proceso de softw
 
 **Explicación docente**
 
-Presentar las dificultades que el material asocia normalmente con el proceso. Invitar a distinguir entre especificación, diseño y codificación y a considerar el impacto de probar tarde y de no poder reemplazar siempre el software durante el mantenimiento.
+- **Desarrollo:**
+  - Analicemos los problemas habituales: **especificaciones incompletas o anómalas**, poca distinción entre **especificación**, **diseño** y **codificación**, **prueba tardía** y dificultad para reemplazar software durante el **mantenimiento**.
+  - La palabra “normalmente” importa: el slide describe riesgos frecuentes, no resultados inevitables.
+- **Ejemplos:** **Global Exchange (conductor):** si no aclaramos una regla de conversión y recién probamos al final, podemos descubrir tarde que el sistema afecta saldos o auditoría. **Segundo contexto industrial:** en un sistema legado gubernamental, una pieza antigua puede no poder reemplazarse sin interrumpir servicios esenciales.
+- **Reflexión docente:**
+  - La prevención temprana no elimina todos los problemas, pero conserva más opciones y reduce el impacto de corregirlos.
+- **Pregunta desafío:** ¿qué revisión temprana habría reducido el impacto?
+- **Respuestas posibles:**
+  1. Revisar requisitos con usuarios y responsables del negocio.
+  2. Separar y revisar el modelo de diseño antes de codificar.
+  3. Probar riesgos e integraciones antes de completar todo el sistema.
+- **Advertencia:** estos son problemas habituales, no afirmaciones inevitables.
 
 ### Slide 24. Retos de los Ingenieros de Software
 
@@ -494,7 +750,19 @@ Presentar las dificultades que el material asocia normalmente con el proceso. In
 
 **Explicación docente**
 
-Cerrar el bloque conceptual identificando cuatro retos del trabajo profesional: sistemas legados, heterogeneidad, presión por la entrega y demanda de formalidad en el proceso.
+- **Desarrollo:**
+  - Cerremos con cuatro retos: mantener **sistemas legados**, enfrentar la **heterogeneidad**, entregar a tiempo y responder a la demanda de **formalidad** en el proceso.
+  - Estos retos combinan restricciones técnicas, organizacionales y profesionales; no se resuelven solo agregando código.
+- **Ejemplos:** **Global Exchange (conductor):** integrar tasas, pagos y auditoría puede mezclar plataformas y servicios heterogéneos mientras el negocio exige una entrega puntual. **Segundo contexto industrial:** un sistema de transporte legado puede tener que convivir con una aplicación móvil nueva sin detener la operación.
+- **Reflexión docente:**
+  - La presión por entregar puede empujar atajos, pero no elimina la responsabilidad de hacer visibles riesgos y límites.
+- **Pregunta desafío:** ¿qué riesgo investigarían primero?
+- **Respuestas posibles:**
+  1. Dependencias del sistema legado que podrían romperse con el cambio.
+  2. Incompatibilidades entre plataformas, datos o integraciones.
+  3. Un requisito crítico que no pueda validarse dentro del plazo.
+  4. La ausencia de evidencia y formalidad para justificar la entrega.
+- **Advertencia:** la presión por entregar no elimina la responsabilidad profesional.
 
 ### Slide 25. Cierre
 
@@ -510,7 +778,19 @@ Cerrar el bloque conceptual identificando cuatro retos del trabajo profesional: 
 
 **Explicación docente**
 
-Finalizar retomando la analogía visible: así como un arquitecto contribuye a que una casa no se venga abajo, el ingeniero de software contribuye a construir software eficiente, seguro y mantenible. Usarlo como síntesis de la importancia profesional presentada en la unidad.
+- **Desarrollo:**
+  - Cerremos retomando **eficiencia**, **seguridad**, **mantenibilidad** y **responsabilidad profesional**: la ingeniería busca que el software funcione hoy y siga siendo confiable mañana.
+  - La cita usa la arquitectura como analogía para recordar que las decisiones estructurales afectan estabilidad, cambios y formas de uso.
+- **Ejemplos:** **Global Exchange (conductor):** las personas querrán seguir usando el sistema si las operaciones son claras, seguras, eficientes y sostenibles ante cambios de tasas o integraciones. **Segundo contexto industrial:** en una plataforma educativa, mantener confianza requiere cuidar disponibilidad, datos y facilidad de evolución.
+- **Reflexión docente:**
+  - La calidad profesional se mide también por el impacto en quienes dependen del sistema, no solo por si el código compila o la entrega llega a tiempo.
+- **Pregunta desafío:** ¿qué decisión de ingeniería hace que las personas quieran seguir usando el sistema?
+- **Respuestas posibles:**
+  1. Diseñar una experiencia comprensible y adecuada al contexto de uso.
+  2. Proteger datos y operaciones mediante controles proporcionales al riesgo.
+  3. Invertir en mantenibilidad para corregir y evolucionar sin degradar el servicio.
+  4. Validar con evidencia que el sistema cumple lo que las personas necesitan.
+- **Advertencia:** la analogía orienta la comprensión, pero no equipara literalmente ambas profesiones.
 
 ## Checklist de regeneración
 
