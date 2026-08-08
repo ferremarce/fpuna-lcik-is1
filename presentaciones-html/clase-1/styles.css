@@ -92,6 +92,7 @@ body { min-height: 100vh; background: var(--bg); }
   font-size: .8rem;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
   transition: all .2s;
 }
 
@@ -802,7 +803,7 @@ h3 {
   }
 }
 
-@page { size: A4 landscape; margin: 0; }
+@page { size: 297mm 167mm; margin: 0; }
 
 @media print {
   html, body { min-height: 0; background: var(--bg); }
@@ -810,10 +811,12 @@ h3 {
   main { min-height: 0; padding: 0; }
   #stage { min-height: 0; }
   .slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
-    height: 210mm;
-    min-height: 210mm;
-    max-height: 210mm;
+    height: 167mm;
+    min-height: 167mm;
+    max-height: 167mm;
     overflow: hidden;
     page-break-after: always;
     break-after: page;
@@ -827,4 +830,14 @@ h3 {
   }
   .slide::before { left: 0; }
   .visual { box-shadow: none; }
+  .slide { padding: 0.6rem 2.5rem; gap: 1.25rem; }
+  .slide h1 { margin: 0.1rem 0 0.3rem; }
+  .slide .content p, .slide .content ul { margin: 0.25rem 0; }
+  .slide .content li { margin: 0.15rem 0; }
+  .slide .content .cards { gap: 0.45rem; margin-top: 0.3rem; }
+  .slide .content .card { padding: 0.35rem 0.6rem; }
+  .slide .content .card h3 { margin-bottom: 0.1rem; font-size: 0.95rem; }
+  .slide .content .card p, .slide .content .card li { font-size: 0.85rem; }
+  .slide .content .quote { padding: 0.6rem 0.9rem; }
+  .slide .content .table-like, .slide .content .row { margin: 0.15rem 0; }
 }

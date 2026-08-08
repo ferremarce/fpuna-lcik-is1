@@ -171,7 +171,7 @@ Esta guía conserva el orden completo de `sesiones-clase/clase-2/IS1-UNIDAD_II.p
 
 ### Slide 10 — Modelo en Cascada: en la práctica
 - **Texto visible:** “En la práctica…” y las etapas: análisis de requerimientos, diseño del sistema, diseño de programas, codificación, testing unitario e integrado, testing del sistema, testing de aceptación, operación y mantención.
-- **Visual:** El flujo lineal retorna visualmente hacia etapas anteriores para representar la práctica.
+- **Visual:** Malla de las 8 etapas interconectadas: todas se conectan entre sí para representar la práctica.
 - **Explicación docente:**
   - **Desarrollo:**
     - Acá contrastamos el modelo ideal con la **práctica**: en un proyecto real aparecen retornos, ajustes y **feedback**.
@@ -208,7 +208,7 @@ Esta guía conserva el orden completo de `sesiones-clase/clase-2/IS1-UNIDAD_II.p
 
 ### Slide 12 — Modelo de Prototipación: flujo
 - **Texto visible:** Requerimientos del prototipo; diseño del prototipo; sistema prototipo; testing; revisión (repetida); requerimientos del sistema; sistema entregado.
-- **Visual:** Ciclo de prototipo y revisión que desemboca en el sistema entregado.
+- **Visual:** Diagrama de flujo del ciclo de prototipo y revisión: bloques principales horizontales (requerimientos → diseño → sistema prototipo → testing → sistema entregado), bloques de revisión superiores interconectados con flechas bidireccionales.
 - **Explicación docente:**
   - **Desarrollo:**
     - Sigan el flujo: definimos **requerimientos**, diseñamos el prototipo, lo probamos y repetimos la **revisión** hasta aclarar qué necesita el sistema entregado.
@@ -261,7 +261,7 @@ Esta guía conserva el orden completo de `sesiones-clase/clase-2/IS1-UNIDAD_II.p
 
 ### Slide 15 — Modelo en Espiral
 - **Texto visible:** Combina actividades de desarrollo con análisis de riesgo. Es iterativo: planificación, análisis de riesgo, ingeniería, evaluación. En cada iteración se evalúan alternativas y se elige una; los gestores intentan eliminar o minimizar el riesgo.
-- **Visual:** Espiral/ciclo de cuatro estaciones.
+- **Visual:** Diagrama del Modelo Espiral de Boehm (1986): espiral en sentido horario dividida en cuatro cuadrantes — Planificación (sup. izq.), Análisis de Riesgo (sup. der.), Ingeniería (inf. der.), Evaluación del Cliente (inf. izq.) — con línea punteada de salida hacia el Sistema final.
 - **Explicación docente:**
   - **Desarrollo:**
     - En el modelo en **Espiral**, cada vuelta combina **planificación**, análisis de **riesgo**, **ingeniería** y evaluación.
@@ -314,7 +314,7 @@ Esta guía conserva el orden completo de `sesiones-clase/clase-2/IS1-UNIDAD_II.p
 
 ### Slide 18 — RUP: esquema visual
 - **Texto visible:** `RUP – Rational Unified Process`.
-- **Visual:** Recreación SVG de un ciclo de fases RUP; la imagen original está referenciada por `slide18.xml.rels` como `image5.png`.
+- **Visual:** Imagen del diagrama de fases del RUP (`assets/rup.gif`), ciclo con iteraciones y las fases de concepción, elaboración, construcción y transición.
 - **Explicación docente:**
   - **Desarrollo:**
     - Fíjense en el ciclo visual de **RUP**: las fases se atraviesan con **iteraciones** y con distinta **intensidad**.

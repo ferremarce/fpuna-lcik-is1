@@ -27,11 +27,26 @@ This repository contains teaching materials for **Ingeniería de Software I (IS1
 - **Header:** Sticky topbar with institutional blue background, logo, course title, and career name
 - **Visual components:** Cards, quotes, tables, process steps, sequence cards, and charts all use institutional blue accents with hover effects
 
+## Canonical deck pattern (clase-1 is the reference)
+
+`presentaciones-html/clase-1/` is the canonical pattern for every new or restyled deck. New classes must replicate it rather than inventing a different system:
+
+- **`styles.css`:** Copy from clase-1 as the base; CSS variables are defined in `:root` (`--fpuna-blue`, `--ink`, `--line`, `--bg-soft`, etc.). Keep the institutional classes listed under "Visual components" below.
+- **Slide data in `app.js`:** Each slide is an object with exactly these fields:
+  - `title` — the slide heading (`<h1>`)
+  - `eyebrow` — the `NN · Label` kicker rendered above the title (e.g., `'15 · Tradicional'`)
+  - `body` — left-column content as an HTML string (`<p>`, `<ul>`, `<div class="card">`, `<p class="lede">`, `<p class="reference">`)
+  - `visual` — right-column visual as an HTML string (`.visual-title` header plus one or more institutional components, e.g. `<div class="quote">`, `.cards/.card`, `.table-like/.row`, `.process`, `.sequence-card`, `.chart`, or `<img class="figure-img">`)
+  - `note` — complete speaker notes (see "Speaker notes format" below)
+- **Images:** Local images go in the class `assets/` folder and are referenced with a relative path (`assets/...`). Deck figures use `<img class="figure-img">`; the class provides styling for `.figure-img` (max-width 100%, auto height, border, radius, shadow).
+- **Inline styles are an exception:** Slides may use minimal inline styles only for layout details the shared CSS does not cover (e.g., the round teacher photo in slide 2). Prefer the institutional classes otherwise.
+- When restyling an existing deck, keep the slide title/eyebrow order and count from its `guia-slides.md`, keep the `note` content, and migrate `body`/`visual` markup to the institutional classes rather than changing content.
+
 ## Presentation structure
 
 - Each class directory is self-contained: `index.html`, `app.js`, `styles.css`, `guia-slides.md`, and `assets/` folder.
 - `app.js` owns slide data, visual markup, notes, navigation, keyboard shortcuts, hash navigation, index, progress, and fullscreen behavior.
-- The class 2 deck supports printing all slides with `?print=all`; its PDF export is A4 landscape and must contain 48 pages. Print CSS uses fixed page height and explicit page breaks—check slides 15–17 when changing print styles.
+- The class 2 deck supports printing all slides with `?print=all`; its PDF export is 16:9 (297mm × 167mm landscape) and must contain 48 pages. Print CSS uses fixed page height and explicit page breaks—check slides 15–17 when changing print styles.
 - Do not expose the aula virtual password from the original class 1 material in Markdown, HTML, JavaScript, CSS, PDFs, screenshots, or commits.
 
 ## Slide content rules
@@ -71,6 +86,7 @@ All visual components use consistent institutional styling:
 - **`.process`:** Numbered steps with circular blue badges, vertical connectors, hover effects
 - **`.sequence-card` / `.sequence-step`:** Numbered sequence with circular badges, connectors, single-line titles and descriptions
 - **`.chart`:** SVG charts with blue axes and curves
+- **`.figure-img`:** Deck figure images (max-width 100%, auto height, border, radius, shadow)
 
 ## Focused verification
 
