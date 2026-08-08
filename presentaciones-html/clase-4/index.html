@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Clase 4: Casos de Uso y Especificación de Casos de Uso">
+  <title>Ingeniería del Software I | Clase 4</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <header class="topbar">
+    <a class="brand" href="#slide-1" aria-label="Ir al inicio">
+      <img class="brand-logo" src="assets/fpuna_logo_institucional.svg" alt="Logo FP-UNA">
+      <div class="brand-text">
+        <span class="brand-title">Ingeniería del Software I</span>
+        <span class="brand-subtitle">FP-UNA / Licenciatura en Ciencias Informáticas (LCiK)</span>
+      </div>
+    </a>
+    <div class="top-actions">
+      <a class="quiet-button" href="../index.html">Índice General</a>
+      <button id="index-toggle" class="quiet-button" type="button" aria-expanded="false" aria-controls="index-panel">Índice</button>
+      <button id="notes-toggle" class="quiet-button" type="button" aria-expanded="false" aria-controls="notes-panel">Notas docentes</button>
+      <button id="fullscreen" class="quiet-button" type="button" aria-label="Activar pantalla completa">Pantalla completa</button>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section id="stage" aria-live="polite" aria-atomic="true"></section>
+  </main>
+
+  <aside id="index-panel" class="side-panel" aria-hidden="true" aria-label="Índice de diapositivas">
+    <div class="panel-heading"><h2>Índice</h2><button class="close-panel" data-close="index-panel" aria-label="Cerrar índice">×</button></div>
+    <nav id="slide-index"></nav>
+  </aside>
+  <aside id="notes-panel" class="side-panel notes-panel" aria-hidden="true" aria-label="Notas docentes">
+    <div class="panel-heading"><h2>Notas docentes</h2><button class="close-panel" data-close="notes-panel" aria-label="Cerrar notas docentes">×</button></div>
+    <p class="notes-help">Estas notas no forman parte de la exposición. Sirven para orientar la explicación y las conexiones entre slides.</p>
+    <div id="speaker-notes"></div>
+  </aside>
+
+  <footer class="controls" aria-label="Controles de presentación">
+    <button id="previous" type="button" aria-label="Diapositiva anterior">← <span>Anterior</span></button>
+    <div class="progress-wrap"><div id="progress" class="progress" role="progressbar" aria-label="Progreso de la presentación" aria-valuemin="1" aria-valuemax="22" aria-valuenow="1"></div></div>
+    <span id="counter" class="counter">01 / 22</span>
+    <button id="next" type="button" aria-label="Diapositiva siguiente"><span>Siguiente</span> →</button>
+  </footer>
+</body>
+</html>
