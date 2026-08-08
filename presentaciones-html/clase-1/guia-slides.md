@@ -26,11 +26,11 @@ Cada slide se describe en tres capas para facilitar la revisión:
 
 - `INGENIERÍA DE SOFTWARE I`
 - `Presentación de la Materia`
-- `Prof. Ing. Julia Talavera`
+- `Prof. Lic. Guillermo Jacobo González Rodas Mst. PMP`
 
 **Elementos visuales**
 
-- Slide de apertura con un título principal en dos líneas, subtítulo y nombre de la docente.
+- Slide de apertura con un título principal en dos líneas, subtítulo y nombre del docente.
 - No contiene imágenes ni notas del orador.
 
 **Explicación docente**
@@ -53,20 +53,23 @@ Cada slide se describe en tres capas para facilitar la revisión:
 **Texto visible**
 
 - `Sobre el Docente`
-- `Ing. Julia Talavera: Ingeniera en Informática, egresada de la FP-UNA. Actualmente cursando la Maestría en TICs con énfasis en Ingeniería de Software. Se desempeña como docente de la carrera de Ingeniería en Informática de la FP-UNA. Ocupa el cargo de Analista Funcional y Project Manager en una consultora de software, con participación en proyectos locales e internacionales.`
-- `E-mail: julia.talavera@pol.una.py`
+- `Prof. Lic. Guillermo Jacobo González Rodas Mst. PMP`
+- `Paraguayo, Profesional, egresado de la carrera de Licenciatura en Análisis de Sistemas Informáticos de la Facultad Politécnica de la Universidad Nacional de Asunción. Ha realizado un Máster en Ingeniería del Software por la Universidad Politécnica de Catalunya, Barcelona - España. Tiene la certificación de PMP (Project Management Professional) del PMI (Project Management Institute).`
+- `Es Consultor de TICs, especializado en Gestión de Proyectos e Implementación de sistemas de información empresariales (ERP). Es docente universitario en el Departamento de Informática, en el Departamento de Gestión y Director de la Unidad de Gestión de Proyectos de Investigación de la Facultad Politécnica de la Universidad Nacional de Asunción.`
+- `E-mail: ggonzalez@pol.una.py`
 
 **Elementos visuales**
 
 - Título y un cuadro de texto con la presentación profesional.
-- No contiene imágenes ni notas del orador.
+- Fotografía del docente.
+- No contiene notas del orador.
 
 **Explicación docente**
 
 - **Desarrollo:**
-  - Fíjense en cómo la **trayectoria** combina Ingeniería de Software, **análisis funcional** y **gestión de proyectos**; son perspectivas distintas sobre un mismo trabajo.
+  - Fíjense en cómo la **trayectoria** combina Ingeniería de Software, **gestión de proyectos** y **consultoría TICs**; son perspectivas distintas sobre un mismo trabajo.
   - El objetivo es entender el contexto docente y reconocer que un proyecto necesita responsabilidades complementarias.
-- **Ejemplos:** **Global Exchange (conductor):** para construir el sistema de cambio de divisas, el análisis funcional puede aclarar reglas de tasas y fondos, mientras la gestión coordina alcance, plazos y riesgos. **Segundo contexto industrial:** en una plataforma educativa, una persona puede relevar necesidades de docentes y estudiantes, y otra organizar la entrega con el equipo.
+- **Ejemplos:** **Global Exchange (conductor):** para construir el sistema de cambio de divisas, la gestión de proyectos puede coordinar alcance, plazos y riesgos, mientras la consultoría aporta experiencia en implementación de sistemas empresariales. **Segundo contexto industrial:** en una plataforma educativa, una persona puede relevar necesidades de docentes y estudiantes, y otra organizar la entrega con el equipo.
 - **Reflexión docente:**
   - La colaboración entre roles reduce puntos ciegos, aunque también exige acordar vocabulario y responsabilidades.
 - **Pregunta desafío:** ¿qué decisiones tomaría un analista funcional que no tomaría un programador?
@@ -296,7 +299,7 @@ Cada slide se describe en tres capas para facilitar la revisión:
 
 - `INGENIERÍA DE SOFTWARE I`
 - `UNIDAD I – INTRODUCCIÓN A LA INGENIERÍA DE SOFTWARE`
-- `Prof. Ing. Julia Talavera`
+- `Prof. Lic. Guillermo Jacobo González Rodas Mst. PMP`
 
 **Elementos visuales**
 

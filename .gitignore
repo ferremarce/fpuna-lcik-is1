@@ -1,0 +1,15 @@
+# Binarios de referencia (fuentes PPTX/PDF)
+*.pptx
+*.pdf
+*.odt
+
+# Lockfiles de LibreOffice
+.lock
+
+# Skill registry cache
+.atl/
+
+# Archivos de planificación binarios
+planificacion-clase/*.pdf
+planificacion-clase/*.png
+planificacion-clase/*.svg
