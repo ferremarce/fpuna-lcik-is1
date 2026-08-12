@@ -47,7 +47,9 @@ This repository contains teaching materials for **Ingeniería de Software I (IS1
 
 - Each class directory is self-contained: `index.html`, `app.js`, `styles.css`, `guia-slides-clase-X.md`, and `assets/` folder.
 - `app.js` owns slide data, markup, notes, navigation, keyboard shortcuts, hash navigation, index, progress, and fullscreen behavior.
+- **Catalog rule:** Every time a presentation, PDF, PPTX, or slide guide is generated or modified for a class, update `presentaciones-html/index.html` so that class card links to all artifacts that exist: `Ver presentación`, `PDF · NN páginas`, `PPTX` (only if the file exists), and `Guía de slides`. Keep `class-meta` accurate (slide count, "guía docente incluida" once the guide exists, PDF page count).
 - The class 2 deck supports printing all slides with `?print=all`; its PDF export is 16:9 (297mm × 167mm landscape) and must contain 47 pages. Print CSS uses fixed page height and explicit page breaks—check slides 15–17 when changing print styles.
+- **PDF generation:** Use Google Chrome headless (`--headless=new --print-to-pdf --no-pdf-header-footer`) over a temp HTML that loads the class `styles.css` + `app.js`, executes `renderAllForPrint()`, and includes `<base href="file://.../clase-N/">` so relative `assets/...` (logo, figures) resolve. Do **not** use WeasyPrint: it rejects `clamp()` in `font-size` (title shrinks below eyebrow) and does not respect `transform: scale()` / `overflow: hidden` for pagination (slides fragment into extra pages). Full recipe in `docs/patron-presentaciones.md` §5.
 - Do not expose the aula virtual password from the original class 1 material in Markdown, HTML, JavaScript, CSS, PDFs, screenshots, or commits.
 
 ## Slide content rules
@@ -117,7 +119,7 @@ pdfinfo presentaciones-html/clase-2/clase-2.pdf | grep '^Pages:'
 pdftotext -f 15 -l 17 -layout presentaciones-html/clase-2/clase-2.pdf -
 ```
 
-The PDF must report 48 pages, and pages 15–17 must contain visible text and diagrams for Espiral, Boehm, and RUP. Preserve normal HTML navigation and the `01 / 48` counter after print changes.
+The PDF must report 47 pages, and pages 15–17 must contain visible text and diagrams for Espiral, Boehm, and RUP. Preserve normal HTML navigation and the `01 / 47` counter after print changes.
 
 ## Change boundaries
 

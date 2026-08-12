@@ -70,7 +70,6 @@ Cada presentación HTML debe incluir:
 
 **Texto visible**
 
-- `INGENIERÍA DE SOFTWARE I`
 - `UNIDAD II – MODELOS DE DESARROLLO DE SOFTWARE Y DESARROLLO RÁPIDO DEL SOFTWARE`
 - `Prof. Ing. Julia Talavera`
 
@@ -1284,7 +1283,7 @@ Cada presentación HTML debe incluir:
 
 **Texto visible**
 
-- `Muchas gracias`
+- `PREGUNTAS`
 
 **Elementos visuales**
 

@@ -25,7 +25,6 @@ Cada slide se describe en tres capas para facilitar la revisión:
 **Texto visible**
 
 - `INGENIERÍA DE SOFTWARE I`
-- `Presentación de la Materia`
 - `Prof. Lic. Guillermo Jacobo González Rodas Mst. PMP`
 
 **Elementos visuales**
@@ -298,7 +297,6 @@ Cada slide se describe en tres capas para facilitar la revisión:
 **Texto visible**
 
 - `INGENIERÍA DE SOFTWARE I`
-- `UNIDAD I – INTRODUCCIÓN A LA INGENIERÍA DE SOFTWARE`
 - `Prof. Lic. Guillermo Jacobo González Rodas Mst. PMP`
 
 **Elementos visuales**

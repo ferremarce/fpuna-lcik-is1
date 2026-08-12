@@ -462,48 +462,98 @@ if (printAll) renderAllForPrint(); else render();
 
 ## 5. Exportación a PDF
 
-### 5.1 Comando Chrome headless
+> **Usar Chrome headless, NO WeasyPrint.** WeasyPrint 69 rechaza `clamp()` en `font-size` (warning "Invalid math function") y descarta la declaración → el título (h1 con `clamp()`) queda pequeño frente al eyebrow. Además WeasyPrint no respeta `transform: scale()` ni `overflow: hidden` para paginar: los slides que exceden 167mm se fragmentan en páginas extra (60+ en vez de 25/47). Chrome respeta `clamp()`, `transform: scale()` y `overflow: hidden`.
 
-Para decks con print CSS completo (clase-1):
+### 5.1 Pipeline de impresión
+
+El PDF se genera desde un HTML de impresión temporal que carga `styles.css` + `app.js` de la clase y ejecuta `renderAllForPrint()`. El HTML DEBE incluir un `<base href>` que apunte a la carpeta de la clase para que las rutas relativas `assets/...` (logo y figuras) se resuelvan; sin esto el PDF sale sin imágenes.
+
+```html
+<!-- /tmp/opencode/clase-N-print.html -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Clase N - Print</title>
+<base href="file:///RUTA/ABS/AL/presentaciones-html/clase-N/">
+<link rel="stylesheet" href="styles.css">
+<style>.print-header-title, .print-header-subtitle { white-space: nowrap; }</style>
+</head>
+<body>
+<main id="stage"></main>
+<script src="app.js"></script>
+<script>renderAllForPrint();</script>
+</body>
+</html>
+```
 
 ```bash
-google-chrome --headless --disable-gpu --no-sandbox \
-  --window-size=1123,631 \
-  --virtual-time-budget=5000 \
+google-chrome --headless=new --disable-gpu --no-sandbox \
   --print-to-pdf=presentaciones-html/clase-N/clase-N.pdf \
-  "file:///$(pwd)/presentaciones-html/clase-N/index.html?print=all"
+  --no-pdf-header-footer \
+  --virtual-time-budget=8000 \
+  "file:///tmp/opencode/clase-N-print.html"
 ```
 
 **Parámetros:**
-- `--window-size=1123,631`: 297mm × 167mm a 96dpi (formato landscape 16:9)
-- `--virtual-time-budget=5000`: tiempo para que renderice el JS
-- `--print-to-pdf`: genera el PDF directamente
-- `?print=all`: activa `renderAllForPrint()`
+- `--no-pdf-header-footer`: evita que Chrome agregue su propio header/footer (el paginador `NN / NN` viene del `.print-header` del HTML)
+- `--virtual-time-budget=8000`: tiempo para que renderice el JS y aplique `fitSlidesForPrint()`
+- `<base href>`: OBLIGATORIO; resuelve los `assets/...` relativos contra la carpeta de la clase
+- `renderAllForPrint()`: genera los `.print-slide` con `.print-header` + `slideMarkup` por slide
 
-### 5.2 Verificación
+### 5.2 Proporciones eyebrow/título en print
+
+El h1 del título usa `font-size: clamp(1.6rem, 3.2vw, 2.8rem)`. En `@media print` fijar valores concretos para mantener las proporciones del HTML (eyebrow ~2.7x más chico que el título). El eyebrow es un `<span>` inline → forzar `display: block` para que el `margin-bottom` aplique:
+
+```css
+@media print {
+  .print-slide .slide-header .eyebrow {
+    display: block;
+    margin: 0 0 1rem;
+    font: 600 .8rem var(--display);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .print-slide .slide-header h1 {
+    font-size: 2.2rem;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    margin-bottom: .8rem;
+  }
+}
+```
+
+### 5.3 Verificación
 
 ```bash
-# Verificar cantidad de páginas
+# Verificar cantidad de páginas (una por slide)
 pdfinfo presentaciones-html/clase-N/clase-N.pdf | grep '^Pages:'
 
 # Verificar texto en páginas específicas (ej: 15-17)
 pdftotext -f 15 -l 17 -layout presentaciones-html/clase-N/clase-N.pdf -
+
+# Verificar que el logo y las figuras quedaron embebidos
+pdfimages -list presentaciones-html/clase-N/clase-N.pdf | wc -l
 ```
 
-### 5.3 Por qué funciona el layout
+### 5.4 Por qué funciona el layout
 
 1. `@page { size: 297mm 167mm; margin: 0; }` fija el tamaño de hoja
 2. Cada `.print-slide` tiene `height: 167mm` y `page-break-after: always`
-3. `fitSlidesForPrint()` escala slides que desbordan
+3. `fitSlidesForPrint()` aplica `transform: scale()` inline a los slides que desbordan (Chrome lo respeta; WeasyPrint no)
 4. El header institucional (`.print-header`) se agrega en cada página
 5. Chrome headless renderiza con CSS de impresión activo
 
-### 5.4 Troubleshooting
+### 5.5 Troubleshooting
 
-- **PDF con 1 página**: falta `?print=all` en la URL
-- **Slides vacías**: virtual-time-budget muy bajo, subir a 10000
+- **PDF con 1 página**: falta `renderAllForPrint()` o el `?print=all`
+- **Slides vacías**: `--virtual-time-budget` muy bajo, subir a 10000
 - **Texto cortado**: ajustar `fitSlidesForPrint()` o reducir contenido
 - **Sin headers**: verificar que `.print-header` esté en el HTML generado
+- **Sin imágenes ni logo**: falta el `<base href>` en el HTML de impresión
+- **Título más chico que el eyebrow**: se regeneró con WeasyPrint (no soporta `clamp()` en font-size); usar Chrome
+- **Más páginas que slides**: se regeneró con WeasyPrint (no respeta `transform: scale()` ni `overflow: hidden`); usar Chrome
+- **Paginador duplicado**: falta `--no-pdf-header-footer`
 
 ---
 
@@ -774,11 +824,13 @@ Después de generar el PDF, actualizar `presentaciones-html/index.html` (ver sec
 
 ## 9. Actualizar el catálogo general (`presentaciones-html/index.html`)
 
-**Cada vez que se crea una clase nueva o se modifica una existente**, actualizar el archivo `presentaciones-html/index.html`. Este archivo es el índice de navegación del curso: lista todas las clases con sus enlaces a presentación, PDF y guía.
+**Cada vez que se genera o modifica una presentación, un PDF, un PPTX o una guía** de una clase, actualizar el archivo `presentaciones-html/index.html`. Este archivo es el índice de navegación del curso: lista todas las clases con sus enlaces a presentación, PDF, PPTX y guía.
+
+**Regla clave:** si la clase tiene el artefacto, el índice debe tener su enlace. Los cuatro enlaces (`Ver presentación`, `PDF`, `PPTX`, `Guía de slides`) se incluyen siempre que el archivo correspondiente exista en `presentaciones-html/clase-N/`. Si un artefacto no existe aún (p. ej. no se generó el PPTX), el enlace se omite hasta que exista.
 
 ### 9.1 Estructura del catálogo
 
-El archivo es HTML autocontenido (242 líneas, sin dependencias externas). Cada clase se representa como un bloque `<article class="class-card">`:
+El archivo es HTML autocontenido, sin dependencias externas. Cada clase se representa como un bloque `<article class="class-card">`:
 
 ```html
 <article class="class-card" id="clase-N">
@@ -791,6 +843,7 @@ El archivo es HTML autocontenido (242 líneas, sin dependencias externas). Cada 
   <div class="class-actions">
     <a class="chip" href="clase-N/index.html">Ver presentación</a>
     <a class="chip" href="clase-N/clase-N.pdf">PDF · NN páginas</a>
+    <a class="chip" href="clase-N/clase-N.pptx">PPTX</a>
     <a class="chip" href="clase-N/guia-slides-clase-X.md">Guía de slides</a>
   </div>
 </article>
@@ -808,6 +861,7 @@ El archivo es HTML autocontenido (242 líneas, sin dependencias externas). Cada 
 | `class-desc` | Resumen del contenido (2-3 oraciones) | Qué temas cubre la clase |
 | Enlace presentación | Ruta relativa al `index.html` de la clase | `clase-5/index.html` |
 | Enlace PDF | Ruta relativa al PDF generado | `clase-5/clase-5.pdf` |
+| Enlace PPTX | Ruta relativa al PPTX generado (solo si existe) | `clase-5/clase-5.pptx` |
 | Enlace guía | Ruta relativa a la guía de slides | `clase-5/guia-slides-clase-X.md` |
 
 ### 9.3 También actualizar
@@ -815,11 +869,13 @@ El archivo es HTML autocontenido (242 líneas, sin dependencias externas). Cada 
 - **Nav links** en el topbar: agregar `<a href="#clase-N">Clase N</a>` en la sección `<nav class="nav-links">`.
 - **Nota inferior** (`guide-note`): si se agrega una clase, verificar que la nota sigue siendo correcta.
 - **Título de la página**: si hay más de 4 clases, considerar actualizar el `<title>`.
+- **`class-meta`**: actualizar a "guía docente incluida" cuando la guía se genere (no "pendiente").
 
 ### 9.4 Flujo completo al crear una clase nueva
 
 1. Crear `presentaciones-html/clase-N/` con `index.html`, `styles.css`, `app.js`, `assets/`, `guia-slides-clase-X.md`
 2. Generar el PDF con Chrome headless
-3. Verificar con `node --check` y `pdfinfo`
-4. **Actualizar `presentaciones-html/index.html`** con el nuevo bloque de clase
-5. Hacer `git diff` para revisar los cambios
+3. Generar el PPTX si corresponde
+4. Verificar con `node --check` y `pdfinfo`
+5. **Actualizar `presentaciones-html/index.html`** con el nuevo bloque de clase (4 enlaces: presentación, PDF, PPTX si existe, guía)
+6. Hacer `git diff` para revisar los cambios

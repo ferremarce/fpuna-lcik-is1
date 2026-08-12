@@ -336,9 +336,12 @@ Usar **solo** las referencias del material del curso:
 - **Nunca** agregar campos a los slides que la función `slideMarkup` no renderice
 
 ### 6.5 Impresión
-- **Nunca** generar un PDF sin `?print=all`
+- **Usar Chrome headless para el PDF, nunca WeasyPrint**: WeasyPrint no soporta `clamp()` en `font-size` (el título queda más chico que el eyebrow) y no respeta `transform: scale()`/`overflow: hidden` (los slides que exceden 167mm se fragmentan en páginas extra)
+- **El HTML de impresión DEBE incluir** `<base href="file:///.../clase-N/">` para que los `assets/...` (logo y figuras) se resuelvan; sin esto el PDF sale sin imágenes
+- **Nunca** generar un PDF sin `?print=all` (o sin ejecutar `renderAllForPrint()`)
 - **Nunca** cambiar `@page { size: 297mm 167mm }` (es el formato 16:9 landscape)
-- **Nunca** olvidar verificar la cantidad de páginas con `pdfinfo` después de cambios al print CSS
+- **Siempre** verificar la cantidad de páginas con `pdfinfo` (una por slide) y que `pdfimages -list` muestre logo + figuras
+- **Receta completa**: `docs/patron-presentaciones.md` sección 5
 
 ---
 

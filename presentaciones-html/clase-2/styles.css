@@ -340,6 +340,15 @@ h3 {
   font-style: normal;
 }
 
+/* Referencias bibliográficas de pie: una línea, ancho completo de la página */
+.slide > .content > .reference {
+  width: 100%;
+  margin: 1.5rem 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .chart {
   width: 100%;
   min-height: 260px;
@@ -405,6 +414,67 @@ h3 {
   color: var(--fpuna-blue);
   font: 700 1rem var(--display);
   text-align: right;
+}
+
+/* Comparación ágiles vs. tradicionales */
+.compare {
+  display: grid;
+  gap: .5rem;
+  margin-top: 1rem;
+}
+.compare-head,
+.compare-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5rem;
+}
+.compare-col {
+  padding: .6rem .9rem;
+  border-radius: .35rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+.compare-col h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+.compare-col p {
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.compare-agile {
+  border-left: 4px solid var(--fpuna-blue);
+}
+.compare-agile h3 {
+  color: var(--fpuna-blue);
+}
+.compare-trad {
+  border-left: 4px solid var(--muted);
+  background: var(--bg-soft);
+}
+.compare-trad h3 {
+  color: var(--muted);
+}
+.compare-head .compare-col {
+  background: var(--fpuna-blue);
+  border: none;
+  border-left: 4px solid var(--fpuna-blue-dark);
+}
+.compare-head .compare-trad {
+  background: var(--muted);
+  border-left: 4px solid #3d454d;
+}
+.compare-head .compare-col h3 {
+  color: #fff;
+}
+.compare-row:hover .compare-col {
+  border-color: var(--fpuna-blue);
+  box-shadow: 0 2px 8px rgba(44, 74, 138, 0.08);
 }
 
 .process {
@@ -793,4 +863,18 @@ h3 {
     animation: none;
   }
   .print-slide .slide::before { left: 0; }
+
+  .print-slide .slide-header .eyebrow {
+    display: block;
+    margin: 0 0 1rem;
+    font: 600 .8rem var(--display);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .print-slide .slide-header h1 {
+    font-size: 2.2rem;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    margin-bottom: .8rem;
+  }
 }
