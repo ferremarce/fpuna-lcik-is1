@@ -45,8 +45,8 @@ Cada presentación HTML debe incluir:
 
 **Texto visible**
 
-- `INGENIERÍA DE SOFTWARE I`
-- `UNIDAD IV – Casos de Uso y Especificación de Casos de Uso`
+- `Ingeniería de Software I`
+- `UNIDAD IV – CASOS DE USO Y ESPECIFICACIÓN DE CASOS DE USO`
 - `Prof. Ing. Julia Talavera`
 
 **Elementos visuales**

@@ -45,7 +45,8 @@ Cada presentación HTML debe incluir:
 
 **Texto visible**
 
-- `INGENIERÍA DE SOFTWARE I`
+- `Ingeniería de Software I`
+- `UNIDAD III – REQUERIMIENTOS DE SOFTWARE`
 - `Prof. Ing. Julia Talavera`
 
 **Elementos visuales**

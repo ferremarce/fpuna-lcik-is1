@@ -189,8 +189,18 @@ h3 {
 .lede {
   max-width: 700px;
   color: var(--ink-soft);
+  font-family: var(--display);
+  font-weight: 700;
+  color: var(--fpuna-blue);
   font-size: clamp(1.1rem, 1.5vw, 1.3rem);
   line-height: 1.5;
+}
+
+.slide-1 .card--hero .lede {
+  max-width: none;
+  font-size: clamp(1.6rem, 3.2vw, 2.8rem);
+  line-height: 1.1;
+  letter-spacing: -.02em;
 }
 
 .content {
@@ -876,5 +886,12 @@ h3 {
     line-height: 1.15;
     letter-spacing: -.02em;
     margin-bottom: .8rem;
+  }
+
+  .print-slide .slide-1 .card--hero .lede {
+    font-size: 2.2rem;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    max-width: none;
   }
 }

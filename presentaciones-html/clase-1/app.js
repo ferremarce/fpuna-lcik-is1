@@ -1,8 +1,8 @@
 const slides = [
   {
-    "title": "Presentación de la Materia",
+    "title": "Ingeniería de Software I",
     "eyebrow": "01 · Apertura",
-    "body": "<div class=\"card card--hero\">\n  <p class=\"lede\">INGENIERÍA DE SOFTWARE I</p>\n  <p>Prof. Lic. Guillermo Jacobo González Rodas Mst. PMP</p>\n</div>",
+    "body": "<div class=\"card card--hero\">\n  <p class=\"lede\">PRESENTACIÓN DE LA MATERIA</p>\n  <p>Prof. Lic. Guillermo Jacobo González Rodas Mst. PMP</p>\n</div>",
     "note": "<strong>Desarrollo:</strong> Presentar Ingeniería de Software I como una asignatura que estudia cómo producir y sostener software, no solamente cómo programarlo. Usar esta apertura para ubicar la unidad y el contexto de trabajo del curso.<br><br><strong>Ejemplos:</strong> Global Exchange (conductor): tomemos el curso como el mapa para construir un sistema de cambio de divisas, desde entender el problema hasta mantenerlo. Segundo contexto industrial: en un sistema de turnos hospitalarios, también necesitaremos organizar decisiones, roles y controles antes de escribir código.<br><br><strong>Reflexión docente:</strong> La profesión exige ampliar la mirada: una solución técnicamente interesante puede fallar si no responde al contexto de uso.<br><br><strong>Pregunta desafío:</strong> ¿qué diferencia esperan encontrar entre programar y ejercer Ingeniería de Software?<br><br><strong>Respuestas posibles:</strong> 1. Programar implementa una solución; la Ingeniería de Software organiza todo su ciclo de vida. 2. La Ingeniería de Software incorpora requisitos, calidad, coordinación, riesgos y mantenimiento. 3. Una persona puede programar correctamente y aun así no resolver el problema completo del sistema.<br><br><strong>Advertencia:</strong> esta apertura contextualiza; todavía no define conceptos técnicos."
   },
   {

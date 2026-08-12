@@ -1,8 +1,8 @@
 const slides = [
   {
-    "title": "INGENIERÍA DE SOFTWARE I",
+    "title": "Ingeniería de Software I",
     "eyebrow": "01 · Apertura",
-    "body": "<div class=\"card card--hero\"><p class=\"lede\">INGENIERÍA DE SOFTWARE I</p><h2 style=\"color:var(--fpuna-blue); margin-bottom:.5rem;\">UNIDAD IV – CASOS DE USO Y ESPECIFICACIÓN DE CASOS DE USO</h2><p>Prof. Lic. Guillermo Jacobo González Rodas Mst. PMP</p></div>",
+    "body": "<div class=\"card card--hero\"><p class=\"lede\">UNIDAD IV – CASOS DE USO Y ESPECIFICACIÓN DE CASOS DE USO</p><p>Prof. Lic. Guillermo Jacobo González Rodas Mst. PMP</p></div>",
     "note": "<strong>Desarrollo:</strong> Presentar la **Casos de Uso y Especificación de Casos de Uso** como un tema fundamental del curso de Ingeniería de Software. - Esta unidad estudia casos de uso y su importancia en el desarrollo de software de calidad. <br><br><strong>Ejemplos:</strong> **Global Exchange (conductor):** para el sistema de cambio de divisas, casos de uso son esenciales para definir qué debe hacer el sistema. **Segundo contexto industrial:** en un sistema de turnos hospitalarios, casos de uso ayudan a organizar las necesidades de los usuarios. <br><br><strong>Reflexión docente:</strong> Comprender casos de uso es el primer paso para construir software que responda a las necesidades reales. <br><br><strong>Pregunta desafío:</strong> ¿por qué son importantes los casos de uso en un proyecto de software? <br><br><strong>Respuestas posibles:</strong><br><br>• Porque definen qué debe hacer el sistema. <br>• Porque ayudan a evitar malentendidos entre clientes y desarrolladores. <br>• Porque son la base para la verificación y validación del producto. <br><br><strong>Advertencia:</strong> esta apertura contextualiza la unidad; aún no definimos conceptos técnicos."
   },
   {

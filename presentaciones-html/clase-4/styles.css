@@ -189,8 +189,18 @@ h3 {
 .lede {
   max-width: 700px;
   color: var(--ink-soft);
+  font-family: var(--display);
+  font-weight: 700;
+  color: var(--fpuna-blue);
   font-size: clamp(1.1rem, 1.5vw, 1.3rem);
   line-height: 1.5;
+}
+
+.slide-1 .card--hero .lede {
+  max-width: none;
+  font-size: clamp(1.6rem, 3.2vw, 2.8rem);
+  line-height: 1.1;
+  letter-spacing: -.02em;
 }
 
 .content {

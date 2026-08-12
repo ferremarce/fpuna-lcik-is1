@@ -1,8 +1,8 @@
 const slides = [
   {
-    "title": "Unidad III – Requerimientos de Software",
+    "title": "Ingeniería de Software I",
     "eyebrow": "01 · Apertura",
-    "body": "<div class=\"card card--hero\"><p class=\"lede\">INGENIERÍA DE SOFTWARE I</p><p>Prof. Lic. Guillermo Jacobo González Rodas Mst. PMP</p></div>",
+    "body": "<div class=\"card card--hero\"><p class=\"lede\">UNIDAD III – REQUERIMIENTOS DE SOFTWARE</p><p>Prof. Lic. Guillermo Jacobo González Rodas Mst. PMP</p></div>",
     "note": "<strong>Desarrollo:</strong> Apertura de la Unidad III: se presenta la materia y se sitúa el tema de los requerimientos dentro de la Ingeniería de Software. El docente se presenta e invita a pensar en qué necesita realmente un sistema antes de construirlo. <br><br><strong>Ejemplos:</strong> Global Exchange (conductor): antes de diseñar el sistema de cambio de divisas definimos qué debe hacer: registrar operaciones, calcular tasas y emitir comprobantes. Segundo contexto industrial: un sistema de turnos necesita saber quién se atiende, en qué orden y con qué servicio. <br><br><strong>Reflexión docente:</strong> los requerimientos son la base de todo el proyecto: un error aquí se multiplica en las fases posteriores. <br><br><strong>Pregunta desafío:</strong> ¿qué pasa si construimos un sistema sin definir bien sus requerimientos? <br><br><strong>Respuestas posibles:</strong> 1. Se construye algo que el cliente no pidió. 2. Se descubren errores tarde y el retrabajo es costoso. 3. Se superan plazos y presupuesto. <br><br><strong>Advertencia:</strong> no confundir requerimientos con diseño; los requerimientos describen el QUÉ, no el CÓMO."
   },
   {
