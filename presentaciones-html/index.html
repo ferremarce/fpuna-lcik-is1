@@ -104,7 +104,9 @@
     .class-card .class-meta { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.6rem; }
     .class-card .class-desc { margin: 0; font-size: 0.94rem; }
     .class-card .class-desc strong { color: var(--fpuna-blue-dark); }
+    .class-card .class-desc + .class-desc { margin-top: 0.6rem; }
     .class-card .class-actions { margin-top: 0.9rem; display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .class-card .class-actions + .class-desc { margin-top: 1.1rem; }
     .chip {
       display: inline-block;
       font-size: 0.8rem;
@@ -117,6 +119,12 @@
       text-decoration: none;
     }
     .chip:hover, .chip:focus-visible { background: var(--fpuna-blue); color: #fff; border-color: var(--fpuna-blue); outline: none; }
+    .chip--source {
+      background: var(--fpuna-blue);
+      color: #fff;
+      border-color: var(--fpuna-blue);
+    }
+    .chip--source:hover, .chip--source:focus-visible { background: var(--fpuna-blue-dark); border-color: var(--fpuna-blue-dark); }
 
     .guide-note {
       margin-top: 2.5rem;
@@ -184,6 +192,7 @@
           <a class="chip" href="clase-1/index.html">Ver presentación</a>
           <a class="chip" href="clase-1/clase-1.pdf">PDF · 25 páginas</a>
           <a class="chip" href="clase-1/clase-1.pptx">PPTX</a>
+          <a class="chip chip--source" href="../sesiones-clase/clase-1/IS1-UNIDAD_I.pptx">PPTX original</a>
           <a class="chip" href="clase-1/guia-slides-clase-1.md">Guía de slides</a>
         </div>
       </article>
@@ -199,6 +208,7 @@
           <a class="chip" href="clase-2/index.html">Ver presentación</a>
           <a class="chip" href="clase-2/clase-2.pdf">PDF · 47 páginas</a>
           <a class="chip" href="clase-2/clase-2.pptx">PPTX</a>
+          <a class="chip chip--source" href="../sesiones-clase/clase-2/IS1-UNIDAD_II.pptx">PPTX original</a>
           <a class="chip" href="clase-2/guia-slides-clase-2.md">Guía de slides</a>
         </div>
       </article>
@@ -214,22 +224,31 @@
           <a class="chip" href="clase-3/index.html">Ver presentación</a>
           <a class="chip" href="clase-3/clase-3.pdf">PDF · 39 páginas</a>
           <a class="chip" href="clase-3/clase-3.pptx">PPTX</a>
+          <a class="chip chip--source" href="../sesiones-clase/clase-3/IS1-UNIDAD_III%20(1).pptx">PPTX original</a>
           <a class="chip" href="clase-3/guia-slides-clase-3.md">Guía de slides</a>
         </div>
       </article>
 
       <article class="class-card" id="clase-4">
-        <p class="class-kicker"><span class="class-badge">Clase 4</span> Unidad IV · Casos de Uso</p>
-        <h2>Casos de Uso y Especificación de Casos de Uso</h2>
-        <p class="class-meta">22 diapositivas · guía docente incluida · exportación PDF (22 páginas)</p>
+        <p class="class-kicker"><span class="class-badge">Clase 4</span> Unidad IV · Casos de Uso y UML</p>
+        <h2>Modelado con Casos de Uso y UML</h2>
+        <p class="class-meta">2 presentaciones · Casos de Uso (22 diapositivas, PDF/PPTX) + Introducción a UML (16 diapositivas) · guías docentes incluidas</p>
         <p class="class-desc">
-          <strong>Contenido:</strong> qué es un caso de uso, formas de describirlo, diagrama de casos de uso (límites, actores, relaciones de asociación, generalización, inclusión y extensión), mal uso de las relaciones, plantilla estándar de especificación de casos de uso, especificación del caso "Crear mensaje en el foro" y caso de estudio del sistema de correos electrónicos.
+          <strong>1 · Introducción a UML:</strong> qué es UML, historia y la OMG, la finalidad del estándar, la analogía con los planos, el lenguaje frente a la programación, los 14 diagramas (7 estructurales y 7 de comportamiento) y las herramientas y buenas prácticas.
         </p>
         <div class="class-actions">
-          <a class="chip" href="clase-4/index.html">Ver presentación</a>
-          <a class="chip" href="clase-4/clase-4.pdf">PDF · 22 páginas</a>
-          <a class="chip" href="clase-4/clase-4.pptx">PPTX</a>
-          <a class="chip" href="clase-4/guia-slides-clase-4.md">Guía de slides</a>
+          <a class="chip" href="clase-4/uml/index.html">Ver presentación · UML</a>
+          <a class="chip" href="clase-4/uml/guia-slides-clase-4-adicional.md">Guía de slides · UML</a>
+        </div>
+        <p class="class-desc">
+          <strong>2 · Casos de Uso y Especificación de Casos de Uso:</strong> qué es un caso de uso, formas de describirlo, diagrama de casos de uso (límites, actores, relaciones de asociación, generalización, inclusión y extensión), mal uso de las relaciones, plantilla estándar de especificación de casos de uso, especificación del caso "Crear mensaje en el foro" y caso de estudio del sistema de correos electrónicos.
+        </p>
+        <div class="class-actions">
+          <a class="chip" href="clase-4/casos_de_uso/index.html">Ver presentación · Casos de Uso</a>
+          <a class="chip" href="clase-4/casos_de_uso/clase-4.pdf">PDF · 22 páginas</a>
+          <a class="chip" href="clase-4/casos_de_uso/clase-4.pptx">PPTX</a>
+          <a class="chip chip--source" href="../sesiones-clase/clase-4/IS1-UNIDAD_IV.pptx">PPTX original</a>
+          <a class="chip" href="clase-4/casos_de_uso/guia-slides-clase-4.md">Guía de slides · Casos de Uso</a>
         </div>
       </article>
     </section>

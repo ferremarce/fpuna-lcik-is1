@@ -80,8 +80,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Presentar la Unidad II como el estudio de cómo se organiza y ejecuta el desarrollo de software: modelos tradicionales, métodos ágiles y su impacto en la calidad y los plazos.
-- **Ejemplos:** **Global Exchange (conductor):** un sistema de cambio de divisas necesita un proceso claro; el modelo elegido afecta cuándo y cómo se entrega valor. **Segundo contexto industrial:** en logística, la elección de un proceso determina si se entrega funcionalidad incremental o se espera a tener todo listo.
+- **Desarrollo:** **UNIDAD II – Modelos de Desarrollo de Software y Desarrollo Rápido del Software:** el título anuncia el foco de la clase: comprender cómo se organiza y se ejecuta el desarrollo de software, comparando los modelos tradicionales, los métodos ágiles y su impacto en la calidad y los plazos; por ejemplo, en un sistema de logística, la elección de un proceso determina si se entrega funcionalidad incremental o se espera a tener todo listo antes de desplegar. **Prof. Lic. Guillermo Jacobo González Rodas Mst. PMP:** la portada identifica al docente responsable de la cátedra, quien guiará el recorrido teórico y práctico de la unidad, de modo que el estudiante sepa a quién recurrir para resolver dudas; por ejemplo, en un curso donde los equipos deben justificar qué modelo de proceso aplicarán a su proyecto integrador, este dato permite ubicar rápidamente el canal de consulta académica.
 - **Reflexión docente:** La unidad conecta teoría y práctica: comprender los modelos ayuda a justificar por qué un equipo trabaja de cierta manera.
 - **Pregunta desafío:** ¿por qué no basta con «programar y entregar»?
 - **Respuestas posibles:**
@@ -106,8 +105,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Los objetivos guían la unidad: comprender diferencias entre enfoques, conocer prácticas ágiles, evaluar su impacto en calidad y reconocer cuándo son efectivos.
-- **Ejemplos:** **Global Exchange (conductor):** ¿debemos usar cascada o ágil para construir el módulo de cambio de divisas? La respuesta depende del contexto. **Segundo contexto industrial:** un proyecto regulatorio puede exigir documentación extensa (cascada), mientras un prototipo de innovación puede beneficiarse de iteraciones cortas (ágil).
+- **Desarrollo:** **OBJETIVOS:** la diapositiva presenta las metas de aprendizaje de la unidad, que orientan qué se espera del estudiante al finalizar. **Entender las diferencias entre los métodos tradicionales de desarrollo y los métodos ágiles:** se busca que el alumno distinga enfoques predictivos de enfoques adaptativos; por ejemplo, en un proyecto regulatorio puede exigirse documentación extensa (cascada), mientras que un prototipo de innovación en comercio electrónico se beneficia de iteraciones cortas (ágil). **Conocer principios, prácticas y limitaciones de los métodos ágiles:** además de saber qué son, hay que conocer sus reglas de juego y sus fronteras; por ejemplo, en un sistema de turnos hospitalarios conviene saber hasta dónde llega la agilidad antes de comprometer el desarrollo. **Entender cómo un enfoque de desarrollo de software iterativo e incremental conduce a una entrega más rápida:** la repetición de ciclos cortos permite mostrar resultados temprano y ajustar el rumbo; por ejemplo, en un ERP se puede liberar primero el módulo de inventario y luego el de compras, entregando valor sin esperar a tener todo el sistema terminado.
 - **Reflexión docente:** No existe un modelo «perfecto»; la elección depende del problema, el equipo y las restricciones.
 - **Pregunta desafío:** ¿qué factores determinan la elección de un modelo de proceso?
 - **Respuestas posibles:**
@@ -136,8 +134,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** La unidad se divide en dos bloques: modelos tradicionales (cascada, prototipación, fases, espiral, RUP) y métodos ágiles (ASD, Scrum, XP).
-- **Ejemplos:** **Global Exchange (conductor):** podemos empezar con cascada para definir la arquitectura y usar ágil para iterar funcionalidades. **Segundo contexto industrial:** en un sistema de turnos, el modelo tradicional puede funcionar para la infraestructura, pero ágil para la interfaz de usuario.
+- **Desarrollo:** **CONTENIDO:** el slide funciona como mapa de ruta de la unidad, anticipando los temas que se desarrollarán. **Introducción:** se sitúa el contexto general; por ejemplo, en un sistema bancario, presentar primero el problema del retraso en las entregas. **Características:** se describen los rasgos de los modelos de proceso, como la predictibilidad o la flexibilidad; por ejemplo, en logística, distinguir un proceso planificado de uno adaptativo. **Manifiesto ágil:** se presenta el documento fundacional de los métodos ágiles, con sus valores y principios, por ejemplo, preferir software funcionando sobre documentación exhaustiva. **Principales metodologías ágiles:** se enumeran los marcos de trabajo más difundidos. **Adaptive Software Development (ASD):** filosofía centrada en equilibrar creatividad y estructura. **Scrum:** marco de gestión con sprints, roles y actividades definidos. **XP:** metodología que lleva las buenas prácticas de código al extremo. Este índice permite al estudiante ubicarse dentro del recorrido, por ejemplo, en un curso donde cada tema se profundiza después de su presentación inicial.
 - **Reflexión docente:** El contenido muestra que no hay una respuesta única; la profesionalidad está en elegir y justificar el enfoque adecuado.
 - **Pregunta desafío:** ¿por qué es importante conocer ambos enfoques?
 - **Respuestas posibles:**
@@ -164,8 +161,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** La Ingeniería de Software busca equilibrar calidad, costos y plazos. Después de casi 40 años, estos siguen siendo desafíos abiertos.
-- **Ejemplos:** **Global Exchange (conductor):** un sistema de cambio de divisas debe ser preciso (calidad), accesible (costos) y rápido de entregar (plazos). **Segundo contexto industrial:** en un sistema bancario, un error de calidad puede costar millones; un retraso puede perder el mercado.
+- **Desarrollo:** **Ingeniería de Software:** la diapositiva introduce la disciplina que da marco a toda la unidad. **A pesar de haber transcurrido casi 40 años, la calidad del software, las metodologías y la madurez de los entornos de desarrollo siguen siendo temas de discusión y estudio:** la idea central es que no hay recetas cerradas; por ejemplo, en un sistema bancario, un error de calidad puede costar millones y un retraso puede perder el mercado, lo que muestra que los problemas históricos persisten. **Objetivos:** la ingeniería persigue metas concretas. **Maximizar calidad:** producir software confiable y mantenible; por ejemplo, en un sistema de salud, que el historial clínico esté siempre disponible y correcto. **Maximizar productividad:** lograr más funcionalidad con el mismo esfuerzo; por ejemplo, en comercio electrónico, reutilizar componentes para acelerar el lanzamiento. **Minimizar riesgos:** reducir la probabilidad de fallos o retrasos; por ejemplo, en un proyecto de infraestructura, identificar temprano los riesgos técnicos. La tensión entre estos tres objetivos es inevitable y la profesión consiste en gestionar esos trade-offs en lugar de eliminarlos.
 - **Reflexión docente:** La tensión entre Q, C y T es inevitable; la profesión está en gestionar trade-offs, no en eliminarlos.
 - **Pregunta desafío:** ¿qué pasaría si ignoramos uno de los tres factores?
 - **Respuestas posibles:**
@@ -192,8 +188,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Fred Brooks identificó la esencia del software: complejidad, conformidad, invisibilidad y variabilidad. Estas hacen que la producción sea intrínsecamente difícil.
-- **Ejemplos:** **Global Exchange (conductor):** un sistema de cambio de divisas tiene complejidad lógica (tasas, redondeo), conformidad (regulaciones), invisibilidad (lógica oculta) y cambios (nuevas monedas, regulaciones). **Segundo contexto industrial:** un ERP tiene miles de reglas de negocio que interactúan; un cambio puede romper otra funcionalidad.
+- **Desarrollo:** **Dificultades en Producción de Software:** la diapositiva presenta las razones estructurales por las que producir software es intrínsecamente difícil, tomadas de la reflexión de Fred Brooks. **Esencia:** se refiere a las propiedades inherentes del software que no se pueden eliminar. **Complejidad:** la lógica de un sistema real tiene miles de reglas que interactúan; por ejemplo, en un ERP, un cambio en una regla de negocio puede romper otra funcionalidad. **Conformidad:** el software debe ajustarse a regulaciones y estándares externos; por ejemplo, un sistema bancario debe cumplir normativas de auditoría que no puede decidir por sí mismo. **Necesidad de cambios:** los requisitos evolucionan con el negocio; por ejemplo, en logística, aparecen nuevas rutas o impuestos que obligan a retrabajo constante. **Invisibilidad:** la lógica del software no se puede ver ni tocar, lo que genera malentendidos entre el equipo y el cliente; por ejemplo, en un hospital, es difícil que el personal sanitario visualice cómo se procesa una derivación internamente. Entender estas esencias explica por qué no existen soluciones mágicas y por qué la ingeniería es necesaria.
 - **Reflexión docente:** Entender la esencia ayuda a por qué no existen soluciones mágicas; la ingeniería es necesaria porque el software es inherentemente difícil.
 - **Pregunta desafío:** ¿cuál de las cuatro esencias genera más problemas en un proyecto real?
 - **Respuestas posibles:**
@@ -218,8 +213,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Un proceso de software organiza actividades, métodos y herramientas. Sommerville lo define como el conjunto de actividades implicadas en desarrollo y evolución.
-- **Ejemplos:** **Global Exchange (conductor):** el proceso define cómo pasamos de la idea de cambiar divisas a un sistema funcionando. **Segundo contexto industrial:** en un hospital, el proceso define cómo se pasan requerimientos de privacidad a un sistema de historias clínicas.
+- **Desarrollo:** **Proceso de Software:** la diapositiva define el concepto central que organiza toda la producción de software. **«Conjunto relacionado de actividades y tareas implicadas en el desarrollo y evolución de un sistema software» [Sommerville]:** esta definición enfatiza que el proceso no es una lista suelta de pasos, sino un conjunto de actividades conectadas entre sí que van desde la captura de requisitos hasta el mantenimiento; por ejemplo, en un hospital, el proceso define cómo se convierten los requerimientos de privacidad en un sistema de historias clínicas, pasando por análisis, diseño, implementación y prueba. La palabra clave es «relacionado»: cada actividad produce insumos para la siguiente y los resultados retroalimentan el conjunto; por ejemplo, en un proyecto de logística, el proceso determina cómo se pasa de la idea de optimizar rutas a un sistema funcionando. Un proceso sin contexto puede convertirse en burocracia, mientras que un proceso aplicado con criterio se transforma en una herramienta de gestión.
 - **Reflexión docente:** Un proceso sin contexto puede ser burocracia; un proceso con contexto es una herramienta de gestión.
 - **Pregunta desafío:** ¿qué pasaría si no hubiera proceso alguno?
 - **Respuestas posibles:**
@@ -251,8 +245,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Los procesos se clasifican en tradicionales y ágiles. Los tradicionales son más planificados y documentados; los ágiles son más flexibles e iterativos.
-- **Ejemplos:** **Global Exchange (conductor):** podemos usar cascada para la arquitectura base y ágil para funcionalidades nuevas. **Segundo contexto industrial:** un sistema de facturación puede usar cascada para cumplir normativas y ágil para la interfaz.
+- **Desarrollo:** **Modelos de Procesos de Software:** la diapositiva clasifica los procesos en dos grandes familias. **Modelos Tradicionales (MTs):** enfoques más planificados y documentados, donde el avance se controla por fases; por ejemplo, en un sistema de facturación que debe cumplir normativas fiscales. **Modelo en Cascada:** las fases se ejecutan en secuencia estricta. **Modelo de Prototipación:** se construyen versiones rápidas para validar ideas. **Modelo de Desarrollo en Fases:** el sistema se entrega por partes. **Modelo en Espiral:** combina iteraciones con análisis de riesgo. **RUP:** un framework iterativo orientado a la arquitectura. **Métodos Ágiles (MAs):** enfoques más flexibles e iterativos, orientados a la adaptación; por ejemplo, en una startup, iterar funcionalidades cortas con retroalimentación continua. **Adaptive Software Development (ASD):** filosofía de equilibrio entre creatividad y estructura. **Scrum:** marco de gestión con sprints. **XP:** prácticas de código llevadas al extremo. No son opuestos, sino herramientas para contextos distintos: las partes estables pueden usar modelos tradicionales y las partes nuevas, métodos ágiles.
 - **Reflexión docente:** No son opuestos; son herramientas distintas para contextos distintos.
 - **Pregunta desafío:** ¿cuándo elegiría tradicional vs. ágil?
 - **Respuestas posibles:**
@@ -278,8 +271,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** El modelo en cascada es secuencial: cada fase debe completarse antes de la siguiente. Es claro pero rígido.
-- **Ejemplos:** **Global Exchange (conductor):** podríamos definir todos los requisitos de cambio de divisas, luego diseñar, luego codificar. Pero si falta un requisito, el error se detecta tarde. **Segundo contexto industrial:** en un sistema de control aéreo, la documentación extensa puede ser necesaria, pero la cascada pura es riesgosa.
+- **Desarrollo:** **Modelo en Cascada:** es el punto de partida de los modelos de proceso. **Es el más antiguo:** surge de trasladar al software las fases de la ingeniería tradicional; por ejemplo, en un proyecto de infraestructura, primero se planifica la obra y luego se construye. **Debe completarse un estado antes de comenzar el siguiente:** las fases son secuenciales, de modo que no se puede programar sin haber terminado el diseño; por ejemplo, en un sistema de control aéreo, la documentación extensa de cada fase es necesaria antes de avanzar. **Es útil para que el desarrollador visualice lo que va a hacer:** el orden lógico da una visión clara del camino completo desde el inicio; por ejemplo, en un proyecto de migración de datos, saber exactamente qué entregar en cada etapa. **Su principal problema es que no refleja la realidad:** los requisitos cambian durante el desarrollo y los errores se descubren tarde; por ejemplo, en un sistema bancario, si falta un requisito detectado recién en las pruebas, hay que retroceder con un alto costo.
 - **Reflexión docente:** La cascada es buena para entender la secuencia lógica, pero peligrosa si se aplica rígidamente.
 - **Pregunta desafío:** ¿por qué la cascada no refleja la realidad?
 - **Respuestas posibles:**
@@ -310,8 +302,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Este diagrama muestra las fases en secuencia: desde requerimientos hasta mantenimiento. En la práctica, estas fases se superponen y los errores se retroalimentan.
-- **Ejemplos:** **Global Exchange (conductor):** primero definimos reglas de cambio, diseñamos la arquitectura, codificamos y probamos. Pero si en testing descubrimos un error de requisitos, debemos retroceder. **Segundo contexto industrial:** en un sistema de turnos, el testing de aceptación puede revelar que los requisitos no cubren todos los casos.
+- **Desarrollo:** **Modelo en Cascada:** la diapositiva muestra cómo se materializa el modelo en la práctica cotidiana. **En la práctica…:** el diagrama ordena las etapas reales del trabajo. **Análisis de requerimientos:** se recogen y documentan las necesidades; por ejemplo, en un sistema de turnos, definir todos los casos de atención. **Diseño del sistema:** se define la arquitectura general; por ejemplo, en un ERP, cómo se comunican los módulos. **Diseño de programas:** se detalla cada componente, por ejemplo, la estructura interna del módulo de inventario. **Codificación:** se escribe el código, por ejemplo, implementar las pantallas de un sistema de facturación. **Testing unitario e integrado:** se prueban las partes y su integración; por ejemplo, verificar que el módulo de pagos hable con el de pedidos. **Testing del sistema:** se valida el conjunto completo. **Testing de aceptación:** el cliente confirma que cumple lo pedido. **Operación y mantención:** el sistema se despliega y evoluciona. Aunque el diagrama parece lineal, en la práctica las fases se superponen y los errores obligan a retroceder a etapas anteriores.
 - **Reflexión docente:** El diagrama es ideal; la realidad es cíclica. Los errores retroalimentan fases anteriores.
 - **Pregunta desafío:** ¿qué pasa si se detecta un error de requisitos en la fase de testing?
 - **Respuestas posibles:**
@@ -336,8 +327,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** La prototipación construye versiones rápidas para validar ideas. Reduce riesgos al obtener retroalimentación temprana.
-- **Ejemplos:** **Global Exchange (conductor):** podríamos prototipar la interfaz de cambio de divisas para validar con el usuario antes de construir todo. **Segundo contexto industrial:** en un sistema de turnos, un prototipo puede mostrar cómo funciona la asignación automática.
+- **Desarrollo:** **Modelo de Prototipación:** la diapositiva presenta un modelo pensado para reducir la incertidumbre del desarrollo. **Permite la construcción rápida del sistema (o parte de éste):** se construyen versiones reducidas y rápidas para validar ideas antes de invertir en el desarrollo completo; por ejemplo, en un sistema de turnos hospitalarios, prototipar primero la pantalla de asignación automática. **Usuario y desarrollador tienen una visión común:** el prototipo hace tangible lo que el cliente imagina, evitando malentendidos; por ejemplo, en comercio electrónico, mostrar un boceto interactivo del carrito de compras para que el usuario lo corrija antes de programarlo. **Se reduce el riesgo y la incertidumbre del desarrollo:** al recibir retroalimentación temprana se detectan errores de requisitos cuando aún son baratos de corregir; por ejemplo, en un sistema bancario, validar el flujo de una solicitud de crédito antes de implementarlo completo. El prototipo es una herramienta de aprendizaje, no el producto final, y debe ser descartable.
 - **Reflexión docente:** El prototipo no es el producto final; es una herramienta de aprendizaje.
 - **Pregunta desafío:** ¿cuándo el prototipo puede ser contraproducente?
 - **Respuestas posibles:**
@@ -366,8 +356,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** El flujo de prototipación es cíclico: se diseña, construye, prueba y repite. El objetivo es refinar los requisitos antes del desarrollo completo.
-- **Ejemplos:** **Global Exchange (conductor):** prototipamos la pantalla de cambio, el usuario dice «falta el historial», refrescamos. **Segundo contexto industrial:** en un sistema de turnos, el prototipo puede mostrar cómo se asignan turnos; el usuario puede pedir filtros adicionales.
+- **Desarrollo:** **Modelo de Prototipación:** la diapositiva presenta el flujo cíclico del proceso de prototipación. **Requerimientos del prototipo:** se definen qué aspectos validar primero; por ejemplo, en un sistema de turnos, qué filtros necesita el usuario. **Diseño del prototipo:** se bosqueja la interfaz o el comportamiento; por ejemplo, en comercio electrónico, el flujo de compra simplificado. **Sistema prototipo:** se construye la versión rápida y funcional. **Testing:** el usuario prueba el prototipo y descubre problemas; por ejemplo, en un sistema bancario, notar que falta el historial de operaciones. **Revisión:** se analizan los resultados y se decide qué cambiar. **Requerimientos del sistema:** con la retroalimentación, se refinan los requisitos definitivos, por ejemplo, agregar los filtros solicitados en la revisión. **Sistema entregado:** finalmente se construye el producto completo sobre la base de requisitos ya validados. Cada ciclo de este bucle reduce la incertidumbre, y el número de iteraciones debe tener un límite definido para evitar el crecimiento descontrolado del alcance.
 - **Reflexión docente:** La iteración es clave; cada ciclo reduce la incertidumbre.
 - **Pregunta desafío:** ¿cuántas iteraciones son razonables?
 - **Respuestas posibles:**
@@ -394,8 +383,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** El desarrollo en fases entrega el sistema en incrementos. El usuario obtiene funcionalidad temprana y puede dar retroalimentación.
-- **Ejemplos:** **Global Exchange (conductor):** Fase 1: consulta de tasas. Fase 2: operaciones básicas. Fase 3: reporting avanzado. **Segundo contexto industrial:** en un ERP, Fase 1: inventario. Fase 2: compras. Fase 3: contabilidad.
+- **Desarrollo:** **Modelo de Desarrollo en Fases:** la diapositiva propone una alternativa para acortar los tiempos de entrega. **Hoy, el mercado no acepta grandes retardos:** esperar meses por el producto completo ya no es viable; por ejemplo, en comercio electrónico, un competidor lanza una función y la demanda es inmediata. **Una forma de reducirlos es desarrollar en fases:** en lugar de entregar todo al final, se divide el trabajo. **El sistema se diseña de manera que pueda ser entregado por partes:** la arquitectura se prepara para recibir incrementos; por ejemplo, en un ERP, el módulo de inventario primero, luego compras y después contabilidad. **Así, el usuario tiene algo de funcionalidad, mientras se desarrolla el resto:** el cliente empieza a usar valor real temprano y da retroalimentación; por ejemplo, en un sistema de turnos, primero visualización y después asignación automática. **Hay dos sistemas funcionando en paralelo: El de Producción, usado por el cliente, y El Nuevo, siendo desarrollado:** mientras el sistema anterior sigue operando, el nuevo crece hasta reemplazarlo; por ejemplo, en un hospital, el sistema viejo de citas sigue activo mientras se construye el moderno.
 - **Reflexión docente:** Las fases permiten aprender y ajustar, pero requieren una arquitectura que soporte incrementos.
 - **Pregunta desafío:** ¿qué riesgo tiene entregar en fases?
 - **Respuestas posibles:**
@@ -418,8 +406,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Este ejemplo muestra cómo el avance no es lineal: la fase 2 ya entrega el 60% del sistema.
-- **Ejemplos:** **Global Exchange (conductor):** Fase 1: consulta de tasas. Fase 2: operaciones de cambio (60% del valor). Fase 3: reporting y administración. **Segundo contexto industrial:** en un sistema de turnos, Fase 1: visualización de turnos. Fase 2: asignación automática. Fase 3: optimización y reportes.
+- **Desarrollo:** **Modelo de Desarrollo en Fases:** la diapositiva ilustra con un ejemplo cómo el avance no es lineal. **\* Este valor es aproximado:** la aclaración advierte que los porcentajes son orientativos y dependen del proyecto; por ejemplo, en un sistema de facturación, el valor de cada fase varía según la complejidad de las reglas fiscales. El diagrama muestra que la fase 2 ya entrega un porcentaje alto del sistema: por ejemplo, en un sistema de turnos hospitalarios, la fase 1 visualiza los turnos, la fase 2 incorpora la asignación automática (que representa la mayor parte del valor, alrededor del 60%) y la fase 3 agrega optimización y reportes. El avance acumulativo permite priorizar lo más valioso primero, decidiendo qué funcionalidad entra en cada fase por valor al usuario, por dependencias técnicas o por riesgo. Como los incrementos se acumulan, el usuario ya dispone de funcionalidad real cuando el proyecto apenas está a mitad de camino, y cada fase debe ser una entrega estable y no un prototipo descartable.
 - **Reflexión docente:** El avance acumulativo permite priorizar lo más valioso primero.
 - **Pregunta desafío:** ¿cómo decidir qué funcionalidad va en cada fase?
 - **Respuestas posibles:**
@@ -445,8 +432,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** El modelo espiral combina iteraciones con análisis de riesgo. Cada vuelta produce un prototipo más maduro.
-- **Ejemplos:** **Global Exchange (conductor):** cada iteración puede agregar una funcionalidad (consulta, operación, reporting) y evaluar riesgos (regulatorios, técnicos). **Segundo contexto industrial:** en un sistema de salud, cada iteración puede agregar un módulo (pacientes, turnos, facturación) y evaluar riesgos de privacidad.
+- **Desarrollo:** **Modelo en Espiral:** la diapositiva presenta un modelo que integra el desarrollo con la gestión de riesgos. **Se combinan las actividades de desarrollo con Análisis de Riesgo:** cada vuelta de la espiral une construcción y evaluación de peligros; por ejemplo, en un sistema de salud, cada iteración agrega un módulo (pacientes, turnos, facturación) y evalúa los riesgos de privacidad de los datos. **El modelo es de tipo iterativo: Planificación, Análisis de Riesgo, Ingeniería, Evaluación, Planificación:** el ciclo se repite y en cada vuelta se planea, se analizan riesgos, se desarrolla y se evalúa el resultado. **En cada iteración, se evalúan las diferentes alternativas y se elige una:** el equipo compara opciones técnicas y decide; por ejemplo, en un sistema bancario, elegir entre construir un módulo propio o integrar uno de terceros. **Los gestores del proyecto intentan eliminar o minimizar los riesgos en cada iteración:** el objetivo es reducir la incertidumbre progresivamente; por ejemplo, en logística, validar la integración con transportistas antes de escalar la solución. Es un modelo poderoso pero complejo.
 - **Reflexión docente:** El espiral es poderoso pero complejo; requiere experiencia en gestión de riesgos.
 - **Pregunta desafío:** ¿qué tipo de proyecto se beneficia más del espiral?
 - **Respuestas posibles:**
@@ -468,7 +454,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** El diagrama espiral muestra iteraciones crecientes con análisis de riesgo en cada vuelta.
+- **Desarrollo:** **Modelo en Espiral:** la diapositiva es esencialmente visual, por lo que el docente debe guiar la lectura del diagrama. El diagrama muestra una espiral que parte del centro y crece hacia afuera: cada vuelta representa una iteración del desarrollo, y en el recorrido de cada giro se ven los cuatro cuadrantes del modelo. En el cuadrante de planificación se definen los objetivos y las restricciones de esa vuelta; en el de análisis de riesgo se identifican los peligros y se evalúan las alternativas; en el de ingeniería se construye el producto o el prototipo de esa iteración; y en el de evaluación el cliente revisa el resultado y decide cómo seguir. Con cada giro el radio aumenta, lo que simboliza un producto más completo y maduro, mientras los puntos de revisión entre cuadrantes permiten corregir el rumbo. Por ejemplo, en un proyecto de infraestructura, cada vuelta agrega una capacidad del sistema y reduce la incertidumbre acumulada, de modo que el riesgo guía la priorización en cada iteración.
 - **Reflexión docente:** La espiral visualiza el concepto de iteración con riesgo.
 - **Pregunta desafío:** ¿cómo se relaciona el riesgo con la planificación?
 - **Respuestas posibles:**
@@ -495,8 +481,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** RUP es un framework iterativo e incremental, orientado a arquitectura y controlado por riesgos.
-- **Ejemplos:** **Global Exchange (conductor):** cada fase de RUP puede entregar un incremento del sistema. **Segundo contexto industrial:** en un sistema bancario, RUP permite planificar iteraciones con análisis de riesgo regulatorio.
+- **Desarrollo:** **RUP – Rational Unified Process:** la diapositiva presenta un marco de proceso iterativo e incremental, orientado a la arquitectura y controlado por riesgos. **Corresponde a un framework que puede ser usado para describir procesos de desarrollo específicos:** RUP no prescribe un proceso único, sino que se adapta a cada proyecto; por ejemplo, en un sistema bancario, permite planificar iteraciones con análisis de riesgo regulatorio. **Cada ciclo de vida del software abarca 4 fases en el siguiente orden: concepción/planificación, elaboración, construcción y transición:** en la concepción se define el alcance, en la elaboración se diseña la arquitectura, en la construcción se implementa la mayor parte y en la transición se despliega; por ejemplo, en un ERP, primero se delimita el alcance, luego se diseña la base y después se construyen los módulos. **La esencia de RUP es la iteración, y cada iteración resulta en un incremento del sistema:** cada fase se recorre en ciclos que entregan una parte funcional; por ejemplo, en logística, liberar primero el seguimiento de envíos y luego la planificación de rutas. Es un marco adaptable, no un proceso rígido.
 - **Reflexión docente:** RUP no es un proceso rígido; es un marco adaptable.
 - **Pregunta desafío:** ¿cuándo usar RUP vs. Scrum?
 - **Respuestas posibles:**
@@ -518,7 +503,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** El diagrama RUP muestra las 4 fases y las disciplinas transversales.
+- **Desarrollo:** **RUP – Rational Unified Process:** la diapositiva presenta el diagrama del proceso, y el docente debe guiar su lectura. El diagrama clásico de RUP está organizado en dos ejes: en el horizontal se ubican las cuatro fases del ciclo de vida —concepción o planificación, elaboración, construcción y transición— y en el vertical se disponen las disciplinas o flujos de trabajo, como modelado de negocio, requisitos, análisis y diseño, implementación, prueba y despliegue. La altura de cada fase sobre las disciplinas indica su énfasis: por ejemplo, en la elaboración dominan el análisis y el diseño, mientras que en la construcción crece la implementación y la prueba. Lo central es que las disciplinas son transversales: atraviesan todas las fases y se ejecutan en mayor o menor medida en cada iteración; por ejemplo, en un sistema de salud, la gestión de requisitos acompaña desde la concepción hasta la transición. El diagrama es una simplificación, pero comunica que cada iteración atraviesa todas las disciplinas y produce un incremento del sistema.
 - **Reflexión docente:** RUP integra todas las disciplinas de desarrollo en cada fase.
 - **Pregunta desafío:** ¿qué disciplinas son transversales en RUP?
 - **Respuestas posibles:**
@@ -544,8 +529,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Los modelos tradicionales tienen problemas comunes: retrasos, recortes, rigidez y burocracia.
-- **Ejemplos:** **Global Exchange (conductor):** si el mercado cambia, el modelo tradicional no puede adaptarse rápido. **Segundo contexto industrial:** en un proyecto gubernamental, la documentación extensa puede retrasar la entrega.
+- **Desarrollo:** **Problemas de los Modelos Tradicionales:** la diapositiva resume las fallas que motivaron el surgimiento de los métodos ágiles. **Incumplimiento de los plazos de entrega:** el plan se atrasa porque los requisitos cambian o las fases se alargan; por ejemplo, en un proyecto gubernamental, la documentación extensa puede retrasar la entrega. **Reducción de las funcionalidades previstas inicialmente:** ante la presión por cerrar, se recorta alcance y el sistema no resuelve la necesidad; por ejemplo, en un sistema de facturación, se elimina el módulo de reportes para cumplir la fecha. **Difícil adaptación a los cambios:** el proceso secuencial no absorbe modificaciones sin retrabajo; por ejemplo, en comercio electrónico, si cambian las reglas de descuento, todo el flujo debe rehacerse. **Excesiva documentación:** se produce burocracia que nadie lee; por ejemplo, en un proyecto de infraestructura, informes interminables que consumen tiempo sin aportar valor. No todos los proyectos sufren todos estos problemas, pero cuando aparecen erosionan la confianza del cliente y dejan el producto obsoleto.
 - **Reflexión docente:** Estos problemas motivaron el surgimiento de los métodos ágiles.
 - **Pregunta desafío:** ¿cuál de estos problemas es más grave?
 - **Respuestas posibles:**
@@ -573,8 +557,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** El Manifiesto Ágil nació en 2001 como respuesta a las limitaciones de los modelos tradicionales.
-- **Ejemplos:** **Global Exchange (conductor):** los métodos ágiles permiten adaptarse a cambios en tasas y regulaciones. **Segundo contexto industrial:** en un sistema de turnos, la agilidad permite ajustar prioridades según la demanda.
+- **Desarrollo:** **Métodos Ágiles (MAs):** la diapositiva cuenta el origen histórico de estos enfoques. **En febrero de 2001, tras una reunión celebrada en Utah-EEUU, nace el término «Ágil», aplicado al desarrollo de software:** en esa reunión se acuñó la palabra que nombra a toda una familia de metodologías; por ejemplo, en un equipo de desarrollo de aplicaciones móviles, decir «somos ágiles» implica adoptar esos valores y prácticas. **En esta reunión participaron un grupo de 17 expertos de la industria del software, incluyendo algunos de los creadores o impulsores de metodologías de software:** participaron figuras como Beck, Schwaber y Sutherland, creadores de XP y Scrum, lo que da autoridad al documento; por ejemplo, en una empresa de desarrollo, esa experiencia acumulada respalda el cambio de enfoque. **Su objetivo fue establecer un manifiesto que reflejara los valores de los métodos ágiles:** el resultado fue un texto corto con valores y principios compartidos; por ejemplo, en un sistema de turnos, la agilidad permite ajustar prioridades según la demanda. El manifiesto es un conjunto de valores, no una metodología específica.
 - **Reflexión docente:** El ágil no es una moda; es una respuesta a problemas reales.
 - **Pregunta desafío:** ¿por qué 17 expertos sintieron la necesidad de crear un manifiesto?
 - **Respuestas posibles:**
@@ -600,8 +583,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Los MAs promueven adaptabilidad sobre predicción. Son estrategias que responden a los cambios en lugar de seguir un plan rígido.
-- **Ejemplos:** **Global Exchange (conductor):** si cambian las regulaciones, el equipo puede ajustar el desarrollo sin rehacer todo el plan. **Segundo contexto industrial:** en un sistema de e-commerce, los cambios en precios o productos se incorporan iteración a iteración.
+- **Desarrollo:** **Métodos Ágiles:** la diapositiva define formalmente el concepto. **Las Metodologías Ágiles (MAs) son un conjunto de estrategias de desarrollo que promueven prácticas adaptativas, en lugar de predictivas, como las sugeridas por las Metodologías Tradicionales (MTs) de Desarrollo de Software:** mientras los modelos tradicionales intentan predecir todo el trabajo por adelantado, los ágiles ajustan el rumbo con evidencia; por ejemplo, en un sistema de comercio electrónico, los cambios en precios o productos se incorporan iteración a iteración. **Dicho de otra manera, promueven la adaptabilidad a los cambios por sobre el seguimiento estricto de un plan:** el plan deja de ser un contrato rígido y pasa a ser una hipótesis que se revisa; por ejemplo, en un sistema de turnos hospitalarios, si aumenta la demanda de citas, el equipo reorganiza las prioridades del siguiente ciclo sin rehacer todo el plan. Es importante aclarar que la agilidad no elimina la planificación: la transforma en un proceso continuo y exige disciplina, roles y herramientas definidos, no improvisación.
 - **Reflexión docente:** La agilidad no es falta de proceso; es proceso adaptable.
 - **Pregunta desafío:** ¿qué diferencia hay entre «adaptarse al cambio» y «no tener plan»?
 - **Respuestas posibles:**
@@ -624,8 +606,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** El manifiesto ágil establece 4 valores fundamentales que guían los métodos ágiles.
-- **Ejemplos:** **Global Exchange (conductor):** preferimos reunirnos con el usuario que escribir 100 páginas de requisitos. **Segundo contexto industrial:** en un sistema de turnos, preferimos entregar funcionalidad que funcione que documentar todo el diseño.
+- **Desarrollo:** **Métodos Ágiles:** la diapositiva abre el bloque dedicado al Manifiesto Ágil. **Según el manifiesto ágil se valora:** esta frase introduce los cuatro valores que guían a todos los métodos ágiles y que se desarrollan uno por uno en las siguientes diapositivas. El manifiesto declara que se valora a los individuos y sus interacciones por sobre el proceso y las herramientas; el software funcionando por sobre la documentación exhaustiva; la colaboración con el cliente por sobre la negociación de un contrato; y la respuesta al cambio por sobre el seguimiento estricto de un plan. Estos valores no son absolutos ni eliminan la documentación o la planificación: son preferencias que se aplican cuando hay un trade-off; por ejemplo, en un sistema de logística, elegir reunirse con el usuario para aclarar el alcance antes que escribir cien páginas de requisitos, o entregar una funcionalidad que funciona antes que documentar todo el diseño por adelantado. Los valores ayudan a decidir dónde invertir el esfuerzo del equipo.
 - **Reflexión docente:** Los valores no son absolutos; son preferencias cuando hay trade-offs.
 - **Pregunta desafío:** ¿qué valor les parece más importante y por qué?
 - **Respuestas posibles:**
@@ -650,8 +631,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** El valor prioritario es las personas y sus interacciones. Un equipo coordinado puede resolver problemas que las herramientas no pueden.
-- **Ejemplos:** **Global Exchange (conductor):** un equipo que se comunica bien puede detectar errores de requisitos antes que una herramienta de gestión. **Segundo contexto industrial:** en un sistema de salud, la comunicación entre desarrolladores y médicos es clave para entender necesidades reales.
+- **Desarrollo:** **Métodos Ágiles:** la diapositiva desarrolla el primer valor del manifiesto. **Al individuo y las interacciones del equipo de desarrollo sobre el proceso y las herramientas:** las personas y su comunicación valen más que el proceso formal o las herramientas; por ejemplo, en un sistema de salud, la comunicación entre desarrolladores y médicos es clave para entender las necesidades reales de atención. **La gente es el principal factor de éxito de un proyecto software. Es más importante construir un buen equipo que construir el entorno. Muchas veces se comete el error de construir primero el entorno y esperar que luego se integre el equipo:** el texto advierte que invertir primero en infraestructura y después esperar que el equipo se acople es un error frecuente; por ejemplo, en comercio electrónico, un equipo que se comunica bien detecta errores de requisitos antes que cualquier herramienta de gestión de proyectos. Las herramientas apoyan, pero las personas deciden: un equipo sin comunicación duplica esfuerzos y produce soluciones técnicamente correctas que no resuelven el problema real. Este valor no excluye las herramientas, sino que las subordina a la colaboración.
 - **Reflexión docente:** Las herramientas apoyan; las personas deciden.
 - **Pregunta desafío:** ¿qué pasa si un equipo tiene las mejores herramientas pero no se comunica?
 - **Respuestas posibles:**
@@ -675,8 +655,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** El software funcionando es la medida de progreso. La documentación tiene valor, pero no es el producto final.
-- **Ejemplos:** **Global Exchange (conductor):** preferimos entregar una funcionalidad de cambio que funcione que documentar todo el diseño antes de empezar. **Segundo contexto industrial:** en un sistema de turnos, un prototipo funcionando comunica más que 50 páginas de especificación.
+- **Desarrollo:** **Métodos Ágiles:** la diapositiva desarrolla el segundo valor del manifiesto. **Desarrollar software que funciona más que conseguir una buena documentación:** el software operativo es la medida real del progreso; por ejemplo, en un sistema de turnos, un prototipo funcionando comunica más que cincuenta páginas de especificación. **La regla a seguir es no producir documentos a menos que sean necesarios de forma inmediata para tomar una decisión importante. Estos documentos deben ser breves y centrarse en lo fundamental:** la documentación no se elimina, pero se justifica solo cuando ayuda a decidir; por ejemplo, en un sistema bancario, un documento breve de arquitectura es necesario, mientras que un informe extenso que nadie lee es burocracia. La documentación excesiva puede convertirse en un fin en sí misma y desviar el esfuerzo del producto; por ejemplo, en un proyecto de logística, preferir un incremento funcional que valide una ruta antes que un manual completo. El equilibrio es clave: no documentar nada es tan peligroso como documentar todo.
 - **Reflexión docente:** La documentación excesiva puede convertirse en burocracia que nadie lee.
 - **Pregunta desafío:** ¿qué documentación es realmente necesaria?
 - **Respuestas posibles:**
@@ -700,8 +679,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** La colaboración continua con el cliente es fundamental. El cliente no es un demandante; es un colaborador.
-- **Ejemplos:** **Global Exchange (conductor):** el usuario de divisas participa en cada iteración, validando que el sistema resuelve sus necesidades reales. **Segundo contexto industrial:** en un sistema de turnos, los médicos y administradores participan en cada sprint para priorizar funcionalidades.
+- **Desarrollo:** **Métodos Ágiles:** la diapositiva desarrolla el tercer valor del manifiesto. **La colaboración con el cliente más que la negociación de un contrato:** el cliente deja de ser un demandante distante y pasa a ser un socio del proyecto; por ejemplo, en un sistema de turnos hospitalarios, los médicos y administradores participan en cada ciclo para priorizar funcionalidades. **Se propone que exista una interacción constante entre el cliente y el equipo de desarrollo. Esta colaboración entre ambos será la que marque la marcha del proyecto y asegure su éxito:** el texto subraya que el contacto continuo guía las decisiones y evita construir algo que nadie quiere usar; por ejemplo, en comercio electrónico, el responsable de ventas valida cada incremento y corrige el rumbo antes de que el error se profundice. Un contrato sin colaboración puede entregar un producto técnicamente correcto pero inútil para el negocio; por ejemplo, en logística, un sistema que cumple el pliego pero no se adapta a cómo operan realmente los transportistas. La colaboración exige compromiso de ambas partes, y si el cliente no puede participar, se designa un representante.
 - **Reflexión docente:** Un contrato sin colaboración puede entregar algo que nadie quiere usar.
 - **Pregunta desafío:** ¿qué pasa si el cliente no puede participar activamente?
 - **Respuestas posibles:**
@@ -726,8 +704,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** La capacidad de adaptación es clave en entornos cambiantes. Un plan rígido puede convertirse en una camisa de fuerza.
-- **Ejemplos:** **Global Exchange (conductor):** si cambian las regulaciones financieras, el equipo puede ajustar el desarrollo sin rehacer todo el plan. **Segundo contexto industrial:** en un sistema de e-commerce, los cambios en precios o productos se incorporan sin esperar al siguiente release.
+- **Desarrollo:** **Métodos Ágiles:** la diapositiva desarrolla el cuarto valor del manifiesto. **Responder a los cambios más que seguir estrictamente un plan:** la adaptación se valora por encima del cumplimiento literal del plan; por ejemplo, en un sistema de comercio electrónico, los cambios en precios o productos se incorporan sin esperar al siguiente lanzamiento. **La habilidad de responder a los cambios que puedan surgir a lo largo del proyecto (cambios en los requisitos, en la tecnología, en el equipo, etc.) determina también el éxito o fracaso del mismo:** el texto vincula directamente la capacidad de adaptación con el resultado del proyecto; por ejemplo, en un sistema bancario, si cambia la regulación financiera, el equipo debe ajustar el desarrollo sin rehacer todo el plan. **Por lo tanto, la planificación no debe ser rígida, sino que debe permitir la adaptación:** se planifica en iteraciones cortas con objetivos claros y un catálogo de trabajo priorizado que se ajusta en cada ciclo. La respuesta al cambio no es improvisación: es adaptación dentro de un marco disciplinado.
 - **Reflexión docente:** El plan es una guía, no una camisa de fuerza.
 - **Pregunta desafío:** ¿cómo planificar sin ser rígido?
 - **Respuestas posibles:**
@@ -754,8 +731,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** La agilidad y el proceso no son opuestos; son complementarios. CMM/CMMI y XP pueden coexistir.
-- **Ejemplos:** **Global Exchange (conductor):** usar Scrum para iterar pero mantener documentación mínima de arquitectura. **Segundo contexto industrial:** en una empresa que usa CMMI, puede adoptar prácticas ágiles en equipos de desarrollo sin cambiar todo el marco organizacional.
+- **Desarrollo:** **Agilidad vs. Proceso:** la diapositiva muestra que agilidad y proceso no son enemigos, sino fuerzas complementarias. **En los últimos años distintos trabajos han investigado la relación entre modelos de procesos y métodos ágiles, observando lo siguiente:** la investigación ha encontrado evidencia de convivencia entre ambos mundos. **El CMM/CMMI del SEI y XP pueden complementarse (enfocando aspectos de gestión vs. técnicos):** CMMI se enfoca en la madurez organizacional y XP en las prácticas técnicas del código; por ejemplo, una empresa certificada en CMMI puede adoptar XP en sus equipos sin cambiar todo el marco. **Métodos ágiles coinciden con la esencia del mejoramiento de procesos bajo un enfoque de equipo:** ambos buscan mejorar continuamente, solo que desde el equipo y la iteración; por ejemplo, en un equipo de desarrollo, la retrospectiva cumple un rol similar a la medición de procesos. **Scrum y CMM/CMMI son compatibles:** Scrum aporta estructura de gestión dentro de un marco de madurez. **El punto de equilibrio entre ambos enfoques permite maximizar beneficios:** el balance se busca evaluando el contexto, experimentando y ajustando; por ejemplo, en una organización madura, combinar certificaciones de proceso con prácticas ágiles.
 - **Reflexión docente:** El equilibrio es contextual; no hay fórmula universal.
 - **Pregunta desafío:** ¿cómo encontrar el equilibrio adecuado?
 - **Respuestas posibles:**
@@ -784,8 +760,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Los métodos ágiles no son la solución universal. El desafío es encontrar equilibrio entre agilidad y proceso.
-- **Ejemplos:** **Global Exchange (conductor):** ¿es ágil para un sistema regulatorio? Depende del nivel de documentación requerido. **Segundo contexto industrial:** en un sistema de aviación, la agilidad puede ser limitada por regulaciones estrictas.
+- **Desarrollo:** **Interrogantes:** la diapositiva invita a cuestionar la validez universal de los métodos ágiles. **¿Resuelven los métodos ágiles todos los problemas?:** la respuesta es no; por ejemplo, en un sistema de aviación, la agilidad está limitada por regulaciones estrictas. **¿Son aplicables a todo tipo de desarrollo?:** no todos los dominios toleran la adaptación constante; por ejemplo, un sistema de control de tránsito aéreo exige documentación y certificaciones que el ágil puro no contempla. **¿Cuánta agilidad? ¿Cuánto proceso?:** la pregunta central es dosificar ambos; por ejemplo, en un sistema bancario, mantener agilidad en el desarrollo y proceso en la gestión de riesgos. **Desafío: encontrar un punto de equilibrio, un balance adecuado:** la meta profesional es calibrar el enfoque según el contexto. **Desarrollos potenciales:** se enumeran líneas de trabajo futuras. **Modelos ágiles balanceados para migración a la práctica industrial:** adaptar la agilidad a entornos corporativos. **Mecanismos y herramientas para la integración de procesos:** construir puentes entre ambos mundos. No hay una respuesta única; depende del contexto de cada proyecto.
 - **Reflexión docente:** La profesionalidad está en elegir el enfoque adecuado, no en defender uno por defecto.
 - **Pregunta desafío:** ¿cuándo NO usar métodos ágiles?
 - **Respuestas posibles:**
@@ -810,8 +785,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Las tres metodologías ágiles más conocidas: ASD, XP y Scrum. Cada una tiene fortalezas distintas.
-- **Ejemplos:** **Global Exchange (conductor):** Scrum para gestión, XP para prácticas de código, ASD para filosofía de desarrollo. **Segundo contexto industrial:** en una startup, puede usarse una combinación de las tres según la etapa del proyecto.
+- **Desarrollo:** **Metodologías Ágiles:** la diapositiva presenta las tres metodologías ágiles más difundidas. **Adaptive Software Development (ASD):** es más una filosofía que un proceso detallado, centrada en equilibrar creatividad y estructura; por ejemplo, en un laboratorio de innovación, guía la cultura del equipo. **Programación Extrema (XP):** se enfoca en las prácticas técnicas del código, como la programación en parejas y el testing continuo; por ejemplo, en un equipo de desarrollo web, permite entregar funcionalidad de calidad rápidamente. **SCRUM:** se centra en la gestión del trabajo en equipo, con sprints, roles y actividades definidos; por ejemplo, en un equipo de desarrollo empresarial, planificar y ejecutar en ciclos de dos semanas. Cada una aporta algo distinto: ASD aporta la filosofía, XP las prácticas de código y Scrum la gestión. Se pueden combinar según la etapa del proyecto; por ejemplo, en una startup, usar Scrum para organizar el trabajo, XP para escribir código y ASD para mantener la mentalidad innovadora, aunque no deben mezclarse sin entender cada metodología.
 - **Reflexión docente:** Cada metodología aporta algo distinto; se pueden combinar.
 - **Pregunta desafío:** ¿qué diferencia hay entre las tres?
 - **Respuestas posibles:**
@@ -838,8 +812,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** ASD se basa en equilibrar creatividad y estructura. La filosofía es "balancearse en el borde del caos".
-- **Ejemplos:** **Global Exchange (conductor):** permitir innovación en la interfaz pero mantener reglas de negocio claras. **Segundo contexto industrial:** en un equipo de innovación, ASD permite experimentar sin perder el foco en el producto.
+- **Desarrollo:** **Adaptive Software Development (ASD):** la diapositiva presenta la filosofía de esta metodología ágil. **Desarrollado por J. Highsmith en el año 2000:** la atribución sitúa el origen del enfoque en la obra de James Highsmith. **La idea fundamental del ASD es: «Balancearse en el borde del Caos»:** la metáfora propone vivir en el límite donde hay suficiente estructura para no perderse y suficiente libertad para innovar; por ejemplo, en un equipo de innovación, permitir experimentar sin perder el foco en el producto. **Dicho de otra manera, buscar un equilibrio entre crear un ambiente que favorezca la creatividad e innovación, y administrar lo que se está haciendo:** la metodología reconoce que el desarrollo de software es complejo e impredecible y que conviene aceptar la incertidumbre; por ejemplo, en un sistema de comercio electrónico, dar libertad al equipo para proponer soluciones nuevas en la interfaz mientras se mantienen reglas de negocio claras. El caos controlado puede ser productivo cuando hay objetivos claros; por ejemplo, en logística, fomentar ideas para optimizar rutas dentro de restricciones operativas definidas.
 - **Reflexión docente:** El caos controlado puede ser productivo cuando hay objetivos claros.
 - **Pregunta desafío:** ¿qué significa "borde del caos" en la práctica?
 - **Respuestas posibles:**
@@ -861,7 +834,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** El diagrama ASD muestra el ciclo de Speculación, Colaboración y Aprendizaje.
+- **Desarrollo:** **Proceso del ASD:** la diapositiva es esencialmente visual y presenta el ciclo de vida de la metodología. El diagrama muestra el ciclo de tres fases del ASD: Especulación, Colaboración y Aprendizaje, representadas como una secuencia circular que se repite. En la Especulación, el equipo define hipótesis sobre qué construir y qué se espera lograr; por ejemplo, en un proyecto de logística, conjeturar qué módulos de seguimiento serán más valiosos. En la Colaboración, desarrolladores, usuarios y stakeholders trabajan juntos de forma intensa y simultánea; por ejemplo, en un sistema de salud, médicos y programadores construyendo en conjunto. En el Aprendizaje, el equipo reflexiona sobre lo entregado y corrige el rumbo; por ejemplo, en comercio electrónico, analizar los resultados de una iteración para ajustar las prioridades. El ciclo es continuo: cada vuelta convierte el aprendizaje en nueva especulación. El diagrama comunica que ASD es más una filosofía que un proceso detallado, y que sus prácticas deben complementarse con otras metodologías.
 - **Reflexión docente:** ASD es más una filosofía que un proceso detallado; sus prácticas deben complementarse con otras metodologías.
 - **Pregunta desafío:** ¿cómo se aplicaría ASD en un proyecto real?
 - **Respuestas posibles:**
@@ -886,8 +859,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** ASD es más filosofía que proceso detallado. No se utiliza solo porque falta especificación de prácticas.
-- **Ejemplos:** **Global Exchange (conductor):** usar filosofía ASD pero complementar con Scrum para gestión y XP para código. **Segundo contexto industrial:** en una empresa innovadora, ASD puede guiar la cultura mientras Scrum organiza el trabajo.
+- **Desarrollo:** **Uso actual del ASD:** la diapositiva analiza por qué esta metodología tiene poca adopción. **Casi no es utilizado porque no se especifican en detalle las pautas (prácticas de desarrollo y gestión) que deben seguirse para su uso:** al no detallar cómo hacer las cosas, cada equipo no sabe exactamente qué pasos seguir; por ejemplo, en una empresa de desarrollo, preferir un marco con actividades definidas. **ASD puede ser utilizado, pero debe complementarse con otra metodología mejor definida:** la filosofía gana cuerpo cuando se combina; por ejemplo, usar la mentalidad ASD para guiar la cultura mientras Scrum organiza el trabajo y XP define las prácticas de código. **Sin embargo, ASD provee conceptos sobre la filosofía misma de las MAs, con ideas importantes sobre cómo enfocar el desarrollo:** aunque no se use solo, aporta el espíritu de adaptación continua y la aceptación de la incertidumbre; por ejemplo, en una empresa innovadora, sus conceptos orientan cómo enfrentar proyectos cambiantes. ASD es un complemento valioso, no un reemplazo de otras metodologías.
 - **Reflexión docente:** ASD aporta ideas valiosas, pero no es suficiente solo.
 - **Pregunta desafío:** ¿qué aporta ASD que otras metodologías no tienen?
 - **Respuestas posibles:**
@@ -915,8 +887,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** XP es la metodología ágil más conocida y practicada. Combina prácticas conocidas de forma innovadora.
-- **Ejemplos:** **Global Exchange (conductor):** usar XP para desarrollo de código con testing continuo y programación en parejas. **Segundo contexto industrial:** en un equipo de desarrollo web, XP permite entregar funcionalidad de calidad rápidamente.
+- **Desarrollo:** **Programación Extrema (XP):** la diapositiva introduce la metodología ágil más difundida. **Desarrollado por K. Beck en 1999:** se atribuye el origen a Kent Beck. **Probablemente es la metodología ágil más conocida y utilizada en la actualidad:** su popularidad se explica por la claridad de sus prácticas; por ejemplo, en un equipo de desarrollo web, XP permite entregar funcionalidad de calidad rápidamente. **XP es un conjunto de prácticas ya conocidas, pero combinadas de manera innovadora para lograr una nueva metodología:** no inventa técnicas nuevas, sino que reúne testing, revisión y diseño simple en un sistema coherente; por ejemplo, en un sistema bancario, combinar pruebas continuas con integración frecuente para reducir errores. **Se la conoce como «Extrema» por el hecho de llevar cada una de sus prácticas al extremo de su recomendación:** si las revisiones son buenas, XP las hace permanentes; si las pruebas son útiles, las hace continuas; por ejemplo, en un sistema de control de calidad, llevar la automatización al máximo. El nombre refleja la intensidad con la que se aplican las buenas prácticas.
 - **Reflexión docente:** XP es pragmático: combina prácticas conocidas de forma efectiva.
 - **Pregunta desafío:** ¿por qué se llama "Extrema"?
 - **Respuestas posibles:**
@@ -938,7 +909,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** El diagrama XP muestra las prácticas fundamentales y su relación.
+- **Desarrollo:** **Programación Extrema (XP):** la diapositiva es esencialmente visual y presenta las prácticas fundamentales de la metodología y sus relaciones. El diagrama muestra un conjunto de prácticas dispuestas alrededor de un núcleo central, conectadas entre sí para comunicar que en XP ninguna práctica funciona aislada. Entre las prácticas que se observan están la programación en parejas, el testing continuo, la integración continua, la refactorización, el diseño simple, la propiedad colectiva del código, el estándar de código y el juego de planificación. Por ejemplo, en un equipo de desarrollo móvil, las parejas revisan el código en tiempo real, las pruebas automatizadas corren con cada cambio y la integración continua detecta conflictos temprano. El diagrama comunica que todas las prácticas se refuerzan mutuamente: la integración continua exige testing continuo, y la refactorización se apoya en el diseño simple. Es una simplificación, ya que XP tiene muchas más prácticas, pero refleja el centro de su filosofía: calidad de código y colaboración del equipo.
 - **Reflexión docente:** XP se centra en la calidad del código y la colaboración del equipo.
 - **Pregunta desafío:** ¿cuáles son las prácticas más importantes de XP?
 - **Respuestas posibles:**
@@ -960,8 +931,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** XP define prácticas concretas para mejorar la calidad: programación en parejas, diseño simple, refactorización, testing continuo.
-- **Ejemplos:** **Global Exchange (conductor):** programación en parejas para lógica de cambio de divisas, testing continuo para validar reglas de negocio. **Segundo contexto industrial:** en un equipo de desarrollo móvil, las prácticas de XP permiten entregar actualizaciones frecuentes con calidad.
+- **Desarrollo:** **Prácticas de Programación Extrema:** la diapositiva presenta la primera parte de las prácticas concretas que definen XP. **Programación en parejas:** dos desarrolladores trabajan juntos en la misma tarea, uno escribe y el otro revisa, detectando errores al instante; por ejemplo, en un sistema de facturación, la lógica de impuestos se revisa en tiempo real. **Diseño simple:** se implementa solo lo necesario para hoy, evitando sobreingeniería; por ejemplo, en un sistema de turnos, empezar con la funcionalidad mínima y agregar después. **Refactorización:** se mejora continuamente el código sin cambiar su comportamiento, manteniéndolo limpio y mantenible; por ejemplo, en comercio electrónico, simplificar un carrito que creció con parches. **Testing continuo:** las pruebas automatizadas corren con cada cambio y detectan errores temprano; por ejemplo, en un sistema bancario, validar las reglas de negocio cada vez que se modifica el código. Estas prácticas son aplicables incluso fuera de XP y requieren compromiso y disciplina del equipo para sostenerse en el tiempo.
 - **Reflexión docente:** Las prácticas de XP son aplicables incluso fuera de XP.
 - **Pregunta desafío:** ¿qué práctica les parece más beneficiosa?
 - **Respuestas posibles:**
@@ -983,8 +953,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Más prácticas XP: integración continua, propiedad colectiva, código estándar, sistema metafórico.
-- **Ejemplos:** **Global Exchange (conductor):** integración continua para detectar errores temprano, propiedad colectiva para que cualquier desarrollador pueda mejorar el código. **Segundo contexto industrial:** en un equipo distribuido, el código estándar y la integración continua son fundamentales.
+- **Desarrollo:** **Prácticas de Programación Extrema:** la diapositiva presenta la segunda parte de las prácticas de XP. **Integración continua:** los cambios de todos los desarrolladores se combinan varias veces al día y el sistema se prueba de inmediato, detectando conflictos temprano; por ejemplo, en un equipo distribuido de logística, cada cambio de un módulo se integra y valida al instante. **Propiedad colectiva del código:** cualquier desarrollador puede modificar cualquier parte del sistema, lo que reduce las dependencias de personas clave; por ejemplo, en un hospital, si el encargado del módulo de citas se ausenta, otro puede continuar. **Código estándar:** todos escriben siguiendo las mismas convenciones, facilitando la lectura compartida; por ejemplo, en comercio electrónico, un formato uniforme hace comprensible todo el repositorio. **Sistema metafórico:** el equipo acuerda una metáfora común para nombrar y estructurar el sistema, alineando el lenguaje; por ejemplo, en un sistema de reservas, describir el flujo como un mostrador de atención. La propiedad colectiva exige confianza y responsabilidad compartida.
 - **Reflexión docente:** La propiedad colectiva reduce puntos ciegos y dependencias individuales.
 - **Pregunta desafío:** ¿qué pasa si nadie quiere compartir la propiedad del código?
 - **Respuestas posibles:**
@@ -1008,8 +977,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** XP es la metodología ágil más utilizada en el mercado por sus prácticas bien definidas.
-- **Ejemplos:** **Global Exchange (conductor):** muchas empresas usan XP para desarrollo de software crítico donde la calidad es esencial. **Segundo contexto industrial:** en una consultancy de desarrollo, XP es el estándar por la previsibilidad de sus resultados.
+- **Desarrollo:** **Uso actual de XP:** la diapositiva presenta datos que explican la popularidad de la metodología. **El 38% del mercado «ágil» utiliza XP. Esto es gracias a que tiene bien definidas sus prácticas a lo largo de todo el proceso de desarrollo:** el dato cuantifica la adopción y la vincula con la claridad de sus prácticas; por ejemplo, en una consultora de desarrollo, XP es el estándar por la previsibilidad de sus resultados. **En la Agile Alliance se puede apreciar en el grupo de usuarios de MAs que existe una amplia mayoría de usuarios de XP:** la comunidad profesional de la Agile Alliance confirma el liderazgo de XP entre los equipos ágiles; por ejemplo, en conferencias y foros, la mayoría de los equipos que reportan sus prácticas mencionan el testing continuo y la programación en parejas. La popularidad se debe al pragmatismo y a resultados medibles en calidad y productividad. Sin embargo, la popularidad no garantiza que sea la mejor opción para todos los contextos; por ejemplo, en un proyecto pequeño con requisitos muy estables, tal vez baste un enfoque más liviano.
 - **Reflexión docente:** La popularidad de XP se debe a su pragmatismo y resultados medibles.
 - **Pregunta desafío:** ¿por qué XP es más popular que otras metodologías ágiles?
 - **Respuestas posibles:**
@@ -1036,8 +1004,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Scrum es el marco ágil más utilizado para gestión de proyectos. Se basa en iteraciones cortas (sprints) y roles definidos.
-- **Ejemplos:** **Global Exchange (conductor):** usar Scrum para gestionar entregas incrementales de funcionalidades de cambio. **Segundo contexto industrial:** en un equipo de desarrollo de software empresarial, Scrum permite planificar y ejecutar en ciclos de 2 semanas.
+- **Desarrollo:** **SCRUM:** la diapositiva introduce el marco de gestión ágil más usado. **La metodología SCRUM es la más utilizada por los equipos que apuestan por las metodologías ágiles:** su éxito se debe a que es simple de entender y a que produce resultados visibles; por ejemplo, en un equipo de desarrollo empresarial, planificar y ejecutar en ciclos de dos semanas. **Scrum es una manera de trabajar en equipo donde el resultado se produce de forma incremental, este resultado es un entregable:** cada ciclo produce una parte funcional del producto lista para usar; por ejemplo, en comercio electrónico, al terminar un sprint se libera la nueva pantalla de pagos. **Se establecen periodos cortos de trabajo en los que se sigue un mismo patrón:** los sprints repiten la misma secuencia de planificación, ejecución, revisión y mejora, creando ritmo y previsibilidad; por ejemplo, en logística, cada dos semanas el equipo entrega una mejora del seguimiento de envíos. Scrum no define cómo programar, sino cómo organizar el trabajo, y exige el compromiso de todos los roles.
 - **Reflexión docente:** Scrum no define cómo programar, sino cómo organizar el trabajo.
 - **Pregunta desafío:** ¿por qué Scrum es tan popular?
 - **Respuestas posibles:**
@@ -1064,8 +1031,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Scrum define 5 actividades clave: Sprint, Planning, Daily, Review y Retrospective. Cada una tiene un propósito distinto.
-- **Ejemplos:** **Global Exchange (conductor):** cada sprint entrega funcionalidad de cambio de divisas; el Daily sincroniza al equipo; la Review valida con el cliente. **Segundo contexto industrial:** en un equipo de desarrollo web, las actividades de Scrum crean ritmo y visibilidad.
+- **Desarrollo:** **SCRUM – Actividades:** la diapositiva presenta las cinco actividades que estructuran el marco. **Sprint:** es la iteración de trabajo de duración fija, de dos a cuatro semanas, al final de la cual hay un entregable; por ejemplo, en un sistema de facturación, cada sprint agrega un grupo de funcionalidades. **Sprint planning:** al inicio del ciclo se define qué se construirá y cómo; por ejemplo, en comercio electrónico, seleccionar las historias del catálogo para el próximo sprint. **Daily:** reunión breve diaria donde el equipo se sincroniza y reporta avances y bloqueos; por ejemplo, en logística, quince minutos para coordinar el trabajo del día. **Sprint Review:** al final del ciclo se presenta el resultado al cliente y se valida con él; por ejemplo, en un hospital, mostrar a los médicos el módulo de citas terminado. **Sprint Retrospective:** el equipo reflexiona sobre el proceso y define mejoras; por ejemplo, en un equipo de desarrollo, decidir automatizar una tarea que costó horas. Todas crean ritmo y visibilidad; omitir alguna debilita el marco.
 - **Reflexión docente:** Las actividades de Scrum crean ritmo y visibilidad del progreso.
 - **Pregunta desafío:** ¿qué actividad es más importante y por qué?
 - **Respuestas posibles:**
@@ -1091,8 +1057,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Scrum usa tres herramientas principales: Product Backlog (lista priorizada), Sprint Backlog (trabajo del sprint) y Burn Down (gráfico de progreso).
-- **Ejemplos:** **Global Exchange (conductor):** el Product Backlog lista todas las funcionalidades de cambio priorizadas por valor; el Burn Down muestra el avance diario. **Segundo contexto industrial:** en un equipo de desarrollo, el Sprint Backlog contiene las tareas del sprint actual.
+- **Desarrollo:** **SCRUM – Herramientas:** la diapositiva presenta las tres herramientas que hacen visible el trabajo. **Product Backlog:** es la lista priorizada de todo lo que el producto podría incluir, ordenada por valor para el negocio; por ejemplo, en comercio electrónico, las funcionalidades del sitio ordenadas por impacto en ventas. **Sprint Backlog:** es la selección de tareas del Product Backlog que el equipo se compromete a completar en el sprint actual; por ejemplo, en logística, las tareas concretas para incorporar el seguimiento de envíos en dos semanas. **Burn Down:** es el gráfico que muestra el avance diario del sprint, comparando trabajo pendiente con tiempo restante; por ejemplo, en un sistema de facturación, ver cómo decrece la curva de tareas pendientes cada día. Estas herramientas hacen visibles el progreso y las prioridades. Si el Product Backlog no está priorizado, el equipo trabaja en lo que parece urgente en lugar de lo más valioso; por ejemplo, en un hospital, se pierde tiempo en funciones de bajo impacto mientras lo crítico espera. Sin disciplina, las herramientas no funcionan.
 - **Reflexión docente:** Las herramientas de Scrum hacen visible el progreso y las prioridades.
 - **Pregunta desafío:** ¿qué pasa si el Product Backlog no está priorizado?
 - **Respuestas posibles:**
@@ -1117,8 +1082,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Scrum define tres roles: Product Owner (define qué construir), Scrum Master (facilita y remueve obstáculos) y Team (construye el producto).
-- **Ejemplos:** **Global Exchange (conductor):** el Product Owner prioriza funcionalidades de cambio; el Scrum Master facilita las reuniones; el Team implementa. **Segundo contexto industrial:** en un equipo de desarrollo, cada rol tiene responsabilidades claras que evitan conflictos.
+- **Desarrollo:** **SCRUM – Roles:** la diapositiva presenta los tres roles que definen las responsabilidades del marco. **Product Owner:** es quien representa al negocio, prioriza el Product Backlog y define qué se construye; por ejemplo, en un sistema de facturación, decide si el próximo sprint incluye reportes o la integración con el banco. **Scrum Master:** es quien facilita las actividades, protege al equipo y remueve obstáculos; por ejemplo, en logística, gestiona con otras áreas el acceso a datos que bloquea al equipo. **Team (equipo de desarrollo):** es el grupo autoorganizado que construye el producto y decide cómo hacerlo; por ejemplo, en comercio electrónico, los desarrolladores y diseñadores acuerdan la mejor forma de implementar el carrito. Los roles crean claridad y responsabilidad y evitan conflictos de autoridad. Si el Product Owner no está disponible, el equipo pierde dirección y puede producir algo que nadie necesita; por ejemplo, en un hospital, sin quien priorice, se construyen funciones que los médicos no usan. Los tres roles son esenciales y no se pueden omitir.
 - **Reflexión docente:** Los roles de Scrum crean claridad y responsabilidad.
 - **Pregunta desafío:** ¿qué pasa si el Product Owner no está disponible?
 - **Respuestas posibles:**
@@ -1140,7 +1104,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** El diagrama muestra el ciclo de Scrum con roles, actividades y herramientas.
+- **Desarrollo:** La diapositiva es esencialmente visual y presenta el ciclo completo de Scrum integrando roles, actividades y herramientas en un único diagrama. El diagrama muestra cómo fluye el trabajo: el Product Owner mantiene priorizado el Product Backlog; en la planificación del sprint, el equipo selecciona del Product Backlog las tareas que pasan al Sprint Backlog; durante el sprint se realizan las reuniones diarias que mantienen al equipo sincronizado; al final, en la revisión del sprint se muestra el entregable al cliente; y en la retrospectiva se mejora el proceso. El gráfico Burn Down acompaña el avance diario del sprint y el Scrum Master facilita todas las actividades y remueve los obstáculos. Por ejemplo, en un sistema de salud, el Product Owner prioriza los módulos de citas, el equipo toma el trabajo en la planificación, el Daily mantiene el ritmo y el Burn Down muestra el avance hacia la meta. El diagrama es una simplificación, pero comunica que Scrum es un marco completo que integra sus tres pilares.
 - **Reflexión docente:** Scrum es un marco completo para gestión ágil que integra roles, actividades y herramientas.
 - **Pregunta desafío:** ¿cómo se integran los roles, actividades y herramientas en Scrum?
 - **Respuestas posibles:**
@@ -1165,8 +1129,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Scrum y XP se complementan: Scrum para gestión, XP para prácticas de código.
-- **Ejemplos:** **Global Exchange (conductor):** usar Scrum para sprints y XP para programación en parejas y testing continuo. **Segundo contexto industrial:** en una empresa de desarrollo, la combinación Scrum+XP es muy efectiva para entregar calidad rápidamente.
+- **Desarrollo:** **Uso actual de SCRUM:** la diapositiva analiza la adopción de Scrum y su relación con XP. **Después de XP, Scrum es uno de los enfoques ágiles más utilizados, pero aún lejos de XP:** los datos de adopción ubican a Scrum en segundo lugar, todavía por debajo de XP; por ejemplo, en una consultora de desarrollo, muchos equipos eligen Scrum para la gestión pero adoptan prácticas de XP para el código. **A nivel de investigación, se están realizando esfuerzos para integrar XP y Scrum, argumentando que Scrum provee un marco de gestión del proyecto sobre las prácticas bien definidas de XP:** la combinación busca unir lo mejor de ambos; por ejemplo, en una empresa de software, usar Scrum para los sprints y XP para la programación en parejas y el testing continuo. Juntos cubren más aspectos del desarrollo: Scrum aporta gestión y XP aporta prácticas técnicas. La integración es un área activa de investigación y práctica, y produce mejores resultados que cada uno por separado, aunque combinar metodologías requiere entender cada una en profundidad.
 - **Reflexión docente:** La integración de Scrum y XP es un área activa de investigación y práctica.
 - **Pregunta desafío:** ¿por qué se buscan combinar Scrum y XP?
 - **Respuestas posibles:**
@@ -1193,8 +1156,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Los MAs tienen ventajas claras: iteraciones cortas, adaptabilidad, orientación a personas y trabajo en equipo.
-- **Ejemplos:** **Global Exchange (conductor):** entregar funcionalidad de cambio cada 2 semanas, adaptarse a cambios de regulaciones, trabajar en equipo con el usuario. **Segundo contexto industrial:** en un equipo de desarrollo ágil, las ventajas se traducen en mayor satisfacción del cliente y mejor calidad.
+- **Desarrollo:** **Ventajas de las MAs:** la diapositiva resume las fortalezas de los métodos ágiles. **Iteraciones en ciclos cortos que permiten correcciones y verificaciones más rápidamente:** al entregar seguido, los errores se detectan y corrigen temprano; por ejemplo, en comercio electrónico, cada ciclo valida una funcionalidad con usuarios reales. **Límites de tiempo para cada ciclo de dos a ocho semanas:** la duración fija crea ritmo y presión sana; por ejemplo, en un sistema de turnos, cada quincena se libera una mejora concreta. **Adaptable al surgimiento de nuevos riesgos:** el marco absorbe imprevistos sin descarrilar el proyecto; por ejemplo, en logística, si cambia una regulación de transporte, el equipo reordena las prioridades en el siguiente ciclo. **Orientación hacia las personas:** el software lo hacen personas y el valor humano se antepone a los procesos; por ejemplo, en un hospital, la comunicación entre desarrolladores y médicos es la clave del éxito. **Estilo de trabajo en equipo:** la colaboración es el motor; por ejemplo, en un equipo de desarrollo, el trabajo conjunto y autoorganizado mejora la calidad. Estas ventajas exigen disciplina y compromiso para hacerse realidad.
 - **Reflexión docente:** Las ventajas son reales, pero requieren disciplina y compromiso.
 - **Pregunta desafío:** ¿cuál es la ventaja más importante?
 - **Respuestas posibles:**
@@ -1220,8 +1182,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Los MAs también tienen desventajas: riesgo de caos, dificultad para mantener interés del cliente, priorización compleja, no apto para requisitos estables.
-- **Ejemplos:** **Global Exchange (conductor):** si el cliente no participa activamente, el ágil puede perder el rumbo. **Segundo contexto industrial:** en un proyecto gubernamental con requisitos estables, un enfoque ágil puede ser ineficiente.
+- **Desarrollo:** **Desventajas de las MAs:** la diapositiva presenta el lado oscuro de los métodos ágiles. **Su filosofía de poder adaptarse al cambio en vez de seguir estrictamente un plan, puede llevar al caos en el proceso de desarrollo:** sin un marco firme, la flexibilidad se vuelve desorden; por ejemplo, en una startup, cambiar de rumbo en cada reunión impide terminar nada. **Difícil de mantener el interés de los clientes que participan en el proceso de desarrollo:** la colaboración continua exige tiempo que el cliente muchas veces no puede dar; por ejemplo, en un proyecto gubernamental, los funcionarios tienen agendas saturadas. **Definir las prioridades de los cambios pueden ser difíciles de establecer cuando los cambios son muchos y se superponen:** cuando todo es urgente, nada lo es; por ejemplo, en comercio electrónico, peticiones simultáneas de descuentos, envíos y pagos compiten por el mismo sprint. **No es adecuado para proyectos con requisitos muy estables o con restricciones de documentación:** en dominios regulados el proceso ágil puro es ineficiente; por ejemplo, en aviación, las certificaciones exigen documentación extensa. Conocer estas limitaciones indica cuándo usar los métodos ágiles con precaución.
 - **Reflexión docente:** Los MAs no son para todos los contextos; conocer sus limitaciones es clave.
 - **Pregunta desafío:** ¿cómo mitigar estas desventajas?
 - **Respuestas posibles:**
@@ -1244,8 +1205,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Los métodos ágiles son una respuesta válida pero no universal a las limitaciones de los modelos tradicionales.
-- **Ejemplos:** **Global Exchange (conductor):** usar ágil para funcionalidades nuevas, tradicional para arquitectura estable. **Segundo contexto industrial:** en una empresa madura, combinar ágil y tradicional según el contexto del proyecto.
+- **Desarrollo:** **Métodos Ágiles:** la diapositiva cierra el bloque dedicado a los métodos ágiles y sintetiza lo aprendido. Los métodos ágiles son una respuesta válida pero no universal a las limitaciones de los modelos tradicionales: ofrecen iteraciones cortas, adaptabilidad y trabajo en equipo, pero no resuelven todos los problemas ni son aplicables a todo tipo de desarrollo. La profesionalidad está en elegir el enfoque adecuado para cada situación, analizando el contexto: la claridad de los requisitos, la estabilidad del equipo y la tecnología, los plazos, los costos y las regulaciones. Por ejemplo, en una empresa madura, se combina lo tradicional para la arquitectura estable y lo ágil para las funcionalidades nuevas; en un sistema bancario, se mantiene proceso para el cumplimiento normativo y agilidad para la interfaz de usuario. No hay una respuesta única: se decide experimentando con ambos enfoques, midiendo resultados y aprendiendo de la experiencia de proyectos anteriores.
 - **Reflexión docente:** La profesionalidad está en elegir el enfoque adecuado para cada situación.
 - **Pregunta desafío:** ¿cómo decidir qué enfoque usar?
 - **Respuestas posibles:**
@@ -1269,8 +1229,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Las conclusiones resumen los aportes de los MAs: marco aplicable, bueno para organizaciones en maduración, adecuado para proyectos de pequeño y mediano tamaño.
-- **Ejemplos:** **Global Exchange (conductor):** el equilibrio entre ágil y tradicional es clave para el éxito del proyecto. **Segundo contexto industrial:** una startup puede beneficiarse mucho de los MAs por su flexibilidad y rapidez.
+- **Desarrollo:** **Conclusiones:** la diapositiva cierra la unidad resumiendo los aportes de los métodos ágiles. **Las ventajas de las MAs proveen un marco de trabajo aplicable a entornos de desarrollo de software que no tienen definidos sus procesos (o lo tienen vagamente), en el área de desarrollo mismo como en el área de aseguramiento de la calidad del producto:** los métodos ágiles sirven de punto de partida ordenado cuando no existe un proceso formal; por ejemplo, en una pequeña empresa de desarrollo que recién comienza, adoptar Scrum da estructura tanto a la construcción como a la verificación de calidad. **Como las MAs se ajustan a sistemas de pequeño y mediano tamaño, pueden ser una buena alternativa para organizaciones que recién inician procesos de desarrollo de software:** por su flexibilidad y rapidez, encajan en equipos chicos y productos medianos; por ejemplo, una startup puede beneficiarse de la agilidad para lanzar rápido. No hay respuestas absolutas: la profesionalidad está en adaptar el enfoque al contexto, por ejemplo, en un hospital, elegir ágil para el módulo de citas y tradicional para la integración con sistemas legados.
 - **Reflexión docente:** La unidad muestra que no hay respuestas absolutas; la profesionalidad está en adaptar el enfoque al contexto.
 - **Pregunta desafío:** ¿qué llevarían de esta unidad a su práctica profesional?
 - **Respuestas posibles:**
@@ -1292,8 +1251,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Cierre de la clase y apertura a preguntas.
-- **Ejemplos:** **Global Exchange (conductor):** ¿qué modelo usarían para el sistema de cambio de divisas? **Segundo contexto industrial:** ¿cómo aplicarían lo aprendido en un proyecto real?
+- **Desarrollo:** **PREGUNTAS:** la diapositiva cierra la clase y abre el espacio para el diálogo con los estudiantes. El docente aprovecha este momento para verificar qué conceptos se comprendieron y cuáles necesitan refuerzo, invitando a preguntar sobre los temas tratados: cuándo conviene usar un modelo de proceso u otro, cómo implementar Scrum o XP en la práctica o cómo equilibrar la agilidad con el proceso. Por ejemplo, en un curso donde los equipos desarrollan proyectos integradores, las preguntas ayudan a que cada grupo justifique qué enfoque aplicará a su sistema de logística, de facturación o de gestión de turnos. Las dudas de los estudiantes son oportunidades de aprendizaje, no interrupciones, y permiten al docente detectar las zonas débiles de la unidad antes del parcial. Se anima a plantear las preguntas con confianza, ya que esta apertura es el espacio natural para cerrar el círculo entre la teoría expuesta y la aplicación práctica que vendrá.
 - **Reflexión docente:** Las preguntas revelan qué conceptos necesitan refuerzo.
 - **Pregunta desafío:** ¿qué duda les queda después de esta clase?
 - **Respuestas posibles:**

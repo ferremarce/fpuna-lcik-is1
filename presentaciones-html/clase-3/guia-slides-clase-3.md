@@ -55,8 +55,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Apertura de la Unidad III: se presenta la materia y se sitúa el tema de los requerimientos dentro de la Ingeniería de Software. El docente se presenta e invita a pensar en qué necesita realmente un sistema antes de construirlo.
-- **Ejemplos:** **Global Exchange (conductor):** antes de diseñar el sistema de cambio de divisas definimos qué debe hacer: registrar operaciones, calcular tasas y emitir comprobantes. **Segundo contexto industrial:** un sistema de turnos necesita saber quién se atiende, en qué orden y con qué servicio.
+- **Desarrollo:** **Ingeniería de Software I:** se presenta la materia dentro del contexto de la carrera y se anuncia la unidad de la sesión. **UNIDAD III – REQUERIMIENTOS DE SOFTWARE:** el tema central es qué necesita realmente un sistema antes de construirlo; por ejemplo, un sistema de reservas de hotel necesita saber qué habitaciones hay, en qué fechas y qué servicios se contratan. **Presentación del docente:** la portada identifica a quien dicta la unidad, se presenta e invita a pensar en qué debe hacer un sistema antes de diseñarlo.
 - **Reflexión docente:** los requerimientos son la base de todo el proyecto: un error aquí se multiplica en las fases posteriores.
 - **Pregunta desafío:** ¿qué pasa si construimos un sistema sin definir bien sus requerimientos?
 - **Respuestas posibles:**
@@ -80,8 +79,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan los objetivos de la unidad: comprender qué son los requerimientos, distinguir sus tipos y aprender técnicas y herramientas para obtenerlos, analizarlos y gestionarlos.
-- **Ejemplos:** **Global Exchange (conductor):** al finalizar la unidad sabremos definir los requerimientos funcionales (registrar cambio de divisas) y no funcionales (tiempo de respuesta, seguridad). **Segundo contexto industrial:** en un hospital, distinguir entre lo que el sistema debe hacer y las restricciones de privacidad.
+- **Desarrollo:** **Comprender qué son los requerimientos de software y por qué son importantes:** al terminar la unidad el estudiante explica qué es un requerimiento y justifica su impacto; por ejemplo, en un sistema de biblioteca, saber que "registrar préstamos" es un requerimiento evita construir módulos innecesarios. **Familiarizarse con los diferentes tipos de requerimientos:** distinguir los funcionales (qué hace el sistema) de los no funcionales (cómo debe comportarse); por ejemplo, en un portal de pagos, "procesar el pago" (funcional) frente a "cifrar los datos de la tarjeta" (no funcional). **Aprender técnicas y herramientas para la obtención, análisis y gestión de requerimientos:** por ejemplo, usar entrevistas para relevar el trabajo actual de una empresa de repartos y herramientas como JIRA para registrar, priorizar y seguir los requerimientos.
 - **Reflexión docente:** estos objetivos estructuran el recorrido de la unidad y dan criterio para evaluar el avance.
 - **Pregunta desafío:** ¿cuál de los tres objetivos les parece más difícil de lograr y por qué?
 - **Respuestas posibles:**
@@ -112,8 +110,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presenta el mapa de la unidad: los diez temas que se recorrerán, desde la definición de requerimiento hasta la gestión de cambios.
-- **Ejemplos:** **Global Exchange (conductor):** el recorrido nos lleva desde "qué es un requerimiento" hasta "cómo gestionar que el cliente pida más monedas o nuevas tasas". **Segundo contexto industrial:** en un sistema de inventario, el mismo camino: definir, obtener, analizar, especificar, verificar, validar y gestionar.
+- **Desarrollo:** **Requerimientos de Software:** punto de partida del mapa de la unidad: qué es un requerimiento y por qué es la base del proyecto. **Tipos de Requerimientos:** su primera clasificación; por ejemplo, en un sistema de pedidos a domicilio, "agregar productos al carrito" (funcional) y "responder en menos de 2 segundos" (no funcional). **Ingeniería de Requerimientos:** la disciplina que reúne las actividades para descubrir, documentar y mantener los requisitos. **Proceso de Requerimientos de Software:** las cinco actividades que lo componen: obtención (entrevistar al personal de cocina y de reparto), análisis (clasificar y priorizar lo pedido), especificación (redactar el documento ERS), verificación (comprobar que el documento es correcto) y validación (confirmar con el cliente que es lo que quiere). **Gestión de Requerimientos:** controlar los cambios; por ejemplo, cuando el restaurante incorpora un nuevo método de pago.
 - **Reflexión docente:** el proceso no es lineal estricto; las actividades se solapan y retroalimentan.
 - **Pregunta desafío:** ¿por qué la verificación y la validación son pasos distintos?
 - **Respuestas posibles:**
@@ -127,7 +124,7 @@ Cada presentación HTML debe incluir:
 **Texto visible**
 
 - `¿Qué es un Requerimiento de Software?`
-- `Propiedad que debe ser exhibida por un software para resolver un problema particular. (Sweebok)`
+- `Propiedad que debe ser exhibida por un software para resolver un problema particular. (Swebok)`
 - `Condición o capacidad que necesita el usuario para resolver un problema o conseguir un objetivo determinado.`
 - `ERS – Documento formal de Especificación de Requisitos Software`
 - `SRS – Software Requirements Specification`
@@ -138,15 +135,14 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se define qué es un requerimiento desde dos perspectivas: la de Sweebok (propiedad que debe exhibir el software) y la del usuario (condición o capacidad para resolver un problema). Se mencionan los documentos ERS y SRS.
-- **Ejemplos:** **Global Exchange (conductor):** un requerimiento es "el sistema debe calcular la tasa de cambio aplicando el margen definido". **Segundo contexto industrial:** en un sistema de turnos, "el sistema debe asignar el siguiente número según la prioridad del paciente".
+- **Desarrollo:** **Definición (Swebok):** el software debe exhibir una propiedad que resuelve un problema particular; por ejemplo, en un sistema de facturación, "el sistema debe calcular el IVA automáticamente" es una propiedad que el software exhibe. **Definición (usuario):** es una condición o capacidad que el usuario necesita para resolver un problema; por ejemplo, en una biblioteca digital, el usuario necesita "buscar un libro por título". **ERS:** documento formal de Especificación de Requisitos Software. **SRS:** Software Requirements Specification; es el mismo documento con su nombre en inglés.
 - **Reflexión docente:** la doble definición muestra que un requerimiento se puede ver desde el sistema y desde el negocio; ambos deben coincidir.
 - **Pregunta desafío:** ¿un requerimiento describe lo que el sistema hace o lo que el usuario necesita?
 - **Respuestas posibles:**
  1. Ambas cosas, según la perspectiva.
  2. Lo que el sistema hace para satisfacer la necesidad.
  3. Lo que el usuario necesita, traducido a capacidad del sistema.
-- **Advertencia:** Sweebok es la guía del cuerpo de conocimiento de la ingeniería de software; es una referencia académica.
+- **Advertencia:** Swebok es la guía del cuerpo de conocimiento de la ingeniería de software; es una referencia académica.
 
 ### Slide 5. Características de los Requerimientos
 
@@ -164,8 +160,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan las características de los requerimientos: surgen de combinar necesidades de distintas personas, deben ser verificables, claros, no ambiguos y cuantificables, y llevan atributos como prioridad e identificador único.
-- **Ejemplos:** **Global Exchange (conductor):** "la operación se registra en menos de 2 segundos" es verificable y cuantificable. **Segundo contexto industrial:** en un ERP, "el sistema debe ser rápido" no es verificable; "responder en menos de 3 segundos" sí.
+- **Desarrollo:** **Combinación compleja:** los requisitos reúnen las necesidades de diferentes personas en distintos niveles de la organización y del entorno en el que operará el software; por ejemplo, en un hospital, el sistema de turnos combina lo que pide la administración (controlar tiempos de espera), el personal médico (acceso rápido al historial) y la ley (proteger los datos del paciente). **Verificable:** es fundamental que un requisito pueda comprobarse; por ejemplo, "el sistema debe ser rápido" no es verificable, pero "la pasarela confirma el pago en menos de 3 segundos" sí lo es. **Prioridad e identificador único:** atributos que caracterizan a cada requisito, permiten ordenar el desarrollo y rastrear su origen; por ejemplo, asignar prioridad "alta" a la facturación electrónica y un código como RF-001. **Claros y no ambiguos, y cuantificables (si es posible):** redactar de modo que haya una sola interpretación y expresar con números lo medible; por ejemplo, "soporte hasta 1.000 usuarios concurrentes" en lugar de "muchos usuarios".
 - **Reflexión docente:** la verificabilidad es clave: un requerimiento que no se puede comprobar no se puede aceptar ni probar.
 - **Pregunta desafío:** ¿cómo harían verificable el requerimiento "el sistema debe ser fácil de usar"?
 - **Respuestas posibles:**
@@ -188,8 +183,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se introduce la clasificación principal de los requerimientos: funcionales y no funcionales.
-- **Ejemplos:** **Global Exchange (conductor):** funcional "registrar una venta de divisas"; no funcional "el sistema debe operar sin interrupciones en horario de atención". **Segundo contexto industrial:** en un hospital, funcional "asignar cama" y no funcional "cumplir la ley de protección de datos".
+- **Desarrollo:** **Requerimientos Funcionales:** describen qué hace el sistema, sus servicios y su reacción ante las entradas; por ejemplo, en una biblioteca, "el sistema presta un libro y reduce el stock disponible". **Requerimientos No Funcionales:** describen restricciones y propiedades de calidad; por ejemplo, "la consulta del catálogo responde en menos de 2 segundos" o "los datos de los socios se almacenan cifrados". Ambos tipos conviven: un sistema con buenas funciones pero mala usabilidad o poca seguridad falla en la práctica.
 - **Reflexión docente:** ambos tipos son necesarios; centrarse solo en los funcionales deja el sistema inusable.
 - **Pregunta desafío:** ¿cuál de los dos tipos se suele olvidar en proyectos reales?
 - **Respuestas posibles:**
@@ -215,8 +209,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se definen los requerimientos funcionales: capacidades del sistema, cómo reacciona ante entradas y cómo se comporta en situaciones particulares; también declaran lo que el sistema NO debe hacer.
-- **Ejemplos:** **Global Exchange (conductor):** "el sistema permite al operador registrar una transacción con monto, moneda origen y destino". **Segundo contexto industrial:** en un sistema de préstamos, "el sistema no permite aprobar un préstamo sin verificación de identidad".
+- **Desarrollo:** **Capacidades del sistema:** los requerimientos funcionales expresan qué sabe hacer el software. **Reacción ante ciertas entradas y comportamiento en situaciones particulares:** describen cómo responde el sistema; por ejemplo, en un cajero automático, ante la entrada "saldo insuficiente" el sistema no dispensa dinero y muestra un mensaje. **Funcionalidad o servicios que se espera que provea:** declaran los servicios del sistema; por ejemplo, en un sistema de reservas, "el sistema registra la reserva y envía una confirmación por correo". **Lo que el sistema NO debe hacer:** también se declaran exclusiones; por ejemplo, en un sistema de préstamos, "el sistema no permite aprobar un crédito sin verificación de identidad".
 - **Reflexión docente:** los requerimientos funcionales describen servicios, no la implementación interna.
 - **Pregunta desafío:** ¿"el sistema usa una base de datos MySQL" es un requerimiento funcional?
 - **Respuestas posibles:**
@@ -241,8 +234,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se muestran cuatro ejemplos de requerimientos funcionales (RF1-RF4) para un sistema típico de comercio: control de acceso, país de preselección, departamentos por país y envío de correos por transacción.
-- **Ejemplos:** **Global Exchange (conductor):** RF "el sistema valida el usuario y contraseña del operador"; RF "el sistema registra el tipo de cambio aplicado en cada venta". **Segundo contexto industrial:** en un sistema de facturación, los mismos patrones de RF1-RF4.
+- **Desarrollo:** **RF1. Control de acceso:** el sistema solo permite ingresar a usuarios autorizados con usuario y contraseña; por ejemplo, en un sistema bancario, "solo los usuarios autenticados pueden ver su saldo". **RF2. País de preselección:** el país asociado a una dirección debe estar previamente registrado; por ejemplo, en un comercio electrónico, "el cliente elige el país desde una lista y no lo escribe a mano". **RF3. Departamentos según el país:** solo se muestran los departamentos del país seleccionado; por ejemplo, "al elegir Paraguay, la lista muestra únicamente los departamentos de Paraguay". **RF4. Envío de correos por transacción:** el sistema notifica al registrarse pedidos, facturas y pagos; por ejemplo, "el sistema envía un correo al cliente cuando su pedido pasa a estado enviado". Todos siguen la forma "el sistema + verbo + condición", la redacción típica de un requerimiento funcional.
 - **Reflexión docente:** los ejemplos muestran la redacción típica: "el sistema + verbo + condición".
 - **Pregunta desafío:** ¿qué características comparten todos estos requerimientos?
 - **Respuestas posibles:**
@@ -268,8 +260,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se definen los requerimientos no funcionales: restricciones y requisitos de calidad (fiabilidad, tiempo de respuesta, capacidad de almacenamiento, restricciones de hardware y representación de datos).
-- **Ejemplos:** **Global Exchange (conductor):** "el sistema debe responder una cotización en menos de 2 segundos" o "debe operar en horario continuo sin caídas". **Segundo contexto industrial:** en un sistema de salud, "los datos de pacientes deben estar cifrados".
+- **Desarrollo:** **Restricciones y requisitos de calidad:** los no funcionales no dicen qué hace el sistema, sino bajo qué condiciones; por ejemplo, en un sistema de reservas, "el sistema no debe caerse durante el horario pico". **Restricciones de tiempo, del proceso de desarrollo y estándares:** por ejemplo, "cada pantalla debe responder en menos de 2 segundos" o "el código debe seguir el estándar interno de la organización". **Propiedades emergentes:** fiabilidad, tiempo de respuesta y capacidad de almacenamiento son propiedades del sistema completo, no de una función puntual; por ejemplo, "el sistema debe soportar 500.000 registros de historial". **Restricciones de dispositivos de entrada/salida y representación de datos:** por ejemplo, "la interfaz debe funcionar en pantallas táctiles" o "las fechas se representan en formato dd/mm/aaaa".
 - **Reflexión docente:** los no funcionales afectan propiedades emergentes del sistema, no funciones puntuales.
 - **Pregunta desafío:** ¿qué diferencia hay entre una restricción y un requisito de calidad?
 - **Respuestas posibles:**
@@ -290,8 +281,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Slide visual: se muestra el diagrama de la clasificación de los requerimientos no funcionales (producto, organizacionales y externos).
-- **Ejemplos:** **Global Exchange (conductor):** ubicamos cada ejemplo en el diagrama: tiempos de respuesta (producto), cumplimiento normativo (externo). **Segundo contexto industrial:** en un banco, privacidad (externo) y disponibilidad (producto).
+- **Desarrollo:** **Clasificación de los no funcionales:** el diagrama organiza los requerimientos no funcionales en tres grupos. **Producto:** propiedades del propio sistema; por ejemplo, tiempos de respuesta y seguridad en un portal de pagos. **Organizacionales:** políticas y estándares de la empresa; por ejemplo, "los entregables seguirán la norma interna de desarrollo". **Externos:** normativa legal y regulación; por ejemplo, "la aplicación debe cumplir la ley de protección de datos personales". El diagrama resume la clasificación y sirve de referencia durante toda la unidad.
 - **Reflexión docente:** la imagen resume la clasificación y sirve de referencia durante toda la unidad.
 - **Pregunta desafío:** ¿en qué categoría ubicarían "el sistema debe usar estándares de la organización"?
 - **Respuestas posibles:**
@@ -318,8 +308,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se muestran ejemplos de requerimientos no funcionales organizados en tres grupos: del producto, organizacionales y externos (RNF1-RNF3).
-- **Ejemplos:** **Global Exchange (conductor):** RNF "la interfaz del operador será HTML sin applets"; RNF "los entregables cumplirán la norma interna"; RNF "no se registrará información personal innecesaria". **Segundo contexto industrial:** en un sistema de salud, RNF externo "cumplir la ley de protección de datos (LOPD)".
+- **Desarrollo:** **Requerimientos del Producto (RNF1):** la interfaz se implementará como HTML simple, sin frames ni applets Java; por ejemplo, en un sistema interno, esta restricción garantiza la compatibilidad con los navegadores de la organización. **Requerimientos Organizacionales (RNF2):** el proceso de desarrollo y los entregables serán conformes a lo establecido en METRICA v3; por ejemplo, en un proyecto gubernamental, cumplir la metodología oficial del organismo. **Requerimientos Externos (RNF3):** no se registrará información personal de los clientes salvo nombre y número de referencia, respetando la LOPD; por ejemplo, en un sistema de ventas, no se guardan datos innecesarios como la dirección completa si no hacen falta. Cada grupo condiciona al sistema desde una fuente distinta: el producto, la organización y la ley.
 - **Reflexión docente:** los ejemplos muestran cómo la normativa y la organización condicionan el sistema.
 - **Pregunta desafío:** ¿por qué un requerimiento externo puede ser obligatorio por ley?
 - **Respuestas posibles:**
@@ -340,8 +329,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Slide visual: se muestra un ejemplo ilustrado de requerimientos, sirviendo de apoyo para fijar el concepto.
-- **Ejemplos:** **Global Exchange (conductor):** la imagen ilustra cómo se describe un requerimiento con su contexto. **Segundo contexto industrial:** aplicable a cualquier dominio de negocio.
+- **Desarrollo:** **Ejemplo ilustrado:** la imagen muestra un caso concreto de cómo se describe un requerimiento con su contexto, sirviendo de apoyo para fijar el concepto. Se usa para mostrar que un requerimiento debe incluir el actor, la acción y la condición; por ejemplo, en un sistema de turnos, "el recepcionista registra al paciente y el sistema asigna el siguiente número según la prioridad". Es un slide de apoyo visual; el detalle técnico se desarrolla en los slides posteriores.
 - **Reflexión docente:** los recursos visuales ayudan a conectar la teoría con casos concretos.
 - **Pregunta desafío:** ¿qué información necesitaría un desarrollador para implementar el ejemplo de la imagen?
 - **Respuestas posibles:**
@@ -364,8 +352,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se define la Ingeniería de Requisitos como el conjunto de actividades para descubrir, documentar y mantener los requisitos, y para establecer los servicios y restricciones que el cliente requiere.
-- **Ejemplos:** **Global Exchange (conductor):** la ingeniería de requisitos nos permite pasar de "queremos cambiar divisas" a un documento claro de servicios y restricciones. **Segundo contexto industrial:** en un ERP, definir qué módulos y bajo qué restricciones.
+- **Desarrollo:** **Conjunto de actividades para descubrir, documentar y mantener requisitos:** la ingeniería de requisitos permite pasar de una idea vaga a un conjunto organizado; por ejemplo, en un sistema de inventario, descubrir que el encargado necesita alertas de stock mínimo, documentar ese requisito y mantenerlo actualizado cuando cambia el negocio. **Establecer los servicios que el cliente requiere y las restricciones bajo las cuales opera:** define qué pide el cliente y qué límites condicionan al sistema; por ejemplo, "el sistema genera órdenes de compra" (servicio) y "solo el comprador autorizado puede generarlas" (restricción).
 - **Reflexión docente:** la ingeniería de requisitos es la primera disciplina del proceso; de ella depende el resto.
 - **Pregunta desafío:** ¿por qué se dice que los requisitos son la etapa más cara de corregir?
 - **Respuestas posibles:**
@@ -386,8 +373,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se define el proceso de la ingeniería de requerimientos como un conjunto estructurado de actividades de cuya ejecución se obtiene, valida y mantiene el documento de requisitos (ERS).
-- **Ejemplos:** **Global Exchange (conductor):** el proceso comienza con obtener qué necesita el cliente y termina con un ERS validado. **Segundo contexto industrial:** en un sistema de logística, el mismo flujo.
+- **Desarrollo:** **Conjunto estructurado de actividades:** el proceso organiza las actividades en pasos ordenados y relacionados. **Obtener, validar y mantener un ERS:** de su ejecución surge el documento de requisitos del sistema (ERS), que se valida con el cliente y se mantiene actualizado. Por ejemplo, en un sistema de logística, se obtienen los requisitos entrevistando a los repartidores, se validan con el responsable del depósito y se mantienen cuando cambian las rutas de entrega. El ERS es el artefacto central: todas las actividades convergen en él.
 - **Reflexión docente:** el ERS es el artefacto central; todas las actividades convergen en él.
 - **Pregunta desafío:** ¿qué significa que el ERS se "valida y mantiene"?
 - **Respuestas posibles:**
@@ -418,8 +404,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan los participantes en el proceso de ingeniería de requerimientos: cliente y usuarios, diseñadores, supervisores del contrato, gerentes del negocio y verificadores, con el rol de cada uno.
-- **Ejemplos:** **Global Exchange (conductor):** el cliente define las reglas de cambio; el diseñador las convierte en arquitectura; el supervisor fija hitos; el verificador comprueba el cumplimiento. **Segundo contexto industrial:** en un hospital, pacientes (usuarios), médicos (gerentes), auditores (verificadores).
+- **Desarrollo:** **Cliente y usuarios:** conocen los requisitos adecuados a sus necesidades; por ejemplo, en un sistema de salud, los médicos describen cómo quieren registrar la atención. **Diseñadores:** comprenden los requerimientos para lograr un diseño que los satisfaga; por ejemplo, el arquitecto decide cómo estructurar los módulos del sistema. **Supervisores del contrato:** establecen los hitos de control y los cronogramas; por ejemplo, definen cuándo se entrega el prototipo. **Gerentes del negocio:** entienden el impacto en la organización; por ejemplo, evalúan cómo el sistema de turnos afecta la atención al paciente. **Verificadores:** comprenden los requerimientos para poder verificar si el sistema los satisface; por ejemplo, diseñan las pruebas de aceptación. Cada participante ve los requisitos desde su rol; la ingeniería debe conciliar todas las visiones.
 - **Reflexión docente:** cada participante ve los requisitos desde su rol; la ingeniería de requisitos debe conciliar todas las visiones.
 - **Pregunta desafío:** ¿qué pasa si un participante no participa del proceso?
 - **Respuestas posibles:**
@@ -440,8 +425,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Slide visual: se muestra el diagrama del proceso de la ingeniería de requerimientos con sus actividades.
-- **Ejemplos:** **Global Exchange (conductor):** localizamos en el diagrama dónde estamos: obtención, análisis, especificación, verificación y validación. **Segundo contexto industrial:** igual para cualquier dominio.
+- **Desarrollo:** **Diagrama del proceso:** el slide muestra el mapa con las actividades de la ingeniería de requerimientos. **Obtención:** se recogen las necesidades; por ejemplo, entrevistas al personal de una fábrica. **Análisis:** se clasifican y priorizan; por ejemplo, se decide qué módulos entran en la primera versión. **Especificación:** se redacta el ERS. **Verificación:** se comprueba que el documento no tiene errores ni omisiones. **Validación:** se confirma con el cliente que es lo que necesita. El diagrama es el mapa del proceso; conviene volver a él en cada fase.
 - **Reflexión docente:** la imagen es el mapa del proceso; conviene volver a ella en cada fase.
 - **Pregunta desafío:** ¿qué actividad del diagrama les parece que se repite más veces?
 - **Respuestas posibles:**
@@ -462,8 +446,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Slide visual de apoyo: se repite el diagrama del proceso para fijar la secuencia de actividades.
-- **Ejemplos:** **Global Exchange (conductor):** se repasa el flujo de actividades con el ejemplo de las divisas. **Segundo contexto industrial:** aplicación a cualquier proyecto.
+- **Desarrollo:** **Repetición del diagrama:** se vuelve a mostrar el diagrama del proceso para fijar la secuencia de actividades. **Ejemplo de recorrido:** en un sistema de restaurante, obtener los requisitos hablando con cocina y mozos, analizarlos, especificarlos en el ERS, verificarlos y validarlos con el dueño. El slide es de apoyo visual: refuerza la memorización del proceso sin introducir contenido nuevo.
 - **Reflexión docente:** la repetición del diagrama refuerza la memorización del proceso.
 - **Pregunta desafío:** ¿qué diferencia hay entre este diagrama y el del slide anterior?
 - **Respuestas posibles:**
@@ -493,8 +476,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan las fuentes de donde se obtienen los requerimientos: clientes y usuarios, modelos del dominio, la situación actual, la organización y sistemas existentes, la versión anterior y documentos o sistemas análogos.
-- **Ejemplos:** **Global Exchange (conductor):** se consulta al cliente (reglas de cambio), al sistema actual (planillas manuales) y a sistemas análogos (casas de cambio existentes). **Segundo contexto industrial:** en un hospital, revisar el sistema de turnos actual y los registros en papel.
+- **Desarrollo:** **Cliente, usuario y otros interesados (necesidades):** la principal fuente de requerimientos; por ejemplo, en una farmacia, el farmacéutico describe cómo controlar el vencimiento de los medicamentos. **Modelos del dominio:** conocimiento estructurado del área de negocio; por ejemplo, el modelo de precios de una distribuidora. **Revisar la situación actual, la organización actual y los sistemas existentes:** entender cómo se trabaja hoy; por ejemplo, revisar las planillas manuales de un almacén. **Versión actual del sistema y desarrolladores de la versión anterior:** aportan lo que ya funciona y los problemas conocidos. **Documentos existentes (antecedentes):** manuales, reglamentos y actas. **Sistemas análogos ya existentes (antecedentes):** por ejemplo, estudiar el sistema de una sucursal que ya se informatizó. Cuantas más fuentes se consulten, menos requisitos se pierden.
 - **Reflexión docente:** cuantas más fuentes se consulten, menos requisitos se pierden.
 - **Pregunta desafío:** ¿qué fuente suele aportar los requisitos más completos?
 - **Respuestas posibles:**
@@ -520,8 +502,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan las técnicas de obtención de requerimientos: reuniones/entrevistas, cuestionarios, observación y brainstorming.
-- **Ejemplos:** **Global Exchange (conductor):** entrevistas con el cliente para conocer las reglas de cambio; observación de cómo los operadores registran operaciones hoy; brainstorming para ideas de nuevas funciones. **Segundo contexto industrial:** en un sistema de logística, encuestas a repartidores y observación de rutas.
+- **Desarrollo:** **Reuniones / Entrevistas:** conversación guiada con los interesados; por ejemplo, entrevistar al responsable de cobranzas para conocer las reglas de descuento. **Cuestionarios:** encuestas que llegan a muchos usuarios; por ejemplo, encuestar a los vendedores de distintas sucursales. **Observación:** ver cómo se trabaja hoy; por ejemplo, observar cómo un operario registra pedidos en papel revela pasos que nadie mencionó. **Brainstorming:** generación de ideas en grupo; por ejemplo, una sesión con el equipo comercial para listar nuevas funciones. Cada técnica tiene ventajas; suelen combinarse según el contexto.
 - **Reflexión docente:** cada técnica tiene ventajas; suelen combinarse.
 - **Pregunta desafío:** ¿qué técnica conviene cuando los usuarios están dispersos geográficamente?
 - **Respuestas posibles:**
@@ -549,8 +530,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan los problemas comunes en la obtención de requerimientos: usuarios que no saben qué quieren o no conocen el costo, requisitos implícitos, distintas fuentes con requisitos distintos, factores políticos, prioridades que cambian y nuevos requisitos que aparecen.
-- **Ejemplos:** **Global Exchange (conductor):** el cliente pide "cambiar divisas" sin saber cuántas monedas ni qué márgenes; luego pide más monedas. **Segundo contexto industrial:** en un sistema de turnos, distintas áreas piden prioridades distintas.
+- **Desarrollo:** **No saben lo que quieren y no conocen el costo de sus peticiones:** los usuarios piden en términos generales sin medir el esfuerzo; por ejemplo, pedir "que todo sea automático" sin saber cuánto cuesta. **Requisitos en sus términos y con conocimiento implícito:** el usuario asume que ciertas tareas se entienden solas; por ejemplo, un contador da por sabido el cierre contable mensual. **Distintos usuarios tienen distintos requisitos:** hay que encontrar todas las fuentes; por ejemplo, ventas y almacén piden cosas distintas del mismo sistema. **Influyen factores políticos:** intereses de áreas o personas que condicionan las decisiones. **La prioridad varía con el tiempo:** lo urgente hoy puede no serlo mañana. **Aparecen nuevos requisitos:** el proyecto crece y cambia. Estos problemas son la razón de ser de la ingeniería de requisitos: ordenar el caos.
 - **Reflexión docente:** estos problemas son la razón de ser de la ingeniería de requisitos: ordenar el caos.
 - **Pregunta desafío:** ¿cómo se mitiga que el usuario no conozca el costo de sus peticiones?
 - **Respuestas posibles:**
@@ -571,8 +551,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Slide visual de apoyo: se repite el diagrama del proceso para situar la actividad de análisis.
-- **Ejemplos:** **Global Exchange (conductor):** se ubica la obtención y el análisis dentro del flujo general. **Segundo contexto industrial:** igual para cualquier proyecto.
+- **Desarrollo:** **Diagrama del proceso:** se repite el diagrama para situar la actividad de análisis. **Obtención y análisis dentro del flujo general:** primero se obtienen las necesidades y luego se analizan; por ejemplo, en un sistema de reservas, se obtiene "reservar sala" y se analiza qué datos mínimos necesita la reserva. El diagrama sirve de guía de navegación de la unidad; el avance por las etapas no es estrictamente secuencial.
 - **Reflexión docente:** el diagrama sirve de guía de navegación de la unidad.
 - **Pregunta desafío:** ¿en qué etapa del diagrama nos encontramos ahora?
 - **Respuestas posibles:**
@@ -600,8 +579,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan las actividades del análisis de requerimientos: analizar stakeholders, crear vistas, detallar, negociar prioridades, buscar requerimientos que faltan, evaluar factibilidad con prototipos y evaluar riesgos.
-- **Ejemplos:** **Global Exchange (conductor):** se negocia qué monedas se soportan en la primera versión; se crean vistas del sistema por rol. **Segundo contexto industrial:** en un ERP, priorizar módulos y evaluar riesgos de integración.
+- **Desarrollo:** **Analizar stakeholders / clientes / usuarios:** identificar quién participa y qué espera cada uno; por ejemplo, en un sistema de nómina, separar lo que pide RRHH de lo que pide contabilidad. **Crear vistas:** representar el sistema desde distintas perspectivas; por ejemplo, una vista por rol de usuario. **Detallar:** precisar cada requerimiento; por ejemplo, definir los pasos exactos de "registrar ausencia". **Negociar prioridades:** decidir qué entra primero; por ejemplo, posponer el módulo de reportes avanzados. **Buscar requerimientos que faltan:** completar vacíos; por ejemplo, detectar que nadie pidió la recuperación de contraseña. **Evaluar factibilidad técnica con prototipos:** probar que lo pedido se puede construir; por ejemplo, un prototipo de pantalla valida la idea antes de desarrollarla. **Evaluar riesgos de los requerimientos:** anticipar problemas; por ejemplo, depender de un sistema externo de pagos. El análisis transforma necesidades dispersas en requisitos organizados y priorizados; no es diseño.
 - **Reflexión docente:** el análisis transforma necesidades dispersas en requisitos organizados y priorizados.
 - **Pregunta desafío:** ¿por qué son útiles los prototipos en el análisis?
 - **Respuestas posibles:**
@@ -632,8 +610,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan los modelos o vistas del sistema usados en el análisis: glosario, modelos gráficos, modelo conceptual, diagramas de estado, DFD, prototipos de interfaz, casos de prueba, tablas de decisión y casos de uso.
-- **Ejemplos:** **Global Exchange (conductor):** un caso de uso "registrar venta de divisas", un DFD del flujo de operaciones, un prototipo de la pantalla de cotización. **Segundo contexto industrial:** en un hospital, un diagrama de estado del turno (en espera, en atención, finalizado).
+- **Desarrollo:** **Glosario:** definiciones comunes de los términos del dominio; por ejemplo, qué significa "cliente activo" en la organización. **Modelos gráficos y modelo conceptual:** representaciones visuales de la estructura; por ejemplo, el modelo conceptual de una biblioteca muestra libros, socios y préstamos. **Diagramas de estado:** para entidades que pasan por distintos estados; por ejemplo, un pedido (creado, pagado, enviado, entregado). **Diagramas de Flujo de Datos (DFD):** muestran cómo circulan los datos entre procesos; por ejemplo, el flujo de un pedido desde el cliente hasta el almacén. **Prototipos de interfaz gráfica:** maquetas de las pantallas para validar la interacción. **Casos de prueba:** situaciones concretas para comprobar el comportamiento. **Tablas de decisión:** combinan condiciones y acciones; por ejemplo, cuándo aplicar un descuento según el monto y el tipo de cliente. **Casos de uso:** describen la interacción entre un actor y el sistema; por ejemplo, "registrar devolución". Cada vista muestra una faceta del sistema; ninguna es suficiente por sí sola.
 - **Reflexión docente:** cada vista muestra una faceta del sistema; ninguna es suficiente por sí sola.
 - **Pregunta desafío:** ¿qué vista usarían para entender los estados de una entidad?
 - **Respuestas posibles:**
@@ -654,8 +631,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Slide visual de apoyo: diagrama del proceso, situando la especificación.
-- **Ejemplos:** **Global Exchange (conductor):** se ubica el análisis y la especificación en el flujo. **Segundo contexto industrial:** igual.
+- **Desarrollo:** **Diagrama del proceso:** se muestra nuevamente el diagrama, situando la especificación. **Análisis y especificación en el flujo:** tras analizar los requisitos se redactan; por ejemplo, en un sistema de inventario, después de priorizar qué productos requieren alertas de stock se escribe el requerimiento en el ERS. Es un apoyo visual; no introduce contenido nuevo.
 - **Reflexión docente:** el diagrama mantiene el contexto del recorrido.
 - **Pregunta desafío:** ¿qué actividad sigue al análisis en el proceso?
 - **Respuestas posibles:**
@@ -679,8 +655,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan las pautas para documentar los requisitos: qué documentar (lo que hace el sistema actual, lo que pide el cliente, lo que hará, criterios de aceptación y verificación) y recomendaciones de redacción (agrupar por temas, requerimientos positivos, voz activa, indicar alcance y múltiples vistas).
-- **Ejemplos:** **Global Exchange (conductor):** documentar que hoy se registra en planillas, que el cliente pide un sistema web, y que el nuevo sistema registrará operaciones en línea con criterios de aceptación definidos. **Segundo contexto industrial:** en un sistema de inventario, igual.
+- **Desarrollo:** **Qué documentar:** lo que hace el sistema actual, lo que el cliente pide, lo que el sistema va a hacer, y los criterios de aceptación y de verificación. Por ejemplo, en un sistema de inventario, documentar que hoy el conteo se hace en planillas, que el cliente pide lectura por código de barras, que el nuevo sistema hará el conteo en línea y cómo se comprobará cada punto. **Recomendaciones:** agrupar por temas (por ejemplo, por módulos), formular los requerimientos en positivo y no en negativo ("el sistema valida el documento" en lugar de "no debe aceptar documentos inválidos"), expresarlos en voz activa y no pasiva, indicar si se documenta solo el alcance o todo lo que se pidió, y representar los requerimientos con múltiples vistas. Redactar bien evita malentendidos y falsas expectativas.
 - **Reflexión docente:** la documentación es la base del ERS; redactar bien ahorra malentendidos.
 - **Pregunta desafío:** ¿por qué se recomienda formular requerimientos en positivo y en voz activa?
 - **Respuestas posibles:**
@@ -708,8 +683,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan los contenidos del documento de especificación de requisitos (SRS): registrar en términos del cliente, propósito general, contexto, visión global, características del sistema, alcance, interfaces y ambiente de operación.
-- **Ejemplos:** **Global Exchange (conductor):** el SRS describe el propósito (sistema de cambio de divisas en línea), contexto (operaciones del local), características (registrar, cotizar, liquidar) e interfaces (con el sistema contable). **Segundo contexto industrial:** en un hospital, el SRS del sistema de turnos describe hardware, comunicaciones y personal.
+- **Desarrollo:** **Registrar los requisitos en los términos del cliente:** sin tecnicismos; por ejemplo, describir que "la caja registradora se comunica con el sistema central" en palabras del cajero. **Propósito general del sistema:** incluye referencias a otros sistemas, glosario y abreviaciones; por ejemplo, referirse al sistema de contabilidad que recibe las ventas. **Contexto y objetivos del desarrollo:** el porqué de construir el sistema. **Visión global del sistema:** incluye las restricciones generales; por ejemplo, "solo se accede desde la red interna". **Características del sistema propuesto, alcance e interfaces:** detallar funciones y límites; por ejemplo, "el módulo de ventas incluye cobro y no incluye devoluciones". **Ambiente de operación:** hardware, comunicaciones y personal; por ejemplo, "se ejecuta en cajas con lector de código de barras y requiere un encargado de turno". El SRS es el contrato técnico entre el cliente y los desarrolladores.
 - **Reflexión docente:** el SRS es el contrato técnico entre cliente y desarrolladores.
 - **Pregunta desafío:** ¿qué diferencia hay entre el propósito y la visión global del sistema?
 - **Respuestas posibles:**
@@ -734,8 +708,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan las primeras características de una buena especificación SRS según IEEE 830: correcta/válida, no ambigua y completa, con detalle de cada una.
-- **Ejemplos:** **Global Exchange (conductor):** un requisito es correcto si el cliente lo valida; no ambiguo si tiene una única interpretación; completo si no hay "a determinar" sin explicar. **Segundo contexto industrial:** en un sistema de turnos, validar con el cliente cada requisito.
+- **Desarrollo:** **Correcta / Válida:** todos los requerimientos son requeridos por el sistema; no existe herramienta que lo asegure, lo valida el cliente. Por ejemplo, en un sistema de turnos, el cliente confirma que el requisito "rechazar doble reserva" refleja su necesidad real. **No ambigua:** cada requerimiento tiene una única interpretación; se incluye un glosario. Por ejemplo, "cuenta corriente" debe significar lo mismo para el cliente y para el desarrollador. **Completa:** incluye todos los requisitos de funcionalidad, desempeño, restricciones de diseño, atributos e interfaces externas; define la respuesta del software ante todo dato de entrada válido o inválido; no hay referencias sin definir, y la frase "a determinar" indica que el SRS no está completo (si aparece, se describe qué falta, con quién y cuándo se definirá). Por ejemplo, un ERS completo especifica qué sucede si el usuario ingresa un monto negativo.
 - **Reflexión docente:** la completitud es difícil de lograr; requiere revisar funcionalidad, desempeño, restricciones e interfaces.
 - **Pregunta desafío:** ¿qué implica que una especificación tenga la frase "a determinar"?
 - **Respuestas posibles:**
@@ -760,8 +733,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan más características del SRS según IEEE 830: consistente internamente, ordenada por importancia/estabilidad, y verificable, con sus implicaciones.
-- **Ejemplos:** **Global Exchange (conductor):** "el sistema responde en 2 segundos" es verificable si existe una prueba; un requisito contradictorio con otro rompe la consistencia. **Segundo contexto industrial:** en un sistema de facturación, definir pruebas para cada requisito.
+- **Desarrollo:** **Consistente internamente:** los requisitos no se contradicen entre sí; por ejemplo, no puede decirse que el sistema acepta pagos sin conexión y, a la vez, que solo opera conectado. **Ordenados por grado de importancia y/o estabilidad:** los requisitos deben tener un identificador; por ejemplo, priorizar "RF-005 facturación" por encima de "RF-012 reportes históricos". **Verificable:** existe un proceso finito de costo accesible para determinar que el sistema cumple el requisito; se usan términos concretos y cantidades mesurables y se preparan pruebas. Por ejemplo, "el sistema responde en menos de 2 segundos" se verifica con una prueba de rendimiento. Si no se puede verificar, el requisito se revisa o se elimina, y cada requisito se expresa por separado.
 - **Reflexión docente:** la verificabilidad exige usar términos concretos y cantidades mesurables.
 - **Pregunta desafío:** ¿qué se hace si un requisito no es verificable?
 - **Respuestas posibles:**
@@ -786,8 +758,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan las últimas características del SRS según IEEE 830: trazables (hacia atrás y hacia adelante), realistas/factibles y entendibles.
-- **Ejemplos:** **Global Exchange (conductor):** cada requisito tiene un identificador único que permite rastrear su origen y su implementación; "tiempo de respuesta local = remoto" puede no ser factible. **Segundo contexto industrial:** en un sistema de salud, trazar cada requisito a su normativa.
+- **Desarrollo:** **Trazables:** el origen de cada requerimiento es claro y es posible seguirle la pista en desarrollos futuros. Trazabilidad hacia atrás: hacia versiones previas. Trazabilidad hacia adelante: hacia documentos posteriores (diseño, pruebas). Ambas requieren identificador único; por ejemplo, el requisito RF-010 se rastrea desde su origen en un acta de reunión hasta su implementación en el código. **Realistas / Factibles:** deben poder implementarse con la tecnología y los recursos disponibles; por ejemplo, exigir "tiempo de respuesta local igual al remoto" puede no ser factible, y un cliente que quiere adelantarse a la tecnología pide funcionalidades aún no maduras. **Entendibles:** comprensibles tanto por los usuarios como por los desarrolladores; por ejemplo, "el sistema recuerda el idioma preferido" en lugar de tecnicismos.
 - **Reflexión docente:** la trazabilidad exige identificadores únicos desde el inicio.
 - **Pregunta desafío:** ¿qué diferencia hay entre trazabilidad hacia atrás y hacia adelante?
 - **Respuestas posibles:**
@@ -808,8 +779,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Slide visual de apoyo: diagrama del proceso, situando la verificación.
-- **Ejemplos:** **Global Exchange (conductor):** se ubica la verificación dentro del flujo, tras la especificación. **Segundo contexto industrial:** igual.
+- **Desarrollo:** **Diagrama del proceso:** se muestra el diagrama situando la verificación. **Verificación tras la especificación:** una vez redactado el ERS se comprueba su calidad; por ejemplo, en un sistema de reservas, revisar que cada requisito sea verificable antes de pasar al diseño. Es un apoyo visual.
 - **Reflexión docente:** el diagrama mantiene el contexto.
 - **Pregunta desafío:** ¿qué viene después de especificar en el proceso?
 - **Respuestas posibles:**
@@ -818,11 +788,12 @@ Cada presentación HTML debe incluir:
  3. Gestionar.
 - **Advertencia:** es un apoyo visual.
 
-### Slide 31. Verificación de Requerimientos
+### Slide 31. Verificación de Requerimientos Funcionales
 
 **Texto visible**
 
 - `Verificación de Requerimientos`
+- `Proceso por el cual se comprueba que los requisitos del documento estén correctamente definidos: consistentes, completos, sin ambigüedades, realistas, verificables, comprensibles, adaptables y trazables`
 - `Se verifica en el documento de requisitos:`
 - `Consistencia: que no haya contradicciones`
 - `Completitud: que no falte nada. Chequear por: Omisiones. Hacer árboles de decisión para ver que estén todas las opciones detalladas. Límites. Más claro con tabla, ahí se ve que no falta ninguno`
@@ -839,8 +810,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan los criterios para verificar el documento de requisitos: consistencia, completitud (omisiones y límites), ambigüedades, realismo o factibilidad, verificabilidad, comprensibilidad, adaptabilidad y trazabilidad.
-- **Ejemplos:** **Global Exchange (conductor):** verificar que no haya contradicciones entre las reglas de cambio; usar tablas para ver que no falten casos (límites); revisar que "el sistema debe ser rápido" sea reformulado con métricas. **Segundo contexto industrial:** en un sistema de turnos, árboles de decisión para cubrir todas las opciones.
+- **Desarrollo:** **Verificación de requisitos:** es el proceso de revisar el documento de requisitos para comprobar que los requisitos estén correctamente definidos, antes de pasar al diseño; por ejemplo, en un sistema de facturación, se verifica que el requisito "el sistema aplica el 10% de IVA" no contradiga a otro que defina un porcentaje distinto. **Consistencia:** que no haya contradicciones; por ejemplo, no permitir que dos requisitos definan plazos distintos para la misma entrega. **Completitud:** que no falte nada; se chequean las omisiones, se usan árboles de decisión para verificar que estén todas las opciones y tablas para revisar los límites; por ejemplo, una tabla que cruce tipo de cliente y forma de pago muestra si falta alguna combinación. **Ambigüedades:** detectar términos con más de una interpretación. **Realismo o Factibilidad:** que se pueda implementar con la tecnología, el presupuesto y el calendario existentes. **Verificabilidad:** que se pueda diseñar un conjunto de pruebas para demostrar el cumplimiento; cuidado con adjetivos y adverbios ("rápido", "fácil"). **Comprensibilidad:** que los usuarios finales lo entiendan. **Adaptabilidad:** que el requisito se pueda cambiar sin afectar a otros. **Trazabilidad:** que esté establecido el origen. La verificación comprueba la calidad del documento, no que el sistema esté bien construido.
 - **Reflexión docente:** la verificación comprueba la calidad del documento, no que el sistema esté bien construido.
 - **Pregunta desafío:** ¿qué se revisa con las tablas de decisión?
 - **Respuestas posibles:**
@@ -865,8 +835,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presenta la verificación de los requerimientos no funcionales: son difíciles de verificar, deben expresarse cuantitativamente con métricas objetivas (ideal) y a los usuarios les cuesta especificarlos en forma cuantitativa.
-- **Ejemplos:** **Global Exchange (conductor):** "el sistema debe ser confiable" se reformula como "disponibilidad del 99,9% anual". **Segundo contexto industrial:** en un sistema de salud, "los datos deben protegerse" se reformula como "cifrado AES-256".
+- **Desarrollo:** **Son difíciles de verificar:** los no funcionales no describen una acción puntual, por lo que cuesta comprobarlos. **Expresarlos de manera cuantitativa con métricas que se puedan probar de forma objetiva (ideal):** por ejemplo, "el sistema debe ser confiable" se reformula como "disponibilidad del 99,9% anual", y "los datos deben estar protegidos" como "cifrado AES-256". **A los usuarios les cuesta especificarlos en forma cuantitativa:** suelen pedir "que sea rápido" o "que no se caiga" sin números; el analista debe ayudar a convertirlos en métricas. Cuantificar es difícil pero necesario para poder probarlos.
 - **Reflexión docente:** cuantificar los no funcionales es difícil pero necesario para poder probarlos.
 - **Pregunta desafío:** ¿cómo cuantificarían "el sistema debe ser fácil de usar"?
 - **Respuestas posibles:**
@@ -887,8 +856,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Slide visual de apoyo: diagrama del proceso, situando la validación.
-- **Ejemplos:** **Global Exchange (conductor):** se ubica la validación tras la verificación. **Segundo contexto industrial:** igual.
+- **Desarrollo:** **Diagrama del proceso:** se muestra el diagrama situando la validación. **Validación tras la verificación:** primero se comprueba el documento y luego se confirma con el cliente; por ejemplo, en un sistema de facturación, validar con el responsable que el ERS refleja las reglas fiscales de la empresa. Es un apoyo visual.
 - **Reflexión docente:** el diagrama mantiene el contexto del proceso.
 - **Pregunta desafío:** ¿qué actividad sigue a la verificación?
 - **Respuestas posibles:**
@@ -911,8 +879,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se define la validación de requerimientos: proceso por el cual se determina si la especificación es consistente con las necesidades del cliente; incluye validez, planificar quién valida qué artefacto y cómo, y registrar un reporte de validación con firma.
-- **Ejemplos:** **Global Exchange (conductor):** el cliente valida que el SRS refleja las reglas de cambio que realmente necesita y firma el reporte. **Segundo contexto industrial:** en un hospital, cada stakeholder valida los artefactos que le conciernen.
+- **Desarrollo:** **Proceso de validación:** se determina si la especificación es consistente con las necesidades del cliente. **Validez:** el usuario valida qué es lo que quiere; por ejemplo, en una biblioteca, el bibliotecario confirma que el requisito "renovación de préstamos" es lo que realmente necesita. **Planificación de la validación:** se define quién (qué stakeholder) valida qué artefacto y cómo (qué técnica); por ejemplo, el gerente valida el alcance y los operadores validan los casos de uso. **Registro:** se documenta un reporte de validación y se obtiene la firma, que compromete a las partes. Diferencia clave: verificar es contra el documento; validar es con el cliente.
 - **Reflexión docente:** la validación es con el cliente; la verificación es contra el documento.
 - **Pregunta desafío:** ¿qué diferencia hay entre verificar y validar?
 - **Respuestas posibles:**
@@ -939,8 +906,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presenta la validación como proceso manual: revisiones informales y formales (recorrida del documento con el cliente), con participantes del cliente y del equipo de desarrollo, incluyendo revisión de objetivos, alineamiento, ambiente, funciones, restricciones y riesgos.
-- **Ejemplos:** **Global Exchange (conductor):** una recorrida del SRS con el cliente explicando implicancias de cada requisito; participan el analista, el diseñador y los encargados de pruebas. **Segundo contexto industrial:** en un sistema de facturación, revisar objetivos y alineamiento con la normativa.
+- **Desarrollo:** **Proceso manual:** se revisa el documento de requisitos buscando anomalías y omisiones. **Revisiones informales:** discusión sin estructura formal entre pares. **Revisiones formales:** se hace una "recorrida" del documento con el cliente explicando las implicancias de cada requisito; por ejemplo, en un sistema de facturación, recorrer requisito por requisito con el contador para confirmar cada regla fiscal. **Participantes:** del cliente (operadores, quienes realizan las entradas, quienes usan las salidas y sus gerentes) y del equipo de desarrollo (analistas de requisitos, diseñadores, encargados de pruebas y de gestión de configuración). **La revisión incluye:** revisar los objetivos del sistema, evaluar el alineamiento de los requisitos con esos objetivos (la necesidad), revisar el ambiente de operación y las interfaces con otros sistemas, verificar funciones completas y restricciones realistas, y evaluar riesgos. **Además se consideran:** las pruebas del sistema, los cambios en los requisitos del proyecto, su verificación y validación.
 - **Reflexión docente:** la recorrida formal es una técnica efectiva para detectar anomalías tempranamente.
 - **Pregunta desafío:** ¿qué se busca al evaluar la alineación de requisitos con los objetivos?
 - **Respuestas posibles:**
@@ -965,8 +931,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presenta la gestión de requerimientos: comprender y controlar los cambios; se hace en paralelo con el proceso de requisitos; los cambios surgen por muchos usuarios, diferencias entre quien paga y quien usa, cambios de negocio y de tecnología; tiene tres etapas: planificación, administración del cambio y trazabilidad.
-- **Ejemplos:** **Global Exchange (conductor):** el cliente pide nuevas monedas; se administra el cambio evaluando su impacto y se actualiza la trazabilidad. **Segundo contexto industrial:** en un sistema de inventario, cambios por nueva normativa.
+- **Desarrollo:** **Comprender y controlar los cambios:** la gestión maneja la evolución de los requisitos a lo largo del proyecto. **En paralelo con el proceso de requisitos:** acompaña a la obtención, el análisis y el resto de las actividades. **Los requisitos cambian porque:** hay muchos usuarios (cada uno pide algo), quienes pagan por el sistema y quienes lo usan no son las mismas personas (por ejemplo, el gerente lo compra pero el operario lo utiliza), y cambian el negocio y la tecnología (por ejemplo, una nueva ley impositiva obliga a modificar la facturación). **Tres etapas:** Planificación (se realiza al comenzar el análisis de requisitos), Administración del cambio (comienza cuando existe una primera versión del documento de requisitos) y Trazabilidad (se mantiene a lo largo de todo el proceso). La gestión evita que los cambios descontrolados destruyan el proyecto.
 - **Reflexión docente:** la gestión evita que los cambios descontrolados destruyan el proyecto.
 - **Pregunta desafío:** ¿por qué los cambios son inevitables en los proyectos de software?
 - **Respuestas posibles:**
@@ -991,8 +956,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se presentan herramientas para la gestión de requerimientos: JIRA (historias de usuario, tareas, épicas, prioridades), Trello (tableros visuales), Confluence (documentación estructurada) y GitHub Issues (seguimiento de problemas y mejoras).
-- **Ejemplos:** **Global Exchange (conductor):** usar JIRA para las historias de usuario del sistema de divisas, Confluence para el SRS y GitHub Issues para bugs. **Segundo contexto industrial:** en un ERP, Trello para el flujo de trabajo y Confluence para la especificación.
+- **Desarrollo:** **JIRA:** herramienta de gestión de proyectos ampliamente utilizada que también ofrece funcionalidades para la gestión de requerimientos; permite crear historias de usuario, tareas, épicas y otras unidades de trabajo, asignar prioridades, seguir el estado y colaborar en equipo. Por ejemplo, registrar la historia "como cajero, quiero cobrar con tarjeta para agilizar la fila". **Trello:** herramienta basada en tableros visuales, con tarjetas para representar requerimientos, listas para organizarlos y tableros para visualizar el flujo de trabajo; por ejemplo, organizar los requerimientos en columnas "por hacer", "en análisis" y "validados". **Confluence:** plataforma de colaboración para documentación estructurada, incluidas especificaciones de requerimientos y casos de uso; por ejemplo, publicar el SRS del proyecto. **GitHub Issues:** seguimiento de problemas, bugs y mejoras dentro de GitHub; por ejemplo, reportar un bug de la facturación como issue. Las herramientas apoyan la gestión, pero no reemplazan el proceso.
 - **Reflexión docente:** las herramientas apoyan la gestión, pero no reemplazan el proceso.
 - **Pregunta desafío:** ¿qué herramienta usarían para documentar la especificación SRS?
 - **Respuestas posibles:**
@@ -1015,8 +979,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Se comparten referencias web con ejemplos de requerimientos funcionales y no funcionales para ampliar la práctica.
-- **Ejemplos:** **Global Exchange (conductor):** usar los ejemplos de la referencia para redactar requerimientos del sistema de divisas. **Segundo contexto industrial:** adaptar los ejemplos a cualquier dominio.
+- **Desarrollo:** **Referencias web de ejemplos:** el slide comparte dos enlaces con ejemplos de requerimientos funcionales y no funcionales para ampliar la práctica. **Requerimientos funcionales:** el primer enlace muestra redacciones de acciones del sistema, por ejemplo "el sistema debe registrar al cliente y sus datos de contacto". **Requerimientos no funcionales:** el segundo muestra restricciones y calidad, por ejemplo "el sistema debe soportar 100 usuarios concurrentes". Se recomienda usar estos ejemplos como modelo para redactar requerimientos propios y adaptarlos al dominio de cada proyecto; al ser referencias externas, conviene verificar su vigencia.
 - **Reflexión docente:** los ejemplos externos complementan la teoría con casos reales.
 - **Pregunta desafío:** ¿qué diferencia encontraron entre los ejemplos funcionales y no funcionales de las referencias?
 - **Respuestas posibles:**
@@ -1037,8 +1000,7 @@ Cada presentación HTML debe incluir:
 
 **Explicación docente**
 
-- **Desarrollo:** Cierre de la unidad: se agradece y se abre el espacio de preguntas.
-- **Ejemplos:** **Global Exchange (conductor):** repaso rápido de cómo definimos los requerimientos del sistema de cambio de divisas. **Segundo contexto industrial:** aplicación de lo aprendido a cualquier proyecto.
+- **Desarrollo:** **Preguntas:** cierre de la unidad: se agradece y se abre el espacio para consultas. Se puede proponer un repaso rápido: definir qué es un requerimiento, distinguir los funcionales de los no funcionales y explicar la diferencia entre verificar y validar, usando como referencia un caso conocido, por ejemplo un sistema de reservas o de pedidos. La unidad sienta las bases para el diseño y desarrollo posteriores; no se introducen contenidos nuevos.
 - **Reflexión docente:** la unidad sienta las bases para el diseño y desarrollo posteriores.
 - **Pregunta desafío:** ¿qué concepto de la unidad les resultó más útil y por qué?
 - **Respuestas posibles:**

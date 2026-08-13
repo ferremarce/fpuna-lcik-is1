@@ -5,8 +5,8 @@ This repository contains teaching materials for **Ingeniería de Software I (IS1
 ## High-signal workflow
 
 - Treat `planificacion-clase/matriz-alineacion-materiales.md` and `planificacion-clase/Enunciado - Global Exchange - IS1 LCIk.md` as the main pedagogical and project-context references. Keep unconfirmed requirements marked `Por validar`.
-- The slide guides are the content specifications: `presentaciones-html/clase-1/guia-slides-clase-1.md` has 25 slides, `presentaciones-html/clase-2/guia-slides-clase-2.md` has 47, `presentaciones-html/clase-3/guia-slides-clase-3.md` has 39, and `presentaciones-html/clase-4/guia-slides-clase-4.md` has 22. Do not silently change slide order or count.
-- Global Exchange is the course-wide conductor example. Do not use real people, accounts, credentials, documents, or transactions in examples or generated materials.
+- The slide guides are the content specifications: `presentaciones-html/clase-1/guia-slides-clase-1.md` has 25 slides, `presentaciones-html/clase-2/guia-slides-clase-2.md` has 47, `presentaciones-html/clase-3/guia-slides-clase-3.md` has 39, and `presentaciones-html/clase-4/casos_de_uso/guia-slides-clase-4.md` has 22 (with `presentaciones-html/clase-4/uml/guia-slides-clase-4-adicional.md` as the UML complement, 16 slides). Do not silently change slide order or count.
+- Global Exchange is the course-wide project described in the Enunciado. Do not use it as a "conductor" example in slide notes or guides (see "Speaker notes format"); do not use real people, accounts, credentials, documents, or transactions in examples or generated materials.
 - The HTML decks are intentionally independent: each class owns its own `app.js` and `styles.css`. Do not introduce shared runtime files unless explicitly requested.
 - Source PPTX/PDF materials are binary/reference inputs. A direct file read will fail for PPTX; inspect OOXML contents by extracting the ZIP package when source verification is needed.
 
@@ -63,12 +63,10 @@ This repository contains teaching materials for **Ingeniería de Software I (IS1
 
 ## Speaker notes format
 
-All slides must have complete speaker notes in the `note` field using this structure:
+All slides must have complete speaker notes in the `note` field (and their mirror in the guide's "Explicación docente" → `Desarrollo`). The **Desarrollo** section explains **each item** of the slide's visible content, item by item, with examples inline. **Desarrollo and Ejemplos are unified** — there is no separate examples block. Do **not** use Global Exchange or a "conductor" example in notes or guides.
 
 ```
-<strong>Desarrollo:</strong> [Explanation of what to present and why]
-<br><br>
-<strong>Ejemplos:</strong> Global Exchange (conductor): [example]. Segundo contexto industrial: [example].
+<strong>Desarrollo:</strong> **Item 1:** explanation with example. **Item 2:** explanation with example. ... (single paragraph)
 <br><br>
 <strong>Reflexión docente:</strong> [Key insight or reflection]
 <br><br>
@@ -78,6 +76,10 @@ All slides must have complete speaker notes in the `note` field using this struc
 <br><br>
 <strong>Advertencia:</strong> [Warning or caveat]
 ```
+
+- Each visible item of the slide is labeled in bold (`**<Ítem>:**`) and followed by its explanation and a concrete example ("Por ejemplo, ..."), covering every item from "Texto visible" in order.
+- Examples use generic domains (facturación, biblioteca, hospital, logística, comercio electrónico, banco, turnos, ERP, etc.). Global Exchange must not appear in the `note` fields or in the guide's "Explicación docente".
+- Keep the guide's "Explicación docente" `Desarrollo` and the `note` field in sync when editing either.
 
 ## Visual components
 
@@ -108,7 +110,8 @@ Run these checks after editing a deck:
 node --check presentaciones-html/clase-1/app.js
 node --check presentaciones-html/clase-2/app.js
 node --check presentaciones-html/clase-3/app.js
-node --check presentaciones-html/clase-4/app.js
+node --check presentaciones-html/clase-4/casos_de_uso/app.js
+node --check presentaciones-html/clase-4/uml/app.js
 git diff --check
 ```
 

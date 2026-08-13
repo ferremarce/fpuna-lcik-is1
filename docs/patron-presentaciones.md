@@ -590,7 +590,8 @@ pdftotext -f 15 -l 17 -layout presentaciones-html/clase-N/clase-N.pdf -
 node --check presentaciones-html/clase-1/app.js
 node --check presentaciones-html/clase-2/app.js
 node --check presentaciones-html/clase-3/app.js
-node --check presentaciones-html/clase-4/app.js
+node --check presentaciones-html/clase-4/casos_de_uso/app.js
+node --check presentaciones-html/clase-4/uml/app.js
 git diff --check
 ```
 
