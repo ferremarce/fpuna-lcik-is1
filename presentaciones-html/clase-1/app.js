@@ -157,10 +157,11 @@ const notesPanel = document.querySelector('#notes-panel');
 const index = document.querySelector('#slide-index');
 const notes = document.querySelector('#speaker-notes');
 const printAll = new URLSearchParams(location.search).get('print') === 'all';
+const presenterView = new URLSearchParams(location.search).get('view') === 'presenter';
 let current = 0;
 
-function slideMarkup(slide, position) {
-  return `<article class="slide slide-${position + 1}" aria-labelledby="slide-title"><header class="slide-header"><p class="eyebrow">${slide.eyebrow}</p><h1 id="slide-title">${slide.title}</h1></header><div class="content">${slide.body}</div></article>`;
+function slideMarkup(slide, position, headingId = 'slide-title') {
+  return `<article class="slide slide-${position + 1}" aria-labelledby="${headingId}"><header class="slide-header"><p class="eyebrow">${slide.eyebrow}</p><h1 id="${headingId}">${slide.title}</h1></header><div class="content">${slide.body}</div></article>`;
 }
 
 function render() {
@@ -217,16 +218,69 @@ function fitSlidesForPrint() {
   probe.remove();
 }
 window.addEventListener('beforeprint', fitSlidesForPrint);
-function goTo(position) { current = Math.max(0, Math.min(slides.length - 1, position)); render(); document.querySelector('#main-content').focus({ preventScroll: true }); }
+function goTo(position, options = {}) {
+  current = Math.max(0, Math.min(slides.length - 1, position));
+  render();
+  if (!options.silent && presenterWindow && !presenterWindow.closed) {
+    presenterWindow.postMessage({ type: 'presentation:navigate', index: current }, '*');
+  }
+  if (options.focus !== false) document.querySelector('#main-content')?.focus({ preventScroll: true });
+}
 function toggle(panel, force) { const open = typeof force === 'boolean' ? force : !panel.classList.contains('open'); panel.classList.toggle('open', open); panel.setAttribute('aria-hidden', String(!open)); const control = document.querySelector(`[aria-controls="${panel.id}"]`); if (control) control.setAttribute('aria-expanded', String(open)); if (open) panel.querySelector('button, [href]')?.focus(); }
-slides.forEach((slide, i) => { const button = document.createElement('button'); button.className = 'index-item'; button.type = 'button'; button.textContent = `${String(i + 1).padStart(2, '0')} · ${slide.title}`; button.addEventListener('click', () => { goTo(i); toggle(indexPanel, false); }); index.append(button); });
-document.querySelector('#next').addEventListener('click', () => goTo(current + 1));
-document.querySelector('#previous').addEventListener('click', () => goTo(current - 1));
-document.querySelector('#index-toggle').addEventListener('click', () => toggle(indexPanel));
-document.querySelector('#notes-toggle').addEventListener('click', () => toggle(notesPanel));
-document.querySelectorAll('.close-panel').forEach(button => button.addEventListener('click', () => toggle(document.querySelector(`#${button.dataset.close}`), false)));
-document.querySelector('#fullscreen').addEventListener('click', () => document.documentElement.requestFullscreen?.());
-document.addEventListener('keydown', event => { if (event.key === 'Escape') { toggle(indexPanel, false); toggle(notesPanel, false); } if (['ArrowRight', 'PageDown', ' '].includes(event.key)) { event.preventDefault(); goTo(current + 1); } if (['ArrowLeft', 'PageUp'].includes(event.key)) { event.preventDefault(); goTo(current - 1); } if (event.key === 'Home') { event.preventDefault(); goTo(0); } if (event.key === 'End') { event.preventDefault(); goTo(slides.length - 1); } if (event.key.toLowerCase() === 'n') toggle(notesPanel); if (event.key.toLowerCase() === 'i') toggle(indexPanel); });
-window.addEventListener('hashchange', () => { const match = location.hash.match(/slide-(\d+)/); if (match) goTo(Number(match[1]) - 1); });
-const initial = location.hash.match(/slide-(\d+)/); if (initial) current = Number(initial[1]) - 1;
-if (printAll) renderAllForPrint(); else render();
+
+let presenterWindow = null;
+function showNotice(message) {
+  const notice = document.querySelector('#popup-notice, #presenter-notice');
+  if (!notice) return;
+  notice.textContent = message;
+  notice.hidden = false;
+  window.setTimeout(() => { notice.hidden = true; }, 7000);
+}
+function openPresenter() {
+  presenterWindow = window.open(`${location.pathname}?view=presenter#slide-${current + 1}`, 'fpuna-presenter', 'popup,width=1440,height=900,resizable=yes,scrollbars=yes');
+  if (!presenterWindow) { showNotice('El navegador bloqueó la ventana del modo presentador. Permití las ventanas emergentes para este sitio e intentá nuevamente.'); return; }
+  presenterWindow.focus();
+}
+
+function initAudience() {
+  slides.forEach((slide, i) => { const button = document.createElement('button'); button.className = 'index-item'; button.type = 'button'; button.textContent = `${String(i + 1).padStart(2, '0')} · ${slide.title}`; button.addEventListener('click', () => { goTo(i); toggle(indexPanel, false); }); index.append(button); });
+  document.querySelector('#next').addEventListener('click', () => goTo(current + 1));
+  document.querySelector('#previous').addEventListener('click', () => goTo(current - 1));
+  document.querySelector('#index-toggle').addEventListener('click', () => toggle(indexPanel));
+  document.querySelector('#notes-toggle').addEventListener('click', () => toggle(notesPanel));
+  document.querySelectorAll('.close-panel').forEach(button => button.addEventListener('click', () => toggle(document.querySelector(`#${button.dataset.close}`), false)));
+  document.querySelector('#presenter-mode').addEventListener('click', openPresenter);
+  document.querySelector('#fullscreen').addEventListener('click', () => document.documentElement.requestFullscreen?.());
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') { toggle(indexPanel, false); toggle(notesPanel, false); } if (['ArrowRight', 'PageDown', ' '].includes(event.key)) { event.preventDefault(); goTo(current + 1); } if (['ArrowLeft', 'PageUp'].includes(event.key)) { event.preventDefault(); goTo(current - 1); } if (event.key === 'Home') { event.preventDefault(); goTo(0); } if (event.key === 'End') { event.preventDefault(); goTo(slides.length - 1); } if (event.key.toLowerCase() === 'n') toggle(notesPanel); if (event.key.toLowerCase() === 'i') toggle(indexPanel); });
+  window.addEventListener('hashchange', () => { const match = location.hash.match(/slide-(\d+)/); if (match) goTo(Number(match[1]) - 1); });
+  window.addEventListener('message', event => { if (event.source !== presenterWindow) return; if (event.data?.type === 'presenter:ready') presenterWindow.postMessage({ type: 'presentation:state', index: current }, '*'); if (event.data?.type === 'presenter:navigate') goTo(event.data.index, { silent: true }); if (event.data?.type === 'presenter:fullscreen') { const request = document.documentElement.requestFullscreen?.(); request?.catch(() => showNotice('El navegador no permitió activar pantalla completa desde la ventana presentador. Activala con el botón Pantalla completa de esta ventana.')); } });
+  const initial = location.hash.match(/slide-(\d+)/); if (initial) current = Number(initial[1]) - 1;
+  if (printAll) renderAllForPrint(); else render();
+}
+
+function fitPresenterSlide(frame) {
+  const slide = frame.querySelector('.slide'); if (!slide) return;
+  slide.style.transform = 'none'; slide.style.width = '100%';
+  const width = slide.scrollWidth; const height = slide.scrollHeight;
+  const scale = Math.min(1, frame.clientWidth / width, frame.clientHeight / height);
+  slide.style.width = `${100 / scale}%`; slide.style.transformOrigin = 'top left'; slide.style.transform = `scale(${scale})`;
+  frame.style.setProperty('--slide-scale', scale);
+}
+
+function initPresenter() {
+  document.body.innerHTML = `<main class="presenter-shell"><header class="presenter-header"><div><p class="presenter-kicker">FP-UNA · Ingeniería del Software I</p><h1>Modo presentador</h1></div><div class="presenter-meta"><span id="presenter-counter">01 / ${String(slides.length).padStart(2, '0')}</span><time id="presenter-clock"></time></div></header><section class="presenter-workspace" aria-label="Vista del presentador"><section class="presenter-notes"><h2>Notas docentes</h2><div id="presenter-notes-content" tabindex="0"></div></section><div class="presenter-stack"><div class="presenter-current"><div class="presenter-label">Slide actual</div><div id="presenter-current-frame" class="presenter-slide-frame"></div></div><section class="presenter-next"><h2>Siguiente slide</h2><div id="presenter-next-frame" class="presenter-slide-frame presenter-slide-frame--next"></div></section></div></section><footer class="presenter-controls"><button id="presenter-previous" type="button">← Anterior</button><button id="presenter-next" type="button">Siguiente →</button><span class="presenter-spacer"></span><button id="presenter-public" type="button">Pantalla completa del público</button><button id="presenter-close" type="button">Cerrar</button></footer><div id="presenter-notice" class="popup-notice" role="status" aria-live="polite" hidden></div></main>`;
+  const currentFrame = document.querySelector('#presenter-current-frame'); const nextFrame = document.querySelector('#presenter-next-frame');
+  function renderPresenter() { const slide = slides[current]; const next = current + 1; currentFrame.innerHTML = slideMarkup(slide, current, 'presenter-current-title'); nextFrame.innerHTML = next < slides.length ? slideMarkup(slides[next], next, 'presenter-next-title') : '<p class="presenter-end-message">Fin de la presentación</p>'; document.querySelector('#presenter-notes-content').innerHTML = slide.note; document.querySelector('#presenter-counter').textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`; requestAnimationFrame(() => { fitPresenterSlide(currentFrame); fitPresenterSlide(nextFrame); }); }
+  function presenterGoTo(position, silent = false) { current = Math.max(0, Math.min(slides.length - 1, position)); renderPresenter(); if (!silent && window.opener && !window.opener.closed) window.opener.postMessage({ type: 'presenter:navigate', index: current }, '*'); history.replaceState(null, '', `#slide-${current + 1}`); }
+  document.querySelector('#presenter-previous').addEventListener('click', () => presenterGoTo(current - 1)); document.querySelector('#presenter-next').addEventListener('click', () => presenterGoTo(current + 1));
+  document.querySelector('#presenter-public').addEventListener('click', () => { if (window.opener && !window.opener.closed) window.opener.postMessage({ type: 'presenter:fullscreen' }, '*'); else showNotice('La pantalla pública no está vinculada a esta ventana.'); });
+  document.querySelector('#presenter-close').addEventListener('click', () => window.close());
+  document.addEventListener('keydown', event => { if (['ArrowRight', 'PageDown', ' '].includes(event.key)) { event.preventDefault(); presenterGoTo(current + 1); } if (['ArrowLeft', 'PageUp'].includes(event.key)) { event.preventDefault(); presenterGoTo(current - 1); } if (event.key === 'Home') presenterGoTo(0); if (event.key === 'End') presenterGoTo(slides.length - 1); });
+  window.addEventListener('resize', () => { fitPresenterSlide(currentFrame); fitPresenterSlide(nextFrame); });
+  window.addEventListener('message', event => { if (event.source !== window.opener) return; if (event.data?.type === 'presentation:state') presenterGoTo(event.data.index, true); });
+  const initial = location.hash.match(/slide-(\d+)/); if (initial) current = Math.max(0, Math.min(slides.length - 1, Number(initial[1]) - 1)); renderPresenter();
+  if (window.opener && !window.opener.closed) window.opener.postMessage({ type: 'presenter:ready' }, '*');
+  setInterval(() => { document.querySelector('#presenter-clock').textContent = new Intl.DateTimeFormat('es-PY', { hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(new Date()); }, 1000);
+}
+
+if (presenterView) initPresenter(); else initAudience();

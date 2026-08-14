@@ -187,12 +187,13 @@ const nextBtn = document.getElementById('next');
 const notes = document.getElementById('speaker-notes');
 const indexNav = document.getElementById('slide-index');
 let current = 0;
+const presenterView = new URLSearchParams(location.search).get('view') === 'presenter';
 
-function slideMarkup(slide, index) {
-  return `<article class="slide slide-${index + 1}" aria-labelledby="slide-title">
+function slideMarkup(slide, index, headingId = 'slide-title') {
+  return `<article class="slide slide-${index + 1}" aria-labelledby="${headingId}">
   <header class="slide-header">
   <p class="eyebrow">${slide.eyebrow}</p>
-  <h1 id="slide-title">${slide.title}</h1>
+  <h1 id="${headingId}">${slide.title}</h1>
   </header>
   <div class="content">${slide.body}</div>
   </article>`;
@@ -214,7 +215,7 @@ function buildIndex() {
   });
 }
 
-function goTo(index) {
+function goTo(index, silent) {
   if (index < 0 || index >= slides.length) return;
   current = index;
   const slide = slides[current];
@@ -228,6 +229,7 @@ function goTo(index) {
   notes.innerHTML = `<div class="note"><strong>Slide ${current + 1}: ${slide.title}</strong><p>${slide.note}</p></div>`;
   document.querySelectorAll('.index-item').forEach((button, i) => button.classList.toggle('active', i === current));
   history.replaceState(null, '', `#slide-${current + 1}`);
+  if (!silent && presenterWindow && !presenterWindow.closed) presenterWindow.postMessage({ type: 'presentation:navigate', index: current }, '*');
 }
 
 function renderAllForPrint() {
@@ -276,42 +278,99 @@ function togglePanel(id, force) {
   if (isOpen) panel.querySelector('button, [href]')?.focus();
 }
 
-previousBtn.addEventListener('click', () => goTo(current - 1));
-nextBtn.addEventListener('click', () => goTo(current + 1));
-document.getElementById('index-toggle').addEventListener('click', () => togglePanel('index-panel'));
-document.getElementById('notes-toggle').addEventListener('click', () => togglePanel('notes-panel'));
-document.querySelectorAll('.close-panel').forEach(btn => {
-  btn.addEventListener('click', () => togglePanel(btn.dataset.close, false));
-});
+let presenterWindow = null;
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); goTo(current - 1); }
-  if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); goTo(current + 1); }
-  if (e.key === 'Home') { e.preventDefault(); goTo(0); }
-  if (e.key === 'End') { e.preventDefault(); goTo(slides.length - 1); }
-  if (e.key === 'f' || e.key === 'F') {
-    if (!document.fullscreenElement) document.documentElement.requestFullscreen();
-    else document.exitFullscreen();
-  }
-  if (e.key === 'i' || e.key === 'I') togglePanel('index-panel');
-  if (e.key === 'n' || e.key === 'N') togglePanel('notes-panel');
-  if (e.key === 'Escape') {
-    togglePanel('index-panel', false);
-    togglePanel('notes-panel', false);
-  }
-});
+function showNotice(message) {
+  const notice = document.querySelector('#popup-notice, #presenter-notice');
+  if (!notice) return;
+  notice.textContent = message;
+  notice.hidden = false;
+  window.setTimeout(() => { notice.hidden = true; }, 7000);
+}
 
-document.getElementById('fullscreen').addEventListener('click', () => {
-  if (!document.fullscreenElement) document.documentElement.requestFullscreen();
-  else document.exitFullscreen();
-});
+function openPresenter() {
+  presenterWindow = window.open(`${location.pathname}?view=presenter#slide-${current + 1}`, 'fpuna-presenter', 'popup,width=1440,height=900,resizable=yes,scrollbars=yes');
+  if (!presenterWindow) { showNotice('El navegador bloqueó la ventana del modo presentador. Permití las ventanas emergentes para este sitio e intentá nuevamente.'); return; }
+  presenterWindow.focus();
+}
+
+function fitPresenterSlide(frame) {
+  const slide = frame.querySelector('.slide'); if (!slide) return;
+  slide.style.transform = 'none'; slide.style.width = '100%';
+  const width = slide.scrollWidth; const height = slide.scrollHeight;
+  const scale = Math.min(1, frame.clientWidth / width, frame.clientHeight / height);
+  slide.style.width = `${100 / scale}%`; slide.style.transformOrigin = 'top left'; slide.style.transform = `scale(${scale})`;
+  frame.style.setProperty('--slide-scale', scale);
+}
+
+function initPresenter() {
+  document.body.innerHTML = `<main class="presenter-shell"><header class="presenter-header"><div><p class="presenter-kicker">FP-UNA · Unidad V · T4 - UML y Casos de Uso</p><h1>Modo presentador</h1></div><div class="presenter-meta"><span id="presenter-counter">01 / ${String(slides.length).padStart(2, '0')}</span><time id="presenter-clock"></time></div></header><section class="presenter-workspace" aria-label="Vista del presentador"><section class="presenter-notes"><h2>Notas docentes</h2><div id="presenter-notes-content" tabindex="0"></div></section><div class="presenter-stack"><div class="presenter-current"><div class="presenter-label">Slide actual</div><div id="presenter-current-frame" class="presenter-slide-frame"></div></div><section class="presenter-next"><h2>Siguiente slide</h2><div id="presenter-next-frame" class="presenter-slide-frame presenter-slide-frame--next"></div></section></div></section><footer class="presenter-controls"><button id="presenter-previous" type="button">← Anterior</button><button id="presenter-next" type="button">Siguiente →</button><span class="presenter-spacer"></span><button id="presenter-public" type="button">Pantalla completa del público</button><button id="presenter-close" type="button">Cerrar</button></footer><div id="presenter-notice" class="popup-notice" role="status" aria-live="polite" hidden></div></main>`;
+  const currentFrame = document.querySelector('#presenter-current-frame'); const nextFrame = document.querySelector('#presenter-next-frame');
+  function renderPresenter() { const slide = slides[current]; const next = current + 1; currentFrame.innerHTML = slideMarkup(slide, current, 'presenter-current-title'); nextFrame.innerHTML = next < slides.length ? slideMarkup(slides[next], next, 'presenter-next-title') : '<p class="presenter-end-message">Fin de la presentación</p>'; document.querySelector('#presenter-notes-content').innerHTML = slide.note; document.querySelector('#presenter-counter').textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`; requestAnimationFrame(() => { fitPresenterSlide(currentFrame); fitPresenterSlide(nextFrame); }); }
+  function presenterGoTo(position, silent = false) { current = Math.max(0, Math.min(slides.length - 1, position)); renderPresenter(); if (!silent && window.opener && !window.opener.closed) window.opener.postMessage({ type: 'presenter:navigate', index: current }, '*'); history.replaceState(null, '', `#slide-${current + 1}`); }
+  document.querySelector('#presenter-previous').addEventListener('click', () => presenterGoTo(current - 1)); document.querySelector('#presenter-next').addEventListener('click', () => presenterGoTo(current + 1));
+  document.querySelector('#presenter-public').addEventListener('click', () => { if (window.opener && !window.opener.closed) window.opener.postMessage({ type: 'presenter:fullscreen' }, '*'); else showNotice('La pantalla pública no está vinculada a esta ventana.'); });
+  document.querySelector('#presenter-close').addEventListener('click', () => window.close());
+  document.addEventListener('keydown', event => { if (['ArrowRight', 'PageDown', ' '].includes(event.key)) { event.preventDefault(); presenterGoTo(current + 1); } if (['ArrowLeft', 'PageUp'].includes(event.key)) { event.preventDefault(); presenterGoTo(current - 1); } if (event.key === 'Home') presenterGoTo(0); if (event.key === 'End') presenterGoTo(slides.length - 1); });
+  window.addEventListener('resize', () => { fitPresenterSlide(currentFrame); fitPresenterSlide(nextFrame); });
+  window.addEventListener('message', event => { if (event.source !== window.opener) return; if (event.data?.type === 'presentation:state') presenterGoTo(event.data.index, true); });
+  const initial = location.hash.match(/slide-(\d+)/); if (initial) current = Math.max(0, Math.min(slides.length - 1, Number(initial[1]) - 1)); renderPresenter();
+  if (window.opener && !window.opener.closed) window.opener.postMessage({ type: 'presenter:ready' }, '*');
+  setInterval(() => { document.querySelector('#presenter-clock').textContent = new Intl.DateTimeFormat('es-PY', { hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(new Date()); }, 1000);
+}
 
 const hashMatch = location.hash.match(/#slide-(\d+)/);
 const startSlide = hashMatch ? parseInt(hashMatch[1], 10) - 1 : 0;
 const printAll = new URLSearchParams(location.search).get('print') === 'all';
 
-window.addEventListener('beforeprint', () => { renderAllForPrint(); });
-window.addEventListener('afterprint', () => { stage.innerHTML = ''; goTo(current); });
+if (presenterView) {
+  initPresenter();
+} else {
+  previousBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+  document.getElementById('index-toggle').addEventListener('click', () => togglePanel('index-panel'));
+  document.getElementById('notes-toggle').addEventListener('click', () => togglePanel('notes-panel'));
+  document.querySelectorAll('.close-panel').forEach(btn => {
+    btn.addEventListener('click', () => togglePanel(btn.dataset.close, false));
+  });
 
-buildIndex();
-if (printAll) renderAllForPrint(); else goTo(Math.min(startSlide, slides.length - 1));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); goTo(current - 1); }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); goTo(current + 1); }
+    if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+    if (e.key === 'End') { e.preventDefault(); goTo(slides.length - 1); }
+    if (e.key === 'f' || e.key === 'F') {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+      else document.exitFullscreen();
+    }
+    if (e.key === 'i' || e.key === 'I') togglePanel('index-panel');
+    if (e.key === 'n' || e.key === 'N') togglePanel('notes-panel');
+    if (e.key === 'Escape') {
+      togglePanel('index-panel', false);
+      togglePanel('notes-panel', false);
+    }
+  });
+
+  document.getElementById('fullscreen').addEventListener('click', () => {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+    else document.exitFullscreen();
+  });
+
+  document.getElementById('presenter-mode').addEventListener('click', openPresenter);
+
+  window.addEventListener('message', event => {
+    if (event.source !== presenterWindow) return;
+    if (event.data?.type === 'presenter:ready') presenterWindow.postMessage({ type: 'presentation:state', index: current }, '*');
+    if (event.data?.type === 'presenter:navigate') goTo(event.data.index, true);
+    if (event.data?.type === 'presenter:fullscreen') {
+      const request = document.documentElement.requestFullscreen?.();
+      request?.catch(() => showNotice('El navegador no permitió activar pantalla completa desde la ventana presentador. Activala con el botón Pantalla completa de esta ventana.'));
+    }
+  });
+
+  window.addEventListener('beforeprint', () => { renderAllForPrint(); });
+  window.addEventListener('afterprint', () => { stage.innerHTML = ''; goTo(current); });
+
+  buildIndex();
+  if (printAll) renderAllForPrint(); else goTo(Math.min(startSlide, slides.length - 1));
+}
