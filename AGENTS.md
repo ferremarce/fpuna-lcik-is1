@@ -5,7 +5,7 @@ This repository contains teaching materials for **Ingeniería de Software I (IS1
 ## High-signal workflow
 
 - Treat `planificacion-clase/matriz-alineacion-materiales.md` and `planificacion-clase/Enunciado - Global Exchange - IS1 LCIk.md` as the main pedagogical and project-context references. Keep unconfirmed requirements marked `Por validar`.
-- The slide guides are the content specifications: `presentaciones-html/clase-1/guia-slides-clase-1.md` has 25 slides, `presentaciones-html/clase-2/guia-slides-clase-2.md` has 47, `presentaciones-html/clase-3/guia-slides-clase-3.md` has 39, and `presentaciones-html/clase-4/casos_de_uso/guia-slides-clase-4.md` has 22 (with `presentaciones-html/clase-4/uml/guia-slides-clase-4-adicional.md` as the UML complement, 16 slides). Do not silently change slide order or count.
+- The slide guides are the content specifications: `presentaciones-html/clase-1/guia-slides-clase-1.md` has 25 slides (canonical pattern), `presentaciones-html/unidad-1/T0-presentacion/guia-slides-unidad-1-t0-presentacion.md` has 9, `presentaciones-html/unidad-1/T1-introduccion-ingenieria-software/guia-slides-unidad-1-t1-introduccion-ingenieria-software.md` has 16, `presentaciones-html/unidad-1/T2-modelo-proceso-metodologias-agiles/guia-slides-unidad-1-t2-modelo-proceso-metodologias-agiles.md` has 47, `presentaciones-html/unidad-2/T3-a-requerimientos-software/guia-slides-unidad-2-t3-a-requerimientos-software.md` has 39, `presentaciones-html/unidad-5/T4-uml-casos-uso/uml/guia-slides-unidad-5-t4-a-uml.md` has 16 (UML complement), `presentaciones-html/unidad-5/T4-uml-casos-uso/casos_de_uso/guia-slides-unidad-5-t4-t5-casos-de-uso.md` has 21, and `presentaciones-html/unidad-6/T6-diagramas-de-clase/guia-slides-unidad-6-t6-diagramas-de-clase.md` has 20. Do not silently change slide order or count.
 - Global Exchange is the course-wide project described in the Enunciado. Do not use it as a "conductor" example in slide notes or guides (see "Speaker notes format"); do not use real people, accounts, credentials, documents, or transactions in examples or generated materials.
 - The HTML decks are intentionally independent: each class owns its own `app.js` and `styles.css`. Do not introduce shared runtime files unless explicitly requested.
 - Source PPTX/PDF materials are binary/reference inputs. A direct file read will fail for PPTX; inspect OOXML contents by extracting the ZIP package when source verification is needed.
@@ -41,15 +41,16 @@ This repository contains teaching materials for **Ingeniería de Software I (IS1
 - **Single-column slide layout (full-width header):** The shared `slideMarkup` renders every slide as `<header class="slide-header">` (eyebrow + `<h1 id="slide-title">`) spanning the full deck width, followed by `<div class="content">${slide.body}</div>`. The base `.slide` grid uses `grid-template-areas: "header" "content"` (one column) with `align-content: start; align-items: start;`, and `.slide .slide-header h1 { max-width: none; }` so titles use the full page width. On mobile (≤760px) the areas keep the same single-column order: header → content. Do not reintroduce the previous two-column layout or per-slide layout flags.
 - **Images:** Local images go in the class `assets/` folder and are referenced with a relative path (`assets/...`). Deck figures use `<img class="figure-img">` or the pattern's `<img class="avatar">` (round, blue border); the class provides the styling.
 - **Inline styles are an exception:** Slides may use minimal inline styles only for layout details the shared CSS does not cover (e.g., `style="gap: 2.25rem;"` on a `.card-grid`, or the round teacher photo in slide 2). Prefer the institutional classes otherwise.
-- When restyling an existing deck, keep the slide title/eyebrow order and count from its `guia-slides-clase-X.md`, keep the `note` content, and migrate `body` markup to the pattern's institutional components rather than changing content.
+- When restyling an existing deck, keep the slide title/eyebrow order and count from its `guia-slides-unidad-N-tX-tema.md` guide, keep the `note` content, and migrate `body` markup to the pattern's institutional components rather than changing content.
 
 ## Presentation structure
 
-- Each class directory is self-contained: `index.html`, `app.js`, `styles.css`, `guia-slides-clase-X.md`, and `assets/` folder.
+- Each deck directory is self-contained: `index.html`, `app.js`, `styles.css`, `guia-slides-unidad-N-tX-tema.md`, and `assets/` folder. Unit decks live under `presentaciones-html/unidad-N/TX-tema/` (e.g. `unidad-2/T3-a-requerimientos-software/`); `clase-1/` keeps its `clase-1` names as the canonical pattern reference.
+- **Artifact naming:** guides use `guia-slides-unidad-N-tX-tema.md`, PDFs `unidad-N-tX-tema.pdf`, and PPTX `unidad-N-tX-tema.pptx` (matching the deck slug; e.g. `unidad-2-t3-a-requerimientos-software.pdf`). Only `clase-1` keeps `clase-1` names.
 - `app.js` owns slide data, markup, notes, navigation, keyboard shortcuts, hash navigation, index, progress, and fullscreen behavior.
 - **Catalog rule:** Every time a presentation, PDF, PPTX, or slide guide is generated or modified for a class, update `presentaciones-html/index.html` so that class card links to all artifacts that exist: `Ver presentación`, `PDF · NN páginas`, `PPTX` (only if the file exists), and `Guía de slides`. Keep `class-meta` accurate (slide count, "guía docente incluida" once the guide exists, PDF page count).
 - The class 2 deck supports printing all slides with `?print=all`; its PDF export is 16:9 (297mm × 167mm landscape) and must contain 47 pages. Print CSS uses fixed page height and explicit page breaks—check slides 15–17 when changing print styles.
-- **PDF generation:** Use Google Chrome headless (`--headless=new --print-to-pdf --no-pdf-header-footer`) over a temp HTML that loads the class `styles.css` + `app.js`, executes `renderAllForPrint()`, and includes `<base href="file://.../clase-N/">` so relative `assets/...` (logo, figures) resolve. Do **not** use WeasyPrint: it rejects `clamp()` in `font-size` (title shrinks below eyebrow) and does not respect `transform: scale()` / `overflow: hidden` for pagination (slides fragment into extra pages). Full recipe in `docs/patron-presentaciones.md` §5.
+- **PDF generation:** Use Google Chrome headless (`--headless=new --print-to-pdf --no-pdf-header-footer`) over a temp HTML that loads the deck `styles.css` + `app.js`, executes `renderAllForPrint()`, and includes `<base href="file://.../presentaciones-html/unidad-N/TX-tema/">` so relative `assets/...` (logo, figures) resolve. Do **not** use WeasyPrint: it rejects `clamp()` in `font-size` (title shrinks below eyebrow) and does not respect `transform: scale()` / `overflow: hidden` for pagination (slides fragment into extra pages). Full recipe in `docs/patron-presentaciones.md` §5.
 - Do not expose the aula virtual password from the original class 1 material in Markdown, HTML, JavaScript, CSS, PDFs, screenshots, or commits.
 
 ## Slide content rules
@@ -59,7 +60,7 @@ This repository contains teaching materials for **Ingeniería de Software I (IS1
 - **Slides 13+:** Academic content must include bibliographic references using `<p class="reference">` styled as blockquotes with left border, subtle background, italic font, and book emoji prefix.
 - **References format:** `Author. Title, Edition. Publisher, Year.` (e.g., `Sommerville, I. Ingeniería de Software, 7ª ed. Addison Wesley, 2005.`)
 - **Never invent references:** Only use references from the course bibliography or verified web sources.
-- **Texto visible del PPTX:** Todo el texto de cada slide del PPTX debe transcribirse COMPLETAMENTE en la guía (`guia-slides-clase-X.md`) en la sección "Texto visible". Este texto es la fuente para generar el `body` del HTML.
+- **Texto visible del PPTX:** Todo el texto de cada slide del PPTX debe transcribirse COMPLETAMENTE en la guía (`guia-slides-unidad-N-tX-tema.md`) en la sección "Texto visible". Este texto es la fuente para generar el `body` del HTML.
 
 ## Speaker notes format
 
@@ -108,18 +109,21 @@ Run these checks after editing a deck:
 
 ```bash
 node --check presentaciones-html/clase-1/app.js
-node --check presentaciones-html/clase-2/app.js
-node --check presentaciones-html/clase-3/app.js
-node --check presentaciones-html/clase-4/casos_de_uso/app.js
-node --check presentaciones-html/clase-4/uml/app.js
+node --check presentaciones-html/unidad-1/T0-presentacion/app.js
+node --check presentaciones-html/unidad-1/T1-introduccion-ingenieria-software/app.js
+node --check presentaciones-html/unidad-1/T2-modelo-proceso-metodologias-agiles/app.js
+node --check presentaciones-html/unidad-2/T3-a-requerimientos-software/app.js
+node --check presentaciones-html/unidad-5/T4-uml-casos-uso/uml/app.js
+node --check presentaciones-html/unidad-5/T4-uml-casos-uso/casos_de_uso/app.js
+node --check presentaciones-html/unidad-6/T6-diagramas-de-clase/app.js
 git diff --check
 ```
 
 For class 2 PDF changes, also verify:
 
 ```bash
-pdfinfo presentaciones-html/clase-2/clase-2.pdf | grep '^Pages:'
-pdftotext -f 15 -l 17 -layout presentaciones-html/clase-2/clase-2.pdf -
+pdfinfo presentaciones-html/unidad-1/T2-modelo-proceso-metodologias-agiles/unidad-1-t2-modelo-proceso-metodologias-agiles.pdf | grep '^Pages:'
+pdftotext -f 15 -l 17 -layout presentaciones-html/unidad-1/T2-modelo-proceso-metodologias-agiles/unidad-1-t2-modelo-proceso-metodologias-agiles.pdf -
 ```
 
 The PDF must report 47 pages, and pages 15–17 must contain visible text and diagrams for Espiral, Boehm, and RUP. Preserve normal HTML navigation and the `01 / 47` counter after print changes.
@@ -135,5 +139,5 @@ The PDF must report 47 pages, and pages 15–17 must contain visible text and di
 
 Para que cualquier agente nuevo, sin acceso a memoria persistente, tenga el mismo contexto de diseño de los decks:
 
-- `docs/rediseno-presentaciones.md` — patrón de rediseño aplicable a CUALQUIER clase (`presentaciones-html/clase-N/`): estructura de una sola columna, componentes CSS y decisiones de diseño. Clase-1 es el ejemplo de referencia (los 25 bodies; fuente de verdad: `presentaciones-html/clase-1/app.js`).
+- `docs/rediseno-presentaciones.md` — patrón de rediseño aplicable a CUALQUIER clase (`presentaciones-html/clase-N/` o `presentaciones-html/unidad-N/TX-tema/`): estructura de una sola columna, componentes CSS y decisiones de diseño. Clase-1 es el ejemplo de referencia (los 25 bodies; fuente de verdad: `presentaciones-html/clase-1/app.js`).
 - `docs/reglas-presentaciones.md` — reglas de estructura, componentes visuales, contenidos, identidad institucional y verificación para editar los decks.

@@ -49,7 +49,7 @@
     .topbar .brand-logo { height: 2.4rem; width: auto; }
     .topbar .brand-title { display: block; font-weight: 600; font-size: 1.02rem; line-height: 1.2; }
     .topbar .brand-subtitle { display: block; font-size: 0.8rem; opacity: 0.88; }
-    .topbar .nav-links { margin-left: auto; display: flex; gap: 0.5rem; }
+    .topbar .nav-links { margin-left: auto; display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: flex-end; }
     .topbar .nav-links a {
       color: #fff;
       text-decoration: none;
@@ -65,6 +65,112 @@
     .intro p { margin: 0; color: var(--muted); }
 
     .class-grid { display: grid; gap: 1.25rem; margin-top: 2rem; }
+    .unit-section {
+      display: grid;
+      gap: 1rem;
+      margin-top: 2.25rem;
+    }
+    .unit-section:first-child { margin-top: 2rem; }
+    .unit-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 0.8rem;
+      margin: 0;
+      padding: 0.85rem 1rem;
+      color: var(--fpuna-blue-dark);
+      background: linear-gradient(90deg, #eef2fa, #fff);
+      border-left: 5px solid var(--fpuna-blue);
+      border-radius: 8px;
+    }
+    .unit-heading small {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 400;
+    }
+    .topic-grid {
+      display: grid;
+      gap: 1.25rem;
+      padding-left: 1.25rem;
+      border-left: 1px solid var(--border);
+    }
+    .unit-card {
+      border-top-width: 5px;
+    }
+    .unit-card .unit-topics {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    .unit-card .topic {
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .unit-card .topic:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+    .unit-card .topic h3 {
+      margin: 0 0 0.25rem;
+      color: var(--fpuna-blue-dark);
+      font-size: 1.08rem;
+    }
+    .unit-card .topic p { margin: 0.35rem 0 0; }
+    .unit-card .topic .class-actions { margin-top: 0.65rem; }
+    .unit-card .topic .class-source { margin-top: 0.7rem; padding-top: 0.6rem; }
+    .activity-group {
+      margin-top: 0.25rem;
+      padding: 1rem;
+      border: 1px solid #edcf9a;
+      border-left: 4px solid #d88918;
+      border-radius: 8px;
+      background: #fffaf0;
+    }
+    .activity-group-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      color: #8b5700;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .unit-card .topic--theme {
+      border-left: 4px solid var(--fpuna-blue);
+      padding-left: 1rem;
+    }
+    .topic-label {
+      display: inline-block;
+      margin-bottom: 0.35rem;
+      color: var(--fpuna-blue);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .catalog-legend {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .legend-item { display: inline-flex; align-items: center; gap: 0.4rem; }
+    .legend-swatch { width: 0.7rem; height: 0.7rem; border-radius: 2px; }
+    .legend-swatch--theme { background: var(--fpuna-blue); }
+    .legend-swatch--activity { background: #d88918; }
+    .unit-card--empty {
+      border-top-color: var(--border);
+      background: var(--panel);
+    }
+    .unit-card--empty .class-badge {
+      background: var(--muted);
+    }
+    .unit-card--empty .class-meta {
+      margin: 0.8rem 0 0;
+    }
     .class-card {
       display: block;
       background: var(--bg);
@@ -174,94 +280,319 @@
       </span>
     </a>
     <nav class="nav-links" aria-label="Accesos directos">
-      <a href="#clase-1">Clase 1</a>
-      <a href="#clase-2">Clase 2</a>
-      <a href="#clase-3">Clase 3</a>
-      <a href="#clase-4">Clase 4</a>
+      <a href="#unidad-1">Unidad I</a>
+      <a href="#unidad-2">Unidad II</a>
+      <a href="#unidad-3">Unidad III</a>
+      <a href="#unidad-4">Unidad IV</a>
+      <a href="#unidad-5">Unidad V</a>
+      <a href="#unidad-6">Unidad VI</a>
+      <a href="#unidad-7">Unidad VII</a>
+      <a href="#unidad-8">Unidad VIII</a>
+      <a href="#unidad-9">Unidad IX</a>
+      <a href="#unidad-10">Unidad X</a>
     </nav>
   </header>
 
   <main>
     <section class="intro">
       <h1>Presentaciones de clase</h1>
-      <p>Índice general de los materiales de exposición del curso Ingeniería del Software I. Cada clase es una presentación HTML autocontenida con navegación por teclado, índice de diapositivas, notas docentes y modo de impresión para PDF.</p>
+      <p>Índice general de los materiales de exposición del curso Ingeniería del Software I. Cada tema se organiza dentro de su unidad y dispone de presentación HTML, notas docentes y artefactos de impresión cuando corresponde.</p>
+      <div class="catalog-legend" aria-label="Leyenda de contenidos">
+        <span class="legend-item"><span class="legend-swatch legend-swatch--theme"></span>Tema estructurado (Tx)</span>
+        <span class="legend-item"><span class="legend-swatch legend-swatch--activity"></span>Actividad práctica</span>
+      </div>
     </section>
 
-    <section class="class-grid" aria-label="Clases disponibles">
-      <article class="class-card" id="clase-1">
-        <p class="class-kicker"><span class="class-badge">Clase 1</span> Unidad I · Introducción</p>
-        <h2>Introducción a la Ingeniería de Software</h2>
-        <p class="class-meta">25 diapositivas · guía docente incluida · exportación PDF (25 páginas)</p>
-        <p class="class-desc">
-          <strong>Contenido:</strong> presentación de la materia (docente, metodología, aula virtual, evaluaciones, trabajos prácticos y bibliografía) y Unidad I: qué es la Ingeniería de Software, el software y sus productos, características, clasificación, costos, proceso de software, proceso genérico, problemas y retos de los ingenieros de software.
-        </p>
-        <div class="class-actions">
-          <a class="chip" href="clase-1/index.html">Ver presentación</a>
-          <a class="chip" href="clase-1/clase-1.pdf">PDF · 25 páginas</a>
-          <a class="chip" href="clase-1/clase-1.pptx">PPTX</a>
-          <a class="chip" href="clase-1/guia-slides-clase-1.md">Guía de slides</a>
-        </div>
-        <p class="class-source">Contenido generado a partir del <a class="chip chip--source" href="../sesiones-clase/clase-1/IS1-UNIDAD_I.pptx">PPTX original</a>.</p>
-      </article>
+    <section class="class-grid" aria-label="Unidades disponibles">
+      <section class="unit-section" id="unidad-1" aria-labelledby="unidad-1-title">
+        <h2 class="unit-heading" id="unidad-1-title">Unidad I <small>Presentación de la asignatura, fundamentos de Ingeniería de Software, modelos de proceso y metodologías ágiles · T0–T2</small></h2>
+        <article class="class-card unit-card">
+          <p class="class-kicker"><span class="class-badge">4 contenidos</span> Presentación, fundamentos, procesos y actividad práctica</p>
+          <div class="unit-topics">
+            <section class="topic topic--theme" id="unidad-1-presentacion">
+              <span class="topic-label">Tema</span>
+              <h3>T0 · Presentación de la asignatura</h3>
+              <p class="class-meta">9 diapositivas · guía docente incluida · PDF de 9 páginas</p>
+              <p><strong>Contenido:</strong> docente, organización de la asignatura, metodología, aula virtual, evaluaciones, trabajos prácticos y bibliografía de referencia.</p>
+              <div class="class-actions">
+                <a class="chip" href="unidad-1/T0-presentacion/index.html">Ver presentación</a>
+                <a class="chip" href="unidad-1/T0-presentacion/unidad-1-t0-presentacion.pdf">PDF · 9 páginas</a>
+                <a class="chip" href="unidad-1/T0-presentacion/unidad-1-t0-presentacion.pptx">PPTX</a>
+                <a class="chip" href="unidad-1/T0-presentacion/guia-slides-unidad-1-t0-presentacion.md">Guía de slides</a>
+              </div>
+            </section>
+            <section class="topic topic--theme" id="unidad-1-t1">
+              <span class="topic-label">Tema</span>
+              <h3>T1 · Introducción a la Ingeniería de Software</h3>
+              <p class="class-meta">16 diapositivas · guía docente incluida · PDF de 16 páginas</p>
+              <p><strong>Contenido:</strong> definición e importancia de la Ingeniería de Software, software y productos, características, clasificación, costos, proceso de software, proceso genérico, problemas y retos profesionales.</p>
+              <div class="class-actions">
+                <a class="chip" href="unidad-1/T1-introduccion-ingenieria-software/index.html">Ver presentación</a>
+                <a class="chip" href="unidad-1/T1-introduccion-ingenieria-software/unidad-1-t1-introduccion-ingenieria-software.pdf">PDF · 16 páginas</a>
+                <a class="chip" href="unidad-1/T1-introduccion-ingenieria-software/unidad-1-t1-introduccion-ingenieria-software.pptx">PPTX</a>
+                <a class="chip" href="unidad-1/T1-introduccion-ingenieria-software/guia-slides-unidad-1-t1-introduccion-ingenieria-software.md">Guía de slides</a>
+              </div>
+            </section>
+            <section class="topic topic--theme" id="unidad-1-t2">
+              <span class="topic-label">Tema</span>
+              <h3>T2 · Modelo de proceso: Tradicionales y Ágiles</h3>
+              <p class="class-meta">47 diapositivas · guía docente incluida · PDF de 47 páginas</p>
+              <p><strong>Contenido:</strong> modelos tradicionales, problemas de los modelos tradicionales, manifiesto y valores ágiles, ASD, XP, Scrum, comparación ágil versus tradicional y conclusiones.</p>
+              <div class="class-actions">
+                <a class="chip" href="unidad-1/T2-modelo-proceso-metodologias-agiles/index.html">Ver presentación</a>
+                <a class="chip" href="unidad-1/T2-modelo-proceso-metodologias-agiles/unidad-1-t2-modelo-proceso-metodologias-agiles.pdf">PDF · 47 páginas</a>
+                <a class="chip" href="unidad-1/T2-modelo-proceso-metodologias-agiles/unidad-1-t2-modelo-proceso-metodologias-agiles.pptx">PPTX</a>
+                <a class="chip" href="unidad-1/T2-modelo-proceso-metodologias-agiles/guia-slides-unidad-1-t2-modelo-proceso-metodologias-agiles.md">Guía de slides</a>
+              </div>
+            </section>
+            <section class="activity-group" aria-labelledby="unidad-1-actividades-title">
+              <div class="activity-group-header" id="unidad-1-actividades-title">
+                <span>Actividades prácticas</span>
+                <span>1 actividad</span>
+              </div>
+              <ol>
+                <li id="unidad-1-formacion-equipos">
+                  <h3>Formación de equipos</h3>
+                  <p><strong>Actividad:</strong> conformación de los equipos de trabajo para desarrollar el proyecto de la asignatura.</p>
+                </li>
+              </ol>
+            </section>
+          </div>
+        </article>
+      </section>
 
-      <article class="class-card" id="clase-2">
-        <p class="class-kicker"><span class="class-badge">Clase 2</span> Unidad II · Modelos de desarrollo</p>
-        <h2>Modelos de desarrollo de software y desarrollo rápido</h2>
-        <p class="class-meta">47 diapositivas · guía docente incluida · exportación PDF (47 páginas)</p>
-        <p class="class-desc">
-          <strong>Contenido:</strong> modelos tradicionales (Cascada, Prototipación, Desarrollo en Fases, Espiral, RUP), problemas de los modelos tradicionales, métodos ágiles (manifiesto y valores), ASD, Programación Extrema (XP), Scrum, ventajas y desventajas, comparación ágil vs. tradicional y conclusiones.
-        </p>
-        <div class="class-actions">
-          <a class="chip" href="clase-2/index.html">Ver presentación</a>
-          <a class="chip" href="clase-2/clase-2.pdf">PDF · 47 páginas</a>
-          <a class="chip" href="clase-2/clase-2.pptx">PPTX</a>
-          <a class="chip" href="clase-2/guia-slides-clase-2.md">Guía de slides</a>
-        </div>
-        <p class="class-source">Contenido generado a partir del <a class="chip chip--source" href="../sesiones-clase/clase-2/IS1-UNIDAD_II.pptx">PPTX original</a>.</p>
-      </article>
+      <section class="unit-section" id="unidad-2" aria-labelledby="unidad-2-title">
+        <h2 class="unit-heading" id="unidad-2-title">Unidad II <small>Requerimientos de Software y recursos materiales del proyecto · T3-a–T3-b</small></h2>
+        <article class="class-card unit-card">
+          <p class="class-kicker"><span class="class-badge">3 contenidos</span> Requerimientos, recursos y actividad práctica</p>
+          <div class="unit-topics">
+            <section class="topic topic--theme" id="unidad-2-t3">
+              <span class="topic-label">Tema</span>
+              <h3>T3 · Requerimientos de Software</h3>
+              <p class="class-meta">39 diapositivas · guía docente incluida · PDF de 39 páginas</p>
+              <p><strong>Contenido:</strong> requerimientos funcionales y no funcionales, ingeniería de requerimientos, obtención, análisis, especificación, verificación, validación y gestión.</p>
+              <div class="class-actions">
+                <a class="chip" href="unidad-2/T3-a-requerimientos-software/index.html">Ver presentación</a>
+                <a class="chip" href="unidad-2/T3-a-requerimientos-software/unidad-2-t3-a-requerimientos-software.pdf">PDF · 39 páginas</a>
+                <a class="chip" href="unidad-2/T3-a-requerimientos-software/unidad-2-t3-a-requerimientos-software.pptx">PPTX</a>
+                <a class="chip" href="unidad-2/T3-a-requerimientos-software/guia-slides-unidad-2-t3-a-requerimientos-software.md">Guía de slides</a>
+              </div>
+            </section>
+            <section class="topic topic--theme" id="unidad-2-t3-b">
+              <span class="topic-label">Tema</span>
+              <h3>T3-b · Recursos materiales</h3>
+              <p><strong>Contenido:</strong> enlaces al enunciado del proyecto y al Documento ERS.</p>
+              <div class="class-actions">
+                <a class="chip" href="unidad-2/T3-b-recursos-materiales/README.md">Ver recursos</a>
+                <a class="chip" href="https://docs.google.com/document/d/1vF0iAuWyDqm1BdxTCDMSj7bAycR2OlvEYwitdXOpD3Y/edit?tab=t.0" target="_blank" rel="noopener">Enunciado del proyecto</a>
+                <a class="chip" href="https://grado.pol.una.py/mod/resource/view.php?id=407946" target="_blank" rel="noopener">Documento ERS</a>
+              </div>
+            </section>
+            <section class="activity-group" aria-labelledby="unidad-2-actividades-title">
+              <div class="activity-group-header" id="unidad-2-actividades-title">
+                <span>Actividades prácticas</span>
+                <span>1 actividad</span>
+              </div>
+              <ol>
+                <li id="unidad-2-proyecto-enunciado">
+                  <h3>Proyecto: Enunciado</h3>
+                  <p><strong>Actividad:</strong> presentación del enunciado del proyecto para comprender su alcance, objetivos y forma de trabajo.</p>
+                </li>
+              </ol>
+            </section>
+          </div>
+        </article>
+      </section>
 
-      <article class="class-card" id="clase-3">
-        <p class="class-kicker"><span class="class-badge">Clase 3</span> Unidad III · Requerimientos</p>
-        <h2>Requerimientos de Software</h2>
-        <p class="class-meta">39 diapositivas · guía docente incluida · exportación PDF (39 páginas)</p>
-        <p class="class-desc">
-          <strong>Contenido:</strong> qué es un requerimiento de software, características, requerimientos funcionales y no funcionales con ejemplos, ingeniería de requerimientos, proceso de obtención, análisis, especificación (SRS / IEEE 830), verificación, validación y gestión de requerimientos, con herramientas como JIRA, Trello, Confluence y GitHub Issues.
-        </p>
-        <div class="class-actions">
-          <a class="chip" href="clase-3/index.html">Ver presentación</a>
-          <a class="chip" href="clase-3/clase-3.pdf">PDF · 39 páginas</a>
-          <a class="chip" href="clase-3/clase-3.pptx">PPTX</a>
-          <a class="chip" href="clase-3/guia-slides-clase-3.md">Guía de slides</a>
-        </div>
-        <p class="class-source">Contenido generado a partir del <a class="chip chip--source" href="../sesiones-clase/clase-3/IS1-UNIDAD_III%20(1).pptx">PPTX original</a>.</p>
-      </article>
+      <section class="unit-section" id="unidad-3" aria-labelledby="unidad-3-title">
+        <h2 class="unit-heading" id="unidad-3-title">Unidad III <small>Clases prácticas y trabajo sobre el proyecto</small></h2>
+        <article class="class-card unit-card">
+          <p class="class-kicker"><span class="class-badge">3 contenidos</span> Actividades prácticas</p>
+          <div class="unit-topics">
+            <section class="activity-group" aria-labelledby="unidad-3-actividades-title">
+              <div class="activity-group-header" id="unidad-3-actividades-title">
+                <span>Actividades prácticas</span>
+                <span>3 actividades</span>
+              </div>
+              <ol>
+                <li id="unidad-3-proyecto-explicacion">
+                  <h3>Proyecto: Explicación - Traer consultas</h3>
+                  <p><strong>Actividad:</strong> explicar el proyecto y preparar consultas sobre sus requerimientos y las decisiones que necesiten validación.</p>
+                </li>
+                <li id="unidad-3-documento-ers">
+                  <h3>Documento ERS</h3>
+                  <p><strong>Actividad:</strong> trabajar con el Documento de Especificación de Requisitos de Software como insumo para el desarrollo del proyecto.</p>
+                </li>
+                <li id="unidad-3-consultas">
+                  <h3>C · Consultas - Proyecto / Tope de formación de Equipos</h3>
+                  <p><strong>Actividad:</strong> resolver consultas sobre el proyecto y establecer el tope para la formación de equipos.</p>
+                </li>
+              </ol>
+            </section>
+          </div>
+        </article>
+      </section>
 
-      <article class="class-card" id="clase-4">
-        <p class="class-kicker"><span class="class-badge">Clase 4</span> Unidad IV · Casos de Uso y UML</p>
-        <h2>Modelado con Casos de Uso y UML</h2>
-        <p class="class-meta">2 presentaciones · Casos de Uso (22 diapositivas, PDF/PPTX) + Introducción a UML (16 diapositivas) · guías docentes incluidas</p>
-        <p class="class-desc">
-          <strong>1 · Introducción a UML:</strong> qué es UML, historia y la OMG, la finalidad del estándar, la analogía con los planos, el lenguaje frente a la programación, los 14 diagramas (7 estructurales y 7 de comportamiento) y las herramientas y buenas prácticas.
-        </p>
-        <div class="class-actions">
-          <a class="chip" href="clase-4/uml/index.html">Ver presentación · UML</a>
-          <a class="chip" href="clase-4/uml/guia-slides-clase-4-adicional.md">Guía de slides · UML</a>
-        </div>
-        <p class="class-desc">
-          <strong>2 · Casos de Uso y Especificación de Casos de Uso:</strong> qué es un caso de uso, formas de describirlo, diagrama de casos de uso (límites, actores, relaciones de asociación, generalización, inclusión y extensión), mal uso de las relaciones, plantilla estándar de especificación de casos de uso, especificación del caso "Crear mensaje en el foro" y caso de estudio del sistema de correos electrónicos.
-        </p>
-        <div class="class-actions">
-          <a class="chip" href="clase-4/casos_de_uso/index.html">Ver presentación · Casos de Uso</a>
-          <a class="chip" href="clase-4/casos_de_uso/clase-4.pdf">PDF · 22 páginas</a>
-          <a class="chip" href="clase-4/casos_de_uso/clase-4.pptx">PPTX</a>
-          <a class="chip" href="clase-4/casos_de_uso/guia-slides-clase-4.md">Guía de slides · Casos de Uso</a>
-        </div>
-        <p class="class-source">Contenido de la presentación de Casos de Uso generado a partir del <a class="chip chip--source" href="../sesiones-clase/clase-4/IS1-UNIDAD_IV.pptx">PPTX original</a>.</p>
-      </article>
+      <section class="unit-section" id="unidad-4" aria-labelledby="unidad-4-title">
+        <h2 class="unit-heading" id="unidad-4-title">Unidad IV <small>Clases prácticas y trabajo sobre el proyecto</small></h2>
+        <article class="class-card unit-card">
+          <p class="class-kicker"><span class="class-badge">2 contenidos</span> Actividades prácticas</p>
+          <div class="unit-topics">
+            <section class="activity-group" aria-labelledby="unidad-4-actividades-title">
+              <div class="activity-group-header" id="unidad-4-actividades-title">
+                <span>Actividades prácticas</span>
+                <span>2 actividades</span>
+              </div>
+              <ol>
+                <li id="unidad-4-cp-presentacion-prototipo">
+                  <h3>CP · Presentación Prototipo - Por Equipo</h3>
+                  <p><strong>Actividad:</strong> presentación del prototipo desarrollado por cada equipo.</p>
+                </li>
+                <li id="unidad-4-cp-borrador-ers">
+                  <h3>CP · Borrador ERS</h3>
+                  <p><strong>Actividad:</strong> elaboración y revisión del borrador del Documento de Especificación de Requisitos de Software.</p>
+                </li>
+              </ol>
+            </section>
+          </div>
+        </article>
+      </section>
+
+      <section class="unit-section" id="unidad-5" aria-labelledby="unidad-5-title">
+        <h2 class="unit-heading" id="unidad-5-title">Unidad V <small>UML, casos de uso y actividades prácticas · T4-a–T4-T5</small></h2>
+        <article class="class-card unit-card">
+          <p class="class-kicker"><span class="class-badge">8 contenidos</span> Modelado, especificación y actividades prácticas</p>
+          <div class="unit-topics">
+            <section class="topic topic--theme" id="unidad-5-t4-a">
+              <span class="topic-label">Tema</span>
+              <h3>T4-a · UML</h3>
+              <p class="class-meta">16 diapositivas · guía docente incluida · PDF de 16 páginas</p>
+              <p><strong>Contenido:</strong> UML, historia y propósito del estándar, analogía con los planos, lenguaje frente a programación, diagramas estructurales y de comportamiento, herramientas y buenas prácticas.</p>
+              <div class="class-actions">
+                <a class="chip" href="unidad-5/T4-uml-casos-uso/uml/index.html">Ver UML</a>
+                <a class="chip" href="unidad-5/T4-uml-casos-uso/uml/unidad-5-t4-a-uml.pdf">PDF · 16 páginas</a>
+                <a class="chip" href="unidad-5/T4-uml-casos-uso/uml/guia-slides-unidad-5-t4-a-uml.md">Guía UML</a>
+              </div>
+            </section>
+            <section class="topic topic--theme" id="unidad-5-t4-b">
+              <span class="topic-label">Tema</span>
+              <h3>T4-T5 · Casos de Uso y Especificación de Casos de Uso</h3>
+              <p class="class-meta">21 diapositivas · guía docente incluida · PDF de 21 páginas</p>
+              <p><strong>Contenido:</strong> casos de uso, actores, límites, relaciones de asociación, generalización, inclusión y extensión, especificación de casos de uso y casos de estudio.</p>
+              <div class="class-actions">
+                <a class="chip" href="unidad-5/T4-uml-casos-uso/casos_de_uso/index.html">Ver Casos de Uso</a>
+                <a class="chip" href="unidad-5/T4-uml-casos-uso/casos_de_uso/unidad-5-t4-t5-casos-de-uso.pdf">PDF · 21 páginas</a>
+                <a class="chip" href="unidad-5/T4-uml-casos-uso/casos_de_uso/unidad-5-t4-t5-casos-de-uso.pptx">PPTX</a>
+                <a class="chip" href="unidad-5/T4-uml-casos-uso/casos_de_uso/guia-slides-unidad-5-t4-t5-casos-de-uso.md">Guía Casos de Uso</a>
+              </div>
+            </section>
+            <section class="activity-group" aria-labelledby="unidad-5-actividades-title">
+              <div class="activity-group-header" id="unidad-5-actividades-title">
+                <span>Actividades prácticas</span>
+                <span>6 actividades</span>
+              </div>
+              <ol>
+                <li id="unidad-5-h1-entrega-ers">
+                  <h3>H1 · Entrega Documento ERS</h3>
+                  <p><strong>Actividad:</strong> entrega del Documento de Especificación de Requisitos de Software.</p>
+                </li>
+                <li id="unidad-5-cp-borrador-diagrama-cu">
+                  <h3>CP · Borrador Diagrama de CU</h3>
+                  <p><strong>Actividad:</strong> elaboración y revisión del borrador del diagrama de casos de uso.</p>
+                </li>
+                <li id="unidad-5-cp-borrador-especificacion-cu">
+                  <h3>CP · Borrador Especificación CU</h3>
+                  <p><strong>Actividad:</strong> elaboración y revisión del borrador de la especificación de casos de uso.</p>
+                </li>
+                <li id="unidad-5-h2-entrega-diagrama-cu">
+                  <h3>H2 · Entrega Diagrama de CU</h3>
+                  <p><strong>Actividad:</strong> entrega del diagrama de casos de uso.</p>
+                </li>
+                <li id="unidad-5-h3-entrega-especificacion-cu">
+                  <h3>H3 · Entrega Especificación de CU</h3>
+                  <p><strong>Actividad:</strong> entrega de la especificación de casos de uso.</p>
+                </li>
+                <li id="unidad-5-r-retroalimentacion-consultas-1p">
+                  <h3>R · Retroalimentación + Consultas 1P</h3>
+                  <p><strong>Actividad:</strong> retroalimentación y resolución de consultas correspondientes al primer parcial.</p>
+                </li>
+              </ol>
+            </section>
+          </div>
+        </article>
+      </section>
+
+      <section class="unit-section" id="unidad-6" aria-labelledby="unidad-6-title">
+        <h2 class="unit-heading" id="unidad-6-title">Unidad VI <small>Diagramas de Clase</small></h2>
+        <article class="class-card unit-card">
+          <p class="class-kicker"><span class="class-badge">3 contenidos</span> T6 · Diagramas de Clase y actividades prácticas</p>
+          <div class="unit-topics">
+            <section class="topic topic--theme" id="unidad-6-t6-diagramas-de-clase">
+              <span class="topic-label">Contenido temático</span>
+              <h3>T6 · Diagramas de Clase</h3>
+              <p class="class-meta">20 slides · guía docente incluida · Unidad VI</p>
+              <p><strong>Contenido:</strong> clases, objetos, atributos, operaciones, asociaciones, multiplicidades, herencia, polimorfismo, agregación, composición, navegabilidad, dependencias y modelo de dominio.</p>
+              <div class="class-actions"><a class="chip" href="unidad-6/T6-diagramas-de-clase/index.html">Ver presentación</a><a class="chip" href="unidad-6/T6-diagramas-de-clase/unidad-6-t6-diagramas-de-clase.pdf">PDF · 20 páginas</a><a class="chip" href="unidad-6/T6-diagramas-de-clase/guia-slides-unidad-6-t6-diagramas-de-clase.md">Guía de slides</a></div>
+            </section>
+            <section class="activity-group" aria-labelledby="unidad-6-actividades-title">
+              <div class="activity-group-header" id="unidad-6-actividades-title">
+                <span>Actividades prácticas</span>
+                <span>2 actividades</span>
+              </div>
+              <ol>
+                <li id="unidad-6-r-revisiones-p1-tps-entregados">
+                  <h3>R · Revisiones - P1 + TPs entregados</h3>
+                  <p><strong>Actividad:</strong> revisión del primer parcial y de los trabajos prácticos entregados.</p>
+                </li>
+                <li id="unidad-6-cp-borrador-diagramas-clase">
+                  <h3>CP · Borrador Diagramas de Clase</h3>
+                  <p><strong>Actividad:</strong> elaboración y revisión del borrador de los diagramas de clase.</p>
+                </li>
+              </ol>
+            </section>
+          </div>
+        </article>
+      </section>
+
+      <section class="unit-section" id="unidad-7" aria-labelledby="unidad-7-title">
+        <h2 class="unit-heading" id="unidad-7-title">Unidad VII <small>Contenido pendiente de definición</small></h2>
+        <article class="class-card unit-card unit-card--empty">
+          <p class="class-kicker"><span class="class-badge">Sin contenidos</span> Próximamente</p>
+          <h3>Unidad VII</h3>
+          <p class="class-meta">Los temas y materiales se incorporarán progresivamente.</p>
+        </article>
+      </section>
+
+      <section class="unit-section" id="unidad-8" aria-labelledby="unidad-8-title">
+        <h2 class="unit-heading" id="unidad-8-title">Unidad VIII <small>Contenido pendiente de definición</small></h2>
+        <article class="class-card unit-card unit-card--empty">
+          <p class="class-kicker"><span class="class-badge">Sin contenidos</span> Próximamente</p>
+          <h3>Unidad VIII</h3>
+          <p class="class-meta">Los temas y materiales se incorporarán progresivamente.</p>
+        </article>
+      </section>
+
+      <section class="unit-section" id="unidad-9" aria-labelledby="unidad-9-title">
+        <h2 class="unit-heading" id="unidad-9-title">Unidad IX <small>Contenido pendiente de definición</small></h2>
+        <article class="class-card unit-card unit-card--empty">
+          <p class="class-kicker"><span class="class-badge">Sin contenidos</span> Próximamente</p>
+          <h3>Unidad IX</h3>
+          <p class="class-meta">Los temas y materiales se incorporarán progresivamente.</p>
+        </article>
+      </section>
+
+      <section class="unit-section" id="unidad-10" aria-labelledby="unidad-10-title">
+        <h2 class="unit-heading" id="unidad-10-title">Unidad X <small>Contenido pendiente de definición</small></h2>
+        <article class="class-card unit-card unit-card--empty">
+          <p class="class-kicker"><span class="class-badge">Sin contenidos</span> Próximamente</p>
+          <h3>Unidad X</h3>
+          <p class="class-meta">Los temas y materiales se incorporarán progresivamente.</p>
+        </article>
+      </section>
     </section>
 
     <aside class="guide-note">
-      <strong>Nota:</strong> las guías docentes de cada clase (<code>guia-slides-clase-X.md</code>) conservan el orden y la cantidad exacta de diapositivas de la fuente original. Las presentaciones son estáticas y se ejecutan en el navegador; los PDFs se exportan en apaisado 16:9.
+      <strong>Nota:</strong> las guías docentes de cada tema (<code>guia-slides-unidad-N-tX-tema.md</code>) conservan el orden y la cantidad exacta de diapositivas de la fuente original. Las presentaciones son estáticas y se ejecutan en el navegador; los PDFs se exportan en apaisado 16:9.
     </aside>
   </main>
 

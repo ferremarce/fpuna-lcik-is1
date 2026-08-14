@@ -6,21 +6,23 @@ Guía técnica completa para crear decks de presentación que repliquen el patr�
 
 ## 1. Resumen
 
-Cada deck es un directorio autocontenido dentro de `presentaciones-html/clase-N/` con esta estructura:
+Cada deck es un directorio autocontenido dentro de `presentaciones-html/unidad-N/TX-tema/` (las unidades; `clase-1/` conserva sus nombres como patrón canónico) con esta estructura:
 
 ```
-clase-N/
+unidad-N/TX-tema/
   index.html          ← HTML del deck (50 líneas, siempre igual salvo N)
   styles.css          ← CSS completo (copiado de clase-1 como base)
   app.js              ← Datos de slides + lógica de navegación + impresión
   assets/             ← Imágenes, logos, fotos
     fpuna_logo_institucional.svg
     foto-docente.png  (solo clase-1)
-    ...               ← imágenes propias de la clase
-  guia-slides-clase-X.md      ← Guía docente (fuente de verdad del contenido)
+    ...               ← imágenes propias del deck
+  guia-slides-unidad-N-tX-tema.md   ← Guía docente (fuente de verdad del contenido)
 ```
 
-Los 3 archivos (`index.html`, `styles.css`, `app.js`) son independientes entre clases. No hay archivos compartidos en runtime.
+Los 3 archivos (`index.html`, `styles.css`, `app.js`) son independientes entre decks. No hay archivos compartidos en runtime.
+
+**Artifact naming:** la guía se nombra `guia-slides-unidad-N-tX-tema.md`, el PDF `unidad-N-tX-tema.pdf` y el PPTX `unidad-N-tX-tema.pptx` (matching the deck slug; ej: `unidad-2-t3-a-requerimientos-software.pdf`). Solo `clase-1` conserva los nombres `clase-1` (`guia-slides-clase-1.md`, `clase-1.pdf`, `clase-1.pptx`).
 
 ---
 
@@ -95,7 +97,7 @@ Los 3 archivos (`index.html`, `styles.css`, `app.js`) son independientes entre c
 
 ## 3. styles.css — Guía completa
 
-Copiar `presentaciones-html/clase-1/styles.css` como base (787 líneas). Si el deck usa imágenes (`<img class="figure-img">`), copiar también la regla `.figure-img` desde clase-2, clase-3 o clase-4:
+Copiar `presentaciones-html/clase-1/styles.css` como base (787 líneas). Si el deck usa imágenes (`<img class="figure-img">`), copiar también la regla `.figure-img` desde `presentaciones-html/unidad-5/T4-uml-casos-uso/` (casos_de_uso o uml):
 
 ```css
 .figure-img {
@@ -313,14 +315,7 @@ const slides = [
 
 **NO hay campo `visual` en ninguna clase.** Todo el contenido va en `body`.
 
-**Formato de clase-2 (shorthand JS con template literals):**
-```javascript
-const slides = [
-  { title: 'Ingeniería de Software I', eyebrow: '01 · Apertura', body: `<div>...</div>`, note: '...' },
-];
-```
-
-**Formato de clase-2, clase-3 y clase-4 (shorthand JS):**
+**Formato shorthand (template literals):** los decks de las unidades usan objetos inline con template literals para `body` y `note`:
 ```javascript
 const slides = [
   { title: 'Ingeniería de Software I', eyebrow: '01 · Apertura', body: `<div>...</div>`, note: '...' },
@@ -329,7 +324,7 @@ const slides = [
 
 ### 4.2 Función slideMarkup
 
-**Clase-1 (canonical):**
+**Patrón único (clase-1 canónico y todos los decks unidad-N):**
 ```javascript
 function slideMarkup(slide, position) {
   return `<article class="slide slide-${position + 1}" aria-labelledby="slide-title">
@@ -338,33 +333,6 @@ function slideMarkup(slide, position) {
       <h1 id="slide-title">${slide.title}</h1>
     </header>
     <div class="content">${slide.body}</div>
-  </article>`;
-}
-```
-
-**Clase-2 (diferente — usa `<div>` en vez de `<header>`, agrega slide-number):**
-```javascript
-function slideMarkup(slide, position) {
-  return `<article class="slide slide-${position + 1}" aria-labelledby="slide-title">
-    <div>
-      <p class="eyebrow">${slide.eyebrow}</p>
-      <h1 id="slide-title">${slide.title}</h1>
-      <div class="content">${slide.body}</div>
-    </div>
-    <span class="slide-number">${String(position + 1).padStart(2, '0')}</span>
-  </article>`;
-}
-```
-
-**Clase-2, clase-3 y clase-4 (usa `<div>` en vez de `<header>`):**
-```javascript
-function slideMarkup(slide, position) {
-  return `<article class="slide slide-${position + 1}" aria-labelledby="slide-title">
-    <div>
-      <p class="eyebrow">${slide.eyebrow}</p>
-      <h1 id="slide-title">${slide.title}</h1>
-      <div class="content">${slide.body}</div>
-    </div>
   </article>`;
 }
 ```
@@ -407,7 +375,7 @@ function toggle(panel, force) {
 
 ### 4.4 Impresión (`?print=all`)
 
-**Clase-1 (soporte completo de PDF):**
+**Patrón único (clase-1 canónico y todos los decks unidad-N):**
 ```javascript
 function renderAllForPrint() {
   const total = slides.length;
@@ -424,13 +392,6 @@ function fitSlidesForPrint() {
   // Mide cada slide y lo escala si desborda 167mm
   // Usa un clon en un probe off-screen para medir altura natural
   // Aplica transform: scale() si scale < 1
-}
-```
-
-**Clase-2, 3, 4 (impresión simplificada):**
-```javascript
-function renderAllForPrint() {
-  stage.innerHTML = slides.map((slide, position) => slideMarkup(slide, position)).join('');
 }
 ```
 
@@ -466,16 +427,16 @@ if (printAll) renderAllForPrint(); else render();
 
 ### 5.1 Pipeline de impresión
 
-El PDF se genera desde un HTML de impresión temporal que carga `styles.css` + `app.js` de la clase y ejecuta `renderAllForPrint()`. El HTML DEBE incluir un `<base href>` que apunte a la carpeta de la clase para que las rutas relativas `assets/...` (logo y figuras) se resuelvan; sin esto el PDF sale sin imágenes.
+El PDF se genera desde un HTML de impresión temporal que carga `styles.css` + `app.js` del deck y ejecuta `renderAllForPrint()`. El HTML DEBE incluir un `<base href>` que apunte a la carpeta del deck para que las rutas relativas `assets/...` (logo y figuras) se resuelvan; sin esto el PDF sale sin imágenes.
 
 ```html
-<!-- /tmp/opencode/clase-N-print.html -->
+<!-- /tmp/opencode/unidad-N-tX-tema-print.html -->
 <!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Clase N - Print</title>
-<base href="file:///RUTA/ABS/AL/presentaciones-html/clase-N/">
+<title>Unidad N · TX - Print</title>
+<base href="file:///RUTA/ABS/AL/presentaciones-html/unidad-N/TX-tema/">
 <link rel="stylesheet" href="styles.css">
 <style>.print-header-title, .print-header-subtitle { white-space: nowrap; }</style>
 </head>
@@ -489,10 +450,10 @@ El PDF se genera desde un HTML de impresión temporal que carga `styles.css` + `
 
 ```bash
 google-chrome --headless=new --disable-gpu --no-sandbox \
-  --print-to-pdf=presentaciones-html/clase-N/clase-N.pdf \
+  --print-to-pdf=presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf \
   --no-pdf-header-footer \
   --virtual-time-budget=8000 \
-  "file:///tmp/opencode/clase-N-print.html"
+  "file:///tmp/opencode/unidad-N-tX-tema-print.html"
 ```
 
 **Parámetros:**
@@ -527,13 +488,13 @@ El h1 del título usa `font-size: clamp(1.6rem, 3.2vw, 2.8rem)`. En `@media prin
 
 ```bash
 # Verificar cantidad de páginas (una por slide)
-pdfinfo presentaciones-html/clase-N/clase-N.pdf | grep '^Pages:'
+pdfinfo presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf | grep '^Pages:'
 
 # Verificar texto en páginas específicas (ej: 15-17)
-pdftotext -f 15 -l 17 -layout presentaciones-html/clase-N/clase-N.pdf -
+pdftotext -f 15 -l 17 -layout presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf -
 
 # Verificar que el logo y las figuras quedaron embebidos
-pdfimages -list presentaciones-html/clase-N/clase-N.pdf | wc -l
+pdfimages -list presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf | wc -l
 ```
 
 ### 5.4 Por qué funciona el layout
@@ -563,7 +524,7 @@ pdfimages -list presentaciones-html/clase-N/clase-N.pdf | wc -l
 
 ```bash
 # Verificar JS válido
-node --check presentaciones-html/clase-N/app.js
+node --check presentaciones-html/unidad-N/TX-tema/app.js
 
 # Verificar diff limpio
 git diff --check
@@ -572,7 +533,7 @@ git diff --check
 ### Después de cambiar styles.css o app.js
 
 ```bash
-node --check presentaciones-html/clase-N/app.js
+node --check presentaciones-html/unidad-N/TX-tema/app.js
 ```
 
 ### Después de cambiar PDF o print CSS
@@ -580,18 +541,21 @@ node --check presentaciones-html/clase-N/app.js
 ```bash
 # Regenerar PDF (ver sección 5.1)
 # Verificar
-pdfinfo presentaciones-html/clase-N/clase-N.pdf | grep '^Pages:'
-pdftotext -f 15 -l 17 -layout presentaciones-html/clase-N/clase-N.pdf -
+pdfinfo presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf | grep '^Pages:'
+pdftotext -f 15 -l 17 -layout presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf -
 ```
 
 ### Para todas las clases
 
 ```bash
 node --check presentaciones-html/clase-1/app.js
-node --check presentaciones-html/clase-2/app.js
-node --check presentaciones-html/clase-3/app.js
-node --check presentaciones-html/clase-4/casos_de_uso/app.js
-node --check presentaciones-html/clase-4/uml/app.js
+node --check presentaciones-html/unidad-1/T0-presentacion/app.js
+node --check presentaciones-html/unidad-1/T1-introduccion-ingenieria-software/app.js
+node --check presentaciones-html/unidad-1/T2-modelo-proceso-metodologias-agiles/app.js
+node --check presentaciones-html/unidad-2/T3-a-requerimientos-software/app.js
+node --check presentaciones-html/unidad-5/T4-uml-casos-uso/uml/app.js
+node --check presentaciones-html/unidad-5/T4-uml-casos-uso/casos_de_uso/app.js
+node --check presentaciones-html/unidad-6/T6-diagramas-de-clase/app.js
 git diff --check
 ```
 
@@ -601,22 +565,22 @@ git diff --check
 
 ---
 
-## 7. Flujo de trabajo: PPTX → guia-slides-clase-X.md → HTML → PDF
+## 7. Flujo de trabajo: PPTX → guia-slides-unidad-N-tX-tema.md → HTML → PDF
 
 El flujo correcto para generar una clase es de **4 pasos**:
 
 ```
 sesiones-clase/clase-N/archivo.pptx
         ↓  PASO 1: Extraer contenido
-        ↓  PASO 2: Crear guia-slides-clase-X.md
-presentaciones-html/clase-N/guia-slides-clase-X.md
+        ↓  PASO 2: Crear guia-slides-unidad-N-tX-tema.md
+presentaciones-html/unidad-N/TX-tema/guia-slides-unidad-N-tX-tema.md
         ↓  PASO 3: Generar HTML (app.js + styles.css + index.html)
-presentaciones-html/clase-N/
+presentaciones-html/unidad-N/TX-tema/
         ↓  PASO 4: Exportar PDF
-presentaciones-html/clase-N/clase-N.pdf
+presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf
 ```
 
-**Regla clave:** `guia-slides-clase-X.md` es la **fuente de verdad del contenido** entre el PPTX y el HTML. El agente que genera el HTML lee SOLO la guía, no el PPTX directamente. Esto permite revisar, corregir y validar el contenido antes de generar el deck.
+**Regla clave:** `guia-slides-unidad-N-tX-tema.md` es la **fuente de verdad del contenido** entre el PPTX y el HTML. El agente que genera el HTML lee SOLO la guía, no el PPTX directamente. Esto permite revisar, corregir y validar el contenido antes de generar el deck.
 
 ### 7.1 Ubicación de fuentes
 
@@ -628,11 +592,11 @@ sesiones-clase/
   clase-4/IS1-UNIDAD_IV.pptx
 ```
 
-### 7.2 PASO 1–2: PPTX → guia-slides-clase-X.md
+### 7.2 PASO 1–2: PPTX → guia-slides-unidad-N-tX-tema.md
 
-Leer el PPTX fuente y crear `guia-slides-clase-X.md` siguiendo la estructura exacta de clase-1 como plantilla. La guía es un documento Markdown autocontenido que documenta cada slide en 3 capas.
+Leer el PPTX fuente y crear `guia-slides-unidad-N-tX-tema.md` siguiendo la estructura exacta de clase-1 como plantilla. La guía es un documento Markdown autocontenido que documenta cada slide en 3 capas.
 
-**Estructura obligatoria de `guia-slides-clase-X.md`:**
+**Estructura obligatoria de `guia-slides-unidad-N-tX-tema.md`:**
 
 ```markdown
 # Guía de regeneración de la Clase N
@@ -699,10 +663,10 @@ Cada slide se describe en tres capas para facilitar la revisión:
 3. **Transcribir TODO el texto visible del PPTX** — sin truncar, sin parafrasear, sin corregir erratas del original (anotarlas como nota). El "Texto visible" es la fuente para generar el `body` del HTML.
 4. **Las notas del docente** se documentan en la sección "Explicación docente" de cada slide. Si el PPTX no tiene notas, crearlas siguiendo el formato de 6 secciones (Desarrollo/Ejemplos/Reflexión/Pregunta/Respuestas/Advertencia).
 5. **Registrar datos sensibles** (contraseñas) como existentes pero **nunca reproducir su valor**.
-6. **Si el PPTX contiene imágenes**, extraerlas y guardarlas en `presentaciones-html/clase-N/assets/`. Documentarlas en la guía con su nombre original y ruta. El HTML debe usar esas mismas imágenes (ver 7.3).
+6. **Si el PPTX contiene imágenes**, extraerlas y guardarlas en `presentaciones-html/unidad-N/TX-tema/assets/`. Documentarlas en la guía con su nombre original y ruta. El HTML debe usar esas mismas imágenes (ver 7.3).
 7. **El título de cada slide** en la guía usa el formato: `### Slide N. Título del slide`
 
-### 7.3 PASO 3: guia-slides-clase-X.md → HTML
+### 7.3 PASO 3: guia-slides-unidad-N-tX-tema.md → HTML
 
 Leer la guía y generar el deck HTML (`app.js`, `styles.css`, `index.html`). La fuente de contenido es SOLO la guía — no se lee el PPTX directamente.
 
@@ -785,19 +749,18 @@ Una vez creado el deck y verificado:
 
 ```bash
 # 1. Verificar sintaxis
-node --check presentaciones-html/clase-N/app.js
+node --check presentaciones-html/unidad-N/TX-tema/app.js
 
-# 2. Regenerar PDF
-google-chrome --headless --disable-gpu --no-sandbox \
+# 2. Regenerar PDF (ver sección 5.1; este es un ejemplo con la ruta típica)
+google-chrome --headless=new --disable-gpu --no-sandbox \
+  --print-to-pdf="presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf" \
   --no-pdf-header-footer \
-  --window-size=1123,631 \
-  --virtual-time-budget=10000 \
-  --print-to-pdf="presentaciones-html/clase-N/clase-N.pdf" \
-  "file:///home/jmferreira/Documents/FPUNA/CLASES-AER/IS1-LCIK/presentaciones-html/clase-N/index.html?print=all"
+  --virtual-time-budget=8000 \
+  "file:///tmp/opencode/unidad-N-tX-tema-print.html"
 
 # 3. Verificar
-pdfinfo presentaciones-html/clase-N/clase-N.pdf | grep '^Pages:'
-pdftotext -f 1 -l 1 -raw presentaciones-html/clase-N/clase-N.pdf - | head -5
+pdfinfo presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf | grep '^Pages:'
+pdftotext -f 1 -l 1 -raw presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf - | head -5
 ```
 
 ### 7.7 Actualizar el catálogo
@@ -825,58 +788,61 @@ Después de generar el PDF, actualizar `presentaciones-html/index.html` (ver sec
 
 ## 9. Actualizar el catálogo general (`presentaciones-html/index.html`)
 
-**Cada vez que se genera o modifica una presentación, un PDF, un PPTX o una guía** de una clase, actualizar el archivo `presentaciones-html/index.html`. Este archivo es el índice de navegación del curso: lista todas las clases con sus enlaces a presentación, PDF, PPTX y guía.
+**Cada vez que se genera o modifica una presentación, un PDF, un PPTX o una guía** de un deck, actualizar el archivo `presentaciones-html/index.html`. Este archivo es el índice de navegación del curso: lista todas las clases con sus enlaces a presentación, PDF, PPTX y guía.
 
-**Regla clave:** si la clase tiene el artefacto, el índice debe tener su enlace. Los cuatro enlaces (`Ver presentación`, `PDF`, `PPTX`, `Guía de slides`) se incluyen siempre que el archivo correspondiente exista en `presentaciones-html/clase-N/`. Si un artefacto no existe aún (p. ej. no se generó el PPTX), el enlace se omite hasta que exista.
+**Regla clave:** si el deck tiene el artefacto, el índice debe tener su enlace. Los cuatro enlaces (`Ver presentación`, `PDF`, `PPTX`, `Guía de slides`) se incluyen siempre que el archivo correspondiente exista en `presentaciones-html/unidad-N/TX-tema/`. Si un artefacto no existe aún (p. ej. no se generó el PPTX), el enlace se omite hasta que exista.
 
 ### 9.1 Estructura del catálogo
 
-El archivo es HTML autocontenido, sin dependencias externas. Cada clase se representa como un bloque `<article class="class-card">`:
+El archivo es HTML autocontenido, sin dependencias externas. Cada deck se representa como un bloque `<article class="class-card unit-card">`:
 
 ```html
-<article class="class-card" id="clase-N">
-  <p class="class-kicker"><span class="class-badge">Clase N</span> Unidad X · Tema</p>
-  <h2>Título de la clase</h2>
-  <p class="class-meta">NN diapositivas · guía docente incluida · exportación PDF (NN páginas)</p>
-  <p class="class-desc">
-    <strong>Contenido:</strong> resumen del contenido de la clase.
-  </p>
-  <div class="class-actions">
-    <a class="chip" href="clase-N/index.html">Ver presentación</a>
-    <a class="chip" href="clase-N/clase-N.pdf">PDF · NN páginas</a>
-    <a class="chip" href="clase-N/clase-N.pptx">PPTX</a>
-    <a class="chip" href="clase-N/guia-slides-clase-X.md">Guía de slides</a>
+<article class="class-card unit-card">
+  <p class="class-kicker"><span class="class-badge">Tema</span> Contenidos y actividades</p>
+  <div class="unit-topics">
+    <section class="topic topic--theme" id="unidad-N-tX">
+      <span class="topic-label">Tema</span>
+      <h3>TX · Título del tema</h3>
+      <p class="class-meta">NN diapositivas · guía docente incluida · PDF de NN páginas</p>
+      <p><strong>Contenido:</strong> resumen del contenido del tema.</p>
+      <div class="class-actions">
+        <a class="chip" href="unidad-N/TX-tema/index.html">Ver presentación</a>
+        <a class="chip" href="unidad-N/TX-tema/unidad-N-tX-tema.pdf">PDF · NN páginas</a>
+        <a class="chip" href="unidad-N/TX-tema/unidad-N-tX-tema.pptx">PPTX</a>
+        <a class="chip" href="unidad-N/TX-tema/guia-slides-unidad-N-tX-tema.md">Guía de slides</a>
+      </div>
+    </section>
   </div>
 </article>
 ```
 
-### 9.2 Campos a actualizar por clase
+### 9.2 Campos a actualizar por tema
 
 | Campo | Descripción | Ejemplo |
 |-------|-------------|---------|
-| `id` | Identificador del anchor | `clase-5` |
-| Badge | Número de clase | `Clase 5` |
+| `id` | Identificador del anchor | `unidad-2-t3` |
+| Badge | Tipo de contenido | `Tema` o `Actividad` |
 | Unidad | Unidad temática | `Unidad V · Tema` |
-| `<h2>` | Título descriptivo | `Ingeniería de Requisitos` |
-| `class-meta` | Cantidad de slides y páginas del PDF | `35 diapositivas · guía docente incluida · exportación PDF (35 páginas)` |
-| `class-desc` | Resumen del contenido (2-3 oraciones) | Qué temas cubre la clase |
-| Enlace presentación | Ruta relativa al `index.html` de la clase | `clase-5/index.html` |
-| Enlace PDF | Ruta relativa al PDF generado | `clase-5/clase-5.pdf` |
-| Enlace PPTX | Ruta relativa al PPTX generado (solo si existe) | `clase-5/clase-5.pptx` |
-| Enlace guía | Ruta relativa a la guía de slides | `clase-5/guia-slides-clase-X.md` |
+| `<h3>` | Título descriptivo | `T3-a · Requerimientos de Software` |
+| `class-meta` | Cantidad de slides y páginas del PDF | `39 diapositivas · guía docente incluida · PDF de 39 páginas` |
+| Contenido | Resumen del contenido (2-3 oraciones) | Qué temas cubre el deck |
+| Enlace presentación | Ruta relativa al `index.html` del deck | `unidad-2/T3-a-requerimientos-software/index.html` |
+| Enlace PDF | Ruta relativa al PDF generado | `unidad-2/T3-a-requerimientos-software/unidad-2-t3-a-requerimientos-software.pdf` |
+| Enlace PPTX | Ruta relativa al PPTX generado (solo si existe) | `unidad-2/T3-a-requerimientos-software/unidad-2-t3-a-requerimientos-software.pptx` |
+| Enlace guía | Ruta relativa a la guía de slides | `unidad-2/T3-a-requerimientos-software/guia-slides-unidad-2-t3-a-requerimientos-software.md` |
 
 ### 9.3 También actualizar
 
-- **Nav links** en el topbar: agregar `<a href="#clase-N">Clase N</a>` en la sección `<nav class="nav-links">`.
-- **Nota inferior** (`guide-note`): si se agrega una clase, verificar que la nota sigue siendo correcta.
-- **Título de la página**: si hay más de 4 clases, considerar actualizar el `<title>`.
+- **Nav links** en el topbar: agregar `<a href="#unidad-N-tX">Tema TX</a>` en la sección `<nav class="nav-links">`.
+- **Nota inferior** (`guide-note`): si se agrega un tema, verificar que la nota sigue siendo correcta.
+- **Título de la página**: si hay más de 4 temas, considerar actualizar el `<title>`.
 - **`class-meta`**: actualizar a "guía docente incluida" cuando la guía se genere (no "pendiente").
 
-### 9.4 Flujo completo al crear una clase nueva
+### 9.4 Flujo completo al crear un deck nuevo
 
-1. Crear `presentaciones-html/clase-N/` con `index.html`, `styles.css`, `app.js`, `assets/`, `guia-slides-clase-X.md`
+1. Crear `presentaciones-html/unidad-N/TX-tema/` con `index.html`, `styles.css`, `app.js`, `assets/`, `guia-slides-unidad-N-tX-tema.md`
 2. Generar el PDF con Chrome headless
 3. Generar el PPTX si corresponde
 4. Verificar con `node --check` y `pdfinfo`
-5. **Actualizar `presentaciones-html/index.html`** con el nuevo bloque de clase (4 enlaces: presentación, PDF, PPTX si existe, guía)
+5. **Actualizar `presentaciones-html/index.html`** con el nuevo bloque de tema (4 enlaces: presentación, PDF, PPTX si existe, guía)
 6. Hacer `git diff` para revisar los cambios

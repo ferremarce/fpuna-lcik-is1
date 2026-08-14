@@ -6,21 +6,22 @@ Esta plantilla define el formato estándar para generar guías de slides a parti
 
 ## Convención de Nombres
 
-- **Guía generada:** `guia-slides-clase-X.md` (donde X es el número de clase)
-- **Ubicación:** `presentaciones-html/clase-X/guia-slides-clase-X.md`
-- **Ejemplo:** `presentaciones-html/clase-2/guia-slides-clase-2.md`
+- **Guía generada:** `guia-slides-unidad-N-tX-tema.md` (donde N es la unidad y tX el tema)
+- **Ubicación:** `presentaciones-html/unidad-N/TX-tema/guia-slides-unidad-N-tX-tema.md`
+- **Ejemplo:** `presentaciones-html/unidad-2/T3-a-requerimientos-software/guia-slides-unidad-2-t3-a-requerimientos-software.md`
+- **Solo clase-1** conserva `guia-slides-clase-1.md` como patrón canónico.
 
 ## Estructura de la Guía
 
 ### 1. Metadata
 
 ```markdown
-# Guía de regeneración de la Clase N
+# Guía de regeneración de Unidad N · TX - Tema
 
 Guía docente para regenerar la presentación a partir de `sesiones-clase/clase-N/ARCHIVO.pptx`. Conserva los **X slides**, su orden y su numeración de origen. La futura presentación deberá usar esta guía como especificación de contenido, no como sustituto del diseño visual.
 
-**Archivo:** `guia-slides-clase-N.md`
-**Ubicación:** `presentaciones-html/clase-N/`
+**Archivo:** `guia-slides-unidad-N-tX-tema.md`
+**Ubicación:** `presentaciones-html/unidad-N/TX-tema/`
 
 ## Lectura rápida
 
@@ -114,7 +115,7 @@ Cuando el slide contenga definiciones, conceptos teóricos o modelos, agregar re
 ```markdown
 ## Checklist de regeneración
 
-- [ ] Archivo nombrado como `guia-slides-clase-N.md`
+- [ ] Archivo nombrado como `guia-slides-unidad-N-tX-tema.md`
 - [ ] Mantener exactamente X slides y el orden 1–X.
 - [ ] Conservar títulos, listas, definiciones, porcentajes, referencias y citas del inventario.
 - [ ] Distinguir visualmente títulos, texto de contenido, jerarquías y bloques de citas.
@@ -135,62 +136,30 @@ La guía se construyó leyendo el paquete OOXML del PPTX: `ppt/presentation.xml`
 ## Exportación a PDF
 
 ### Herramienta
-- Usar **WeasyPrint** para generar PDF desde HTML
-- Instalar si no está disponible: `pip3 install weasyprint`
+- Usar **Google Chrome headless** para generar PDF desde HTML
+- **NO usar WeasyPrint**: no soporta `clamp()` en `font-size` (título queda más chico que el eyebrow) ni respeta `transform: scale()`/`overflow: hidden` para paginar (los slides que exceden 167mm se fragmentan en páginas extra). Ver `docs/patron-presentaciones.md` sección 5 para el pipeline completo con HTML temporal + `<base href>` + `renderAllForPrint()`.
 
 ### Proceso de generación
 
-1. **Crear archivo HTML temporal** en `/tmp/clase-X-print.html` con:
-   - HTML autocontenido (sin dependencias externas)
-   - Todas las diapositivas pre-renderizadas (sin JavaScript)
-   - Rutas absolutas `file:///` para imágenes y logo
+1. **Crear archivo HTML temporal** en `/tmp/opencode/unidad-N-tX-tema-print.html` con:
+   - Carga `styles.css` + `app.js` del deck (no HTML autocontenido estático)
+   - `<base href="file:///RUTA/ABS/AL/presentaciones-html/unidad-N/TX-tema/">` para resolver `assets/...`
+   - Ejecuta `renderAllForPrint()` al final del `<body>`
 
-2. **Estructura del HTML de impresión:**
-   ```html
-   <!DOCTYPE html>
-   <html lang="es">
-   <head>
-     <style>
-       @page { size: landscape; margin: 0; }
-       .print-slide { 
-         page-break-after: always; 
-         width: 297mm; 
-         height: 167mm; 
-         overflow: hidden;
-       }
-       .print-header { /* Header con logo */ }
-       .figure-img { max-width: 100%; max-height: 400px; object-fit: contain; }
-     </style>
-   </head>
-   <body>
-     <div class="print-slide">
-       <div class="print-header">
-         <img src="file:///ruta/absoluta/fpuna_logo_institucional.svg">
-         <div class="print-header-text">
-           <span class="print-header-title">Ingeniería del Software I</span>
-           <span class="print-header-subtitle">FP-UNA / Licenciatura en Ciencias Informáticas (LCiK)</span>
-         </div>
-         <span class="print-header-page">01 / 47</span>
-       </div>
-       <div class="slide">...</div>
-     </div>
-   </body>
-   </html>
-   ```
-
-3. **Generar PDF con Python:**
-   ```python
-   import weasyprint
-   html = weasyprint.HTML(filename='/tmp/clase-X-print.html')
-   html.write_pdf('presentaciones-html/clase-X/clase-X.pdf')
+2. **Generar PDF con Chrome headless:**
+   ```bash
+   google-chrome --headless=new --disable-gpu --no-sandbox \
+     --print-to-pdf="presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf" \
+     --no-pdf-header-footer \
+     --virtual-time-budget=8000 \
+     "file:///tmp/opencode/unidad-N-tX-tema-print.html"
    ```
 
 ### Reglas críticas
 
-1. **Rutas absolutas para imágenes:**
-   - Logo: `src="file:///home/jmferreira/Documents/FPUNA/CLASES-AER/IS1-LCIK/presentaciones-html/clase-X/assets/fpuna_logo_institucional.svg"`
-   - Imágenes: `src="file:///home/jmferreira/Documents/FPUNA/CLASES-AER/IS1-LCIK/presentaciones-html/clase-X/assets/nombre-imagen.png"`
-   - **NUNCA** usar rutas relativas en el HTML de impresión
+1. **Rutas de imágenes resueltas por `<base href>`:**
+   - El HTML de impresión DEBE incluir `<base href="file:///home/jmferreira/Documents/FPUNA/CLASES-AER/IS1-LCIK/presentaciones-html/unidad-N/TX-tema/">` para que `assets/fpuna_logo_institucional.svg` y las figuras se resuelvan
+   - **NUNCA** usar rutas relativas a otro directorio en el HTML de impresión
 
 2. **Header y sub-header en líneas separadas:**
    ```css
@@ -206,8 +175,8 @@ La guía se construyó leyendo el paquete OOXML del PPTX: `ppt/presentation.xml`
    ```
 
 3. **Dimensiones de página:**
-   - Tamaño: `@page { size: landscape; margin: 0; }`
-   - Slide: `width: 297mm; height: 167mm;` (proporción 16:9)
+   - Tamaño: `@page { size: 297mm 167mm; margin: 0; }`
+   - Slide: `width: 1123px; height: 631px;` (proporción 16:9)
    - Header fijo en la parte superior
 
 4. **Imágenes:**
@@ -216,28 +185,28 @@ La guía se construyó leyendo el paquete OOXML del PPTX: `ppt/presentation.xml`
    - Sin wrapper card en el PDF
 
 5. **Contenido:**
-   - Pre-renderizar todas las diapositivas en HTML estático
-   - NO usar JavaScript en el HTML de impresión
-   - Incluir todas las 47 diapositivas (o el número total de la clase)
+   - Cada slide se renderiza con `renderAllForPrint()` → `.print-slide` con `.print-header` + `slideMarkup`
+   - `fitSlidesForPrint()` escala los slides que desbordan 167mm
+   - Incluir todas las diapositivas (o el número total del tema)
 
 ### Verificación del PDF
 
 ```bash
 # Verificar número de páginas
-pdfinfo presentaciones-html/clase-X/clase-X.pdf | grep Pages
+pdfinfo presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf | grep '^Pages:'
 
 # Verificar tamaño
-ls -lh presentaciones-html/clase-X/clase-X.pdf
+ls -lh presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf
 
 # Verificar contenido (opcional)
-pdftotext -f 1 -l 1 presentaciones-html/clase-X/clase-X.pdf -
+pdftotext -f 1 -l 1 presentaciones-html/unidad-N/TX-tema/unidad-N-tX-tema.pdf -
 ```
 
 ### Actualización en index.html
 
 Después de generar el PDF, actualizar el enlace en `presentaciones-html/index.html`:
 ```html
-<a class="chip" href="clase-X/clase-X.pdf">PDF · N páginas</a>
+<a class="chip" href="unidad-N/TX-tema/unidad-N-tX-tema.pdf">PDF · N páginas</a>
 ```
 ```
 
@@ -350,12 +319,12 @@ El CSS debe tener:
 
 ### Notas Docentes (OBLIGATORIO)
 
-Las notas docentes del HTML (campo `note` en app.js) DEBEN contener la **Explicación docente completa** de la guía `guia-slides-clase-X.md`.
+Las notas docentes del HTML (campo `note` en app.js) DEBEN contener la **Explicación docente completa** de la guía `guia-slides-unidad-N-tX-tema.md`.
 
 **Regla:** Siempre extraer las explicaciones de la guía y copiarlas al campo `note` de cada slide en app.js.
 
 **Proceso:**
-1. Leer la guía `guia-slides-clase-X.md`
+1. Leer la guía `guia-slides-unidad-N-tX-tema.md`
 2. Para cada slide, extraer la sección "Explicación docente"
 3. Convertir de markdown a HTML:
    - `- **Desarrollo:**` → `<strong>Desarrollo:</strong>`
@@ -411,7 +380,7 @@ Las notas docentes del HTML (campo `note` en app.js) DEBEN contener la **Explica
 
 ## Proceso de Generación
 
-**IMPORTANTE:** Siempre generar la guía `guia-slides-clase-X.md` para cada clase. Es un paso OBLIGATORIO del proceso.
+**IMPORTANTE:** Siempre generar la guía `guia-slides-unidad-N-tX-tema.md` para cada tema. Es un paso OBLIGATORIO del proceso.
 
 1. **Extraer contenido del PPTX** usando python-pptx
 2. **Identificar slides con imágenes** y documentarlas
@@ -420,19 +389,19 @@ Las notas docentes del HTML (campo `note` en app.js) DEBEN contener la **Explica
 5. **Describir elementos visuales** de cada slide
 6. **Generar explicación docente** siguiendo el formato
 7. **Agregar referencias bibliográficas** donde sea aplicable
-8. **Crear guía `guia-slides-clase-X.md`** (OBLIGATORIO)
+8. **Crear guía `guia-slides-unidad-N-tX-tema.md`** (OBLIGATORIO)
 9. **Crear HTML** (index.html, app.js, styles.css)
-10. **Generar PDF** con WeasyPrint
+10. **Generar PDF** con Chrome headless
 11. **Actualizar index.html** principal con enlaces
 12. **Documentar verificación de fuente**
 
-### Checklist de generación por clase
+### Checklist de generación por tema
 
-- [ ] Archivo `guia-slides-clase-X.md` creado
+- [ ] Archivo `guia-slides-unidad-N-tX-tema.md` creado
 - [ ] Archivo `index.html` creado
 - [ ] Archivo `app.js` creado con N slides
 - [ ] Archivo `styles.css` copiado de clase-1
-- [ ] Archivo `clase-X.pdf` generado
+- [ ] Archivo `unidad-N-tX-tema.pdf` generado
 - [ ] Logo institucional en `assets/`
 - [ ] Nombre del profesor correcto
 - [ ] Imágenes del PPTX extraídas a `assets/`

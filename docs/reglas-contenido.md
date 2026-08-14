@@ -2,7 +2,7 @@
 
 Reglas para generar contenido de slides, notas del docente y artefactos visuales.
 
-> **Flujo de trabajo:** `PPTX → guia-slides.md → HTML → PDF`. La fuente de verdad del contenido es `guia-slides.md`, NO el PPTX directamente. El agente que genera el HTML lee SOLO la guía. Ver `docs/patron-presentaciones.md` sección 7 para el flujo completo.
+> **Flujo de trabajo:** `PPTX → guia-slides.md → HTML → PDF`. La fuente de verdad del contenido es `guia-slides.md` (nombrada `guia-slides-unidad-N-tX-tema.md`), NO el PPTX directamente. El agente que genera el HTML lee SOLO la guía. Ver `docs/patron-presentaciones.md` sección 7 para el flujo completo.
 
 ---
 
@@ -239,7 +239,7 @@ El número puede ser `01`, `02`, ... o `I`, `II`, `III`, ... (romanos para unida
 
 **Cuándo usar**: diagramas, capturas, ilustraciones del material fuente.
 
-**Nota**: esta clase NO existe en `styles.css` de clase-1 (que no usa imágenes). Si el deck usa imágenes, agregar la regla CSS desde clase-2/3/4 (ver `patron-presentaciones.md` sección 3.1).
+**Nota**: esta clase NO existe en `styles.css` de clase-1 (que no usa imágenes). Si el deck usa imágenes, agregar la regla CSS desde `unidad-5/T4-uml-casos-uso/` (ver `patron-presentaciones.md` sección 3.1).
 
 ### 3.16 `.avatar` — Foto redonda
 
@@ -316,7 +316,7 @@ Usar **solo** las referencias del material del curso:
 
 ### 6.2 Contenido
 - **Nunca** inventar referencias bibliográficas
-- **Nunca** cambiar el orden de slides definido en la guía (`guia-slides-clase-X.md`)
+- **Nunca** cambiar el orden de slides definido en la guía (`guia-slides-unidad-N-tX-tema.md`)
 - **Siempre** transcribir TODO el texto del PPTX al "Texto visible" de la guía, sin truncar
 - **El "Texto visible"** es la fuente para generar el `body` del HTML
 - **Siempre** usar las imágenes originales del PPTX en el HTML — extraerlas del PPTX a `assets/` y referenciarlas con `<img class="figure-img" src="assets/nombre.png">`
@@ -337,7 +337,7 @@ Usar **solo** las referencias del material del curso:
 
 ### 6.5 Impresión
 - **Usar Chrome headless para el PDF, nunca WeasyPrint**: WeasyPrint no soporta `clamp()` en `font-size` (el título queda más chico que el eyebrow) y no respeta `transform: scale()`/`overflow: hidden` (los slides que exceden 167mm se fragmentan en páginas extra)
-- **El HTML de impresión DEBE incluir** `<base href="file:///.../clase-N/">` para que los `assets/...` (logo y figuras) se resuelvan; sin esto el PDF sale sin imágenes
+- **El HTML de impresión DEBE incluir** `<base href="file:///.../presentaciones-html/unidad-N/TX-tema/">` para que los `assets/...` (logo y figuras) se resuelvan; sin esto el PDF sale sin imágenes
 - **Nunca** generar un PDF sin `?print=all` (o sin ejecutar `renderAllForPrint()`)
 - **Nunca** cambiar `@page { size: 297mm 167mm }` (es el formato 16:9 landscape)
 - **Siempre** verificar la cantidad de páginas con `pdfinfo` (una por slide) y que `pdfimages -list` muestre logo + figuras
@@ -361,26 +361,30 @@ En los ejemplos de las notas, siempre empezar por "Global Exchange (conductor):"
 
 ## 8. Catálogo general — `presentaciones-html/index.html`
 
-**Siempre** después de crear o modificar una clase, actualizar el catálogo `presentaciones-html/index.html`. Este archivo lista todas las clases con sus enlaces a presentación, PDF y guía.
+**Siempre** después de crear o modificar un deck, actualizar el catálogo `presentaciones-html/index.html`. Este archivo lista todos los temas con sus enlaces a presentación, PDF y guía.
 
-**Qué actualizar al crear/modificar una clase:**
+**Qué actualizar al crear/modificar un tema:**
 
-1. Agregar o editar el bloque `<article class="class-card" id="clase-N">` con: badge, unidad, título, cantidad de slides, resumen de contenido, y 3 enlaces (presentación, PDF, guía).
-2. Agregar `<a href="#clase-N">Clase N</a>` en el `<nav class="nav-links">` del topbar.
+1. Agregar o editar el bloque `<article class="class-card unit-card">` con: badge, unidad, título, cantidad de slides, resumen de contenido, y enlaces (presentación, PDF, PPTX si existe, guía).
+2. Agregar `<a href="#unidad-N-tX">Tema TX</a>` en el `<nav class="nav-links">` del topbar.
 3. Verificar que la nota inferior (`guide-note`) sigue siendo correcta.
 
 **Plantilla del bloque:**
 
 ```html
-<article class="class-card" id="clase-N">
-  <p class="class-kicker"><span class="class-badge">Clase N</span> Unidad X · Tema</p>
-  <h2>Título de la clase</h2>
-  <p class="class-meta">NN diapositivas · guía docente incluida · exportación PDF (NN páginas)</p>
-  <p class="class-desc"><strong>Contenido:</strong> resumen del contenido.</p>
-  <div class="class-actions">
-    <a class="chip" href="clase-N/index.html">Ver presentación</a>
-    <a class="chip" href="clase-N/clase-N.pdf">PDF · NN páginas</a>
-    <a class="chip" href="clase-N/guia-slides.md">Guía de slides</a>
+<article class="class-card unit-card">
+  <div class="unit-topics">
+    <section class="topic topic--theme" id="unidad-N-tX">
+      <span class="topic-label">Tema</span>
+      <h3>TX · Título del tema</h3>
+      <p class="class-meta">NN diapositivas · guía docente incluida · PDF de NN páginas</p>
+      <p><strong>Contenido:</strong> resumen del contenido.</p>
+      <div class="class-actions">
+        <a class="chip" href="unidad-N/TX-tema/index.html">Ver presentación</a>
+        <a class="chip" href="unidad-N/TX-tema/unidad-N-tX-tema.pdf">PDF · NN páginas</a>
+        <a class="chip" href="unidad-N/TX-tema/guia-slides-unidad-N-tX-tema.md">Guía de slides</a>
+      </div>
+    </section>
   </div>
 </article>
 ```
